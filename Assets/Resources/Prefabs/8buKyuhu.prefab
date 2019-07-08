@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7414117124936151131}
   - component: {fileID: 514844897610537970}
   - component: {fileID: -9132500433775857576}
+  - component: {fileID: -7533815844850746263}
   m_Layer: 0
   m_Name: 8buKyuhu
   m_TagString: Enemy
@@ -164,6 +165,7 @@ MonoBehaviour:
   - {fileID: 7414117124936151131}
   - {fileID: 514844897610537970}
   - {fileID: -9132500433775857576}
+  - {fileID: -7533815844850746263}
 --- !u!114 &7414117124936151131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,3 +210,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 100
+  _duration: 5
+--- !u!114 &-7533815844850746263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857626769000194195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d5025aba114f68a8f0ce969cde3249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

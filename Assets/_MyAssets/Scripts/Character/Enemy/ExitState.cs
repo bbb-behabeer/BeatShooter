@@ -17,7 +17,12 @@ namespace _MyAssets.Scripts.Character.Enemy
 
         // 移動速度
         [SerializeField] private float _speed = 100f;
+        
+        // 遷移までの期間
+        [SerializeField] private float _duration = 5f;
 
+        private float _currentSec = 0f;
+        
         private Rigidbody2D _rb;
 
         void Start()
@@ -30,5 +35,14 @@ namespace _MyAssets.Scripts.Character.Enemy
             _rb.velocity = Vector2.down * _speed;
         }
 
+        public override void OnStateUpdate()
+        {
+            _currentSec += Time.deltaTime;
+
+            if (_currentSec > _duration)
+            {
+                _stateMachine.Next();
+            }
+        }
     }
 }

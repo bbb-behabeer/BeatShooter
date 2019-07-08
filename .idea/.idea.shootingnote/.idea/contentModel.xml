@@ -17,6 +17,7 @@
             <e p="Character" t="Include">
               <e p="Enemy" t="Include">
                 <e p="ApproachState.cs" t="Include" />
+                <e p="DestroyState.cs" t="Include" />
                 <e p="EightShotState.cs" t="Include" />
                 <e p="EnemyBulletCtl.cs" t="Include" />
                 <e p="EnemyCtl.cs" t="Include" />
