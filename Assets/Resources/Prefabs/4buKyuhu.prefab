@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offset: 100
-  _stateMachine: {fileID: 0}
+  _stateMachine: {fileID: 2221852617352476073}
 --- !u!114 &8601679781112955088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b2b39e2039451c8976732d44095460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stateMachine: {fileID: 2221852617352476073}
   _duration: 3
 --- !u!114 &1863821958773135639
 MonoBehaviour:
@@ -205,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57b43aab7564ec6be472a61086986da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stateMachine: {fileID: 2221852617352476073}
   _approachCnt: 1
   _duration: 5
   _speed: 100

@@ -13,6 +13,7 @@ namespace _MyAssets.Scripts.Character.Enemy
     [Serializable]
     public class ApproachState : StateBase
     {
+        [SerializeField]
         private SerialStateMachine _stateMachine;
         
         // 接近する回数
@@ -63,6 +64,8 @@ namespace _MyAssets.Scripts.Character.Enemy
                 // アプローチ回数を超えたら
                 // プレイヤーへの接近を終了
                 _approachable = false;
+                if (_stateMachine != null)
+                    _stateMachine.Next();
             }
         }
 

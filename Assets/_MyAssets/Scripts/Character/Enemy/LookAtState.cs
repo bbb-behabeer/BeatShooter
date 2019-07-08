@@ -13,6 +13,7 @@ namespace _MyAssets.Scripts.Character.Enemy
     [Serializable]
     public class LookAtState : StateBase
     {
+        [SerializeField]
         private SerialStateMachine _stateMachine;
 
         // プレイヤーの方向を向く時間
@@ -36,7 +37,8 @@ namespace _MyAssets.Scripts.Character.Enemy
 
             if (_currentSec > _duration)
             {
-                _stateMachine.Next();
+                if (_stateMachine != null)
+                    _stateMachine.Next();
             }
         }
 

@@ -13,6 +13,7 @@ namespace _MyAssets.Scripts.Character.Enemy
     [Serializable]
     public class ExitState : StateBase
     {
+        [SerializeField]
         private SerialStateMachine _stateMachine;
 
         // 移動速度
@@ -41,7 +42,8 @@ namespace _MyAssets.Scripts.Character.Enemy
 
             if (_currentSec > _duration)
             {
-                _stateMachine.Next();
+                if (_stateMachine != null)
+                    _stateMachine.Next();
             }
         }
     }
