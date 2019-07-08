@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace _MyAssets.Scripts.Character
 {
-    /**
-     * 弾丸の制御
-     */
+    /// <summary>
+    /// 弾丸を制御する
+    /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerBulletCtl : MonoBehaviour
     {
@@ -37,6 +37,10 @@ namespace _MyAssets.Scripts.Character
             }
         }
 
+        /// <summary>
+        /// 弾速を設定する
+        /// </summary>
+        /// <param name="v">弾速</param>
         public void SetVelocity(Vector3 v)
         {
             velocity = v;

@@ -49,9 +49,6 @@
               <e p="Player" t="Include">
                 <e p="PlayerBulletCtl.cs" t="Include" />
                 <e p="PlayerCtl.cs" t="Include" />
-                <e p="PlayerIdleState.cs" t="Include" />
-                <e p="PlayerKnockBackState.cs" t="Include" />
-                <e p="PlayerStateMachine.cs" t="Include" />
               </e>
             </e>
             <e p="Common" t="Include">

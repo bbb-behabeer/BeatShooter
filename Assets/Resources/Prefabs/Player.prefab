@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 4369722847765822224}
   - component: {fileID: 4369722847765822227}
   - component: {fileID: 4369722847180442094}
-  - component: {fileID: 4369722847180442092}
   - component: {fileID: 4369722847180442093}
   - component: {fileID: 4369722847180442097}
   m_Layer: 0
@@ -136,19 +135,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4369722847180442092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4369722847765822226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c02e186ffa46e7a1b264b1925e5b2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _PlayerCtl: {fileID: 4369722847180442093}
 --- !u!114 &4369722847180442093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,9 +150,10 @@ MonoBehaviour:
   _bullet: {fileID: 495428064193193380, guid: e132a245f22aa854d8375eac9aada379, type: 3}
   _shotWaitSec: 0.2
   _bulletPos: {fileID: 1576501712}
-  _noteManager: {fileID: 0}
   _maxRange: {x: 300, y: 160}
   _minRange: {x: -120, y: -120}
+  _sencitivity: 1
+  _explosion: {fileID: 0}
 --- !u!61 &4369722847180442097
 BoxCollider2D:
   m_ObjectHideFlags: 0

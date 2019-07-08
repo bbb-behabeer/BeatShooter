@@ -41,6 +41,27 @@ namespace _MyAssets.Scripts.Character.Player
             _cacheMousePos = Vector3.zero;
         }
 
+        void Update()
+        {
+            // 入力状態を退避
+            var state = PlayerInput.MouseButtonState;
+            var buttonDown = PlayerInput.ButtonDown;
+
+            if (state.Equals(MouseButtonState.Press))
+            {
+                // マウスを押下中
+                // 射撃する
+                ShotCtl();
+                // 移動
+                MoveCtl(PlayerInput.MouseWorldPoint);
+            } else if (state == MouseButtonState.Void)
+            {
+                // マウスを操作していないとき
+                // 弾を停止
+                Idle();
+            }
+        }
+
         /// <summary>
         /// 射撃する
         /// </summary>
