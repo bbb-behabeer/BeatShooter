@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1dca47db-bf3f-4a3b-8e48-e2427e579a45" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/PressButtonBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/PressButtonBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Character.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Character.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EighthRest/EighthRestIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EighthRest/EighthRestIdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EighthRest/EighthRestShotState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EighthRest/EighthRestShotState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/HalfRest/HalfRestApproachState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/HalfRest/HalfRestApproachState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/HalfRest/HalfRestIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/HalfRest/HalfRestIdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/QuarterRest/QuarterRestApproachState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/QuarterRest/QuarterRestApproachState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/QuarterRest/QuarterRestIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/QuarterRest/QuarterRestIdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/WholeRest/WholeRestApproachState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/WholeRest/WholeRestApproachState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/WholeRest/WholeRestExitState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/WholeRest/WholeRestExitState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/WholeRest/WholeRestIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/WholeRest/WholeRestIdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/WholeRest/WholeRestShotState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/WholeRest/WholeRestShotState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/IStateBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/IStateBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/IStateBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/IStateBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerIdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerKnockBackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerKnockBackState.cs" afterDir="false" />
-    </list>
+    <list default="true" id="1dca47db-bf3f-4a3b-8e48-e2427e579a45" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +25,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/StateMachineBase.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="401">
@@ -60,6 +39,38 @@
                 <marker date="1562568284145" expanded="true" signature="575:893" ph="{...}" />
                 <marker date="1562568284145" expanded="true" signature="672:732" ph="/* 以前のステートと違うとき、 ... */" />
                 <marker date="1562568284145" expanded="true" signature="921:982" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="135" column="16" selection-start-line="135" selection-start-column="16" selection-end-line="135" selection-end-column="16" />
+              <folding>
+                <marker date="1562568544082" expanded="true" signature="6:104" ph="..." />
+                <marker date="1562568544082" expanded="true" signature="150:3743" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="157:208" ph="/// プレイヤーを制御する ... " />
+                <marker date="1562568544082" expanded="true" signature="295:3741" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="646:714" ph="/* [SerializeField] private NoteManager _noteManager; ... */" />
+                <marker date="1562568544082" expanded="true" signature="1000:1063" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="1073:1126" ph="/// 射撃する ... " />
+                <marker date="1562568544082" expanded="true" signature="1153:1359" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="1196:1349" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="1369:1444" ph="/// 射撃を制御する ... " />
+                <marker date="1562568544082" expanded="true" signature="1474:1859" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="1523:1610" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="1784:1849" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="1878:1999" ph="/// posの位置にから、プレイヤーの移動を制御する ... " />
+                <marker date="1562568544082" expanded="true" signature="2040:2987" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="2250:2916" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="2997:3050" ph="/// 待機する ... " />
+                <marker date="1562568544082" expanded="true" signature="3077:3239" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="3296:3735" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="3379:3725" ph="{...}" />
+                <marker date="1562568544082" expanded="true" signature="3410:3501" ph="/* 敵キャラクターと接触したとき ... */" />
               </folding>
             </state>
           </provider>
@@ -164,11 +175,11 @@
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EighthRest/EighthRestCtl.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerIdleState.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/IStateBase.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/PixelObjectBase.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/PressButtonBase.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/StateMachineBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs" />
       </list>
     </option>
   </component>
@@ -297,7 +308,7 @@
       <workItem from="1562385411503" duration="211000" />
       <workItem from="1562386271691" duration="38613000" />
       <workItem from="1562507116410" duration="10332000" />
-      <workItem from="1562567660541" duration="624000" />
+      <workItem from="1562567660541" duration="887000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1562331841533</created>
@@ -359,7 +370,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93314000" />
+    <option name="totallyTimeSpent" value="93577000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -372,6 +383,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26066098" />
@@ -1399,35 +1411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="123" column="33" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
-          <folding>
-            <marker date="1562544059246" expanded="true" signature="6:104" ph="..." />
-            <marker date="1562544059246" expanded="true" signature="150:3431" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="157:208" ph="/// プレイヤーを制御する ... " />
-            <marker date="1562544059246" expanded="true" signature="295:3429" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="866:929" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="939:992" ph="/// 射撃する ... " />
-            <marker date="1562544059246" expanded="true" signature="1019:1225" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="1062:1215" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="1235:1310" ph="/// 射撃を制御する ... " />
-            <marker date="1562544059246" expanded="true" signature="1340:1725" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="1389:1476" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="1650:1715" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="1744:1865" ph="/// posの位置にから、プレイヤーの移動を制御する ... " />
-            <marker date="1562544059246" expanded="true" signature="1906:2853" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="2116:2782" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="2863:2916" ph="/// 待機する ... " />
-            <marker date="1562544059246" expanded="true" signature="2943:3105" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="3162:3423" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="3243:3413" ph="{...}" />
-            <marker date="1562544059246" expanded="true" signature="3333:3399" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Character.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1484,6 +1467,36 @@
             <marker date="1562568284145" expanded="true" signature="575:893" ph="{...}" />
             <marker date="1562568284145" expanded="true" signature="672:732" ph="/* 以前のステートと違うとき、 ... */" />
             <marker date="1562568284145" expanded="true" signature="921:982" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="135" column="16" selection-start-line="135" selection-start-column="16" selection-end-line="135" selection-end-column="16" />
+          <folding>
+            <marker date="1562568544082" expanded="true" signature="6:104" ph="..." />
+            <marker date="1562568544082" expanded="true" signature="150:3743" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="157:208" ph="/// プレイヤーを制御する ... " />
+            <marker date="1562568544082" expanded="true" signature="295:3741" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="646:714" ph="/* [SerializeField] private NoteManager _noteManager; ... */" />
+            <marker date="1562568544082" expanded="true" signature="1000:1063" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="1073:1126" ph="/// 射撃する ... " />
+            <marker date="1562568544082" expanded="true" signature="1153:1359" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="1196:1349" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="1369:1444" ph="/// 射撃を制御する ... " />
+            <marker date="1562568544082" expanded="true" signature="1474:1859" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="1523:1610" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="1784:1849" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="1878:1999" ph="/// posの位置にから、プレイヤーの移動を制御する ... " />
+            <marker date="1562568544082" expanded="true" signature="2040:2987" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="2250:2916" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="2997:3050" ph="/// 待機する ... " />
+            <marker date="1562568544082" expanded="true" signature="3077:3239" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="3296:3735" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="3379:3725" ph="{...}" />
+            <marker date="1562568544082" expanded="true" signature="3410:3501" ph="/* 敵キャラクターと接触したとき ... */" />
           </folding>
         </state>
       </provider>

@@ -11,6 +11,7 @@ TagManager:
   - ReleaseNote
   - UpperFrame
   - LowerFrame
+  - Object
   layers:
   - Default
   - TransparentFX

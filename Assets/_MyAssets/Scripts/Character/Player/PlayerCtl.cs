@@ -19,17 +19,23 @@ namespace _MyAssets.Scripts.Character.Player
         [SerializeField] private float _shotWaitSec;
         // 発射タイマー
         private float _shotCurrentSec = 0f;
-
         private Vector3 _cacheMousePos;
 
+        // 射撃位置
         [SerializeField] private Transform _bulletPos;
+        
+        //[SerializeField] private NoteManager _noteManager;
 
-        [SerializeField] private NoteManager _noteManager;
-
+        // 画面枠
         [SerializeField] private Vector2 _maxRange;
         [SerializeField] private Vector2 _minRange;
-        [SerializeField] private float _sencitivity = 1f;
         
+        // マウス感度
+        [SerializeField] private float _sencitivity = 1f;
+
+        // 爆発エフェクト
+        [SerializeField] private GameObject _explosion;
+
         void Start()
         {
             _cacheMousePos = Vector3.zero;
@@ -119,13 +125,17 @@ namespace _MyAssets.Scripts.Character.Player
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Enemy") || other.CompareTag("Note"))
+            if (other.CompareTag("Enemy") || other.CompareTag("Object"))
             {
                 // 敵キャラクターと接触したとき
-                if (_noteManager != null)
-                {
-                    // ノートを失う
-                }
+                // オブジェクトと接触したとき
+                
+                // 爆発する
+                var explosion = Instantiate(_explosion);
+                explosion.transform.position = transform.position;
+                
+                // 自身を消去する
+                Destroy(this.gameObject);
             }
         }
     }

@@ -4062,9 +4062,10 @@ GameObject:
   - component: {fileID: 545973261}
   - component: {fileID: 545973263}
   - component: {fileID: 545973262}
+  - component: {fileID: 545973264}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5588,7 +5589,7 @@ Tilemap:
   - m_RefCount: 144
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.754717, g: 0.6870773, b: 0.6870773, a: 1}
+  m_Color: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
   m_Origin: {x: -10, y: -7, z: 0}
   m_Size: {x: 18, y: 115, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -5610,6 +5611,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &545973264
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545973260}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 100
+  m_ExtrusionFactor: 0.00001
 --- !u!4 &549360205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6170300701753735755, guid: 6755a82ce263f3c498a9d134f238b787,
@@ -12200,6 +12217,12 @@ PrefabInstance:
       propertyPath: _shotWaitSec
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 4369722847180442093, guid: 90c93efee0d3ec540892624648887db8,
+        type: 3}
+      propertyPath: _explosion
+      value: 
+      objectReference: {fileID: 2501792985075724444, guid: c1fbbc6bccaa4c544accafa657b677ab,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90c93efee0d3ec540892624648887db8, type: 3}
 --- !u!1001 &4454084316153777404
