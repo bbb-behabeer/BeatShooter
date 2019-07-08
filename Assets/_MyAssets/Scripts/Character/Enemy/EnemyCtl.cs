@@ -1,6 +1,7 @@
 using System;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _MyAssets.Scripts.Common
 {

@@ -4,12 +4,12 @@ using _MyAssets.Scripts.Character;
 using _MyAssets.Scripts.Character.Enemy;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Common
+namespace _MyAssets.Scripts.Enemy
 {
     /**
      * 全休符の制御
      */
-    public class WholeRestCtl: MonoBehaviour
+    public class EnemyMover: MonoBehaviour
     {
         // 全休符の移動速度
         [SerializeField] private int _speed;
@@ -54,61 +54,7 @@ namespace _MyAssets.Scripts.Common
             }
         }
 
-        /// <summary>
-        /// 射撃する
-        /// </summary>
-        public void Shot()
-        {
-            if (_bullet != null)
-            {
-                // 弾の数　8方向
-                var num = 8;
-                for (int i = 0; i < num; i++)
-                {
-                    // 弾丸を生成
-                    var b = UnityEngine.Object.Instantiate(_bullet);
-                    b.transform.position = transform.position;
-
-                    // 弾丸の角度とスピードを変更
-                    var angle = i * 360f / num;
-                    var v = Quaternion.AngleAxis(angle, Vector3.forward) * Vector3.down * _bulletSpeed;
-
-                    // 弾丸の速度を設定
-                    var ctl = b.GetComponent<EnemyBulletCtl>();
-                    ctl.SetVelocity(v);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 射撃を制御する
-        /// </summary>
-        /// <returns></returns>
-        public bool ShotCtl()
-        {
-            if (_shotCurrentSec == 0f)
-            {
-                // タイマーが0秒のときに弾を発射
-                Shot();
-            }
-
-            // タイマーを進める
-            _shotCurrentSec += Time.deltaTime;
-
-            // タイマーが待機時間を超えたとき、タイマーをリセット
-            if (_shotCurrentSec > _shotWaitSec)
-            {
-                _shotCurrentSec = 0;
-                _shotEndCnt++;
-            }
-
-            if (_shotEndCnt >= _shotLimit)
-            {
-                return false;
-            }
-
-            return true;
-        }
+        
 
         /// <summary>
         /// 待機状態を制御する

@@ -13,38 +13,17 @@
             <e p="Base" t="Include">
               <e p="IStateBase.cs" t="Include" />
               <e p="PixelObjectBase.cs" t="Include" />
-              <e p="StateMachineBase.cs" t="Include" />
             </e>
             <e p="Character" t="Include">
               <e p="Enemy" t="Include">
-                <e p="EighthRest" t="Include">
-                  <e p="EighthRestCtl.cs" t="Include" />
-                  <e p="EighthRestIdleState.cs" t="Include" />
-                  <e p="EighthRestShotState.cs" t="Include" />
-                  <e p="EighthRestStateMachine.cs" t="Include" />
-                </e>
+                <e p="ApproachState.cs" t="Include" />
+                <e p="EightShotState.cs" t="Include" />
                 <e p="EnemyBulletCtl.cs" t="Include" />
                 <e p="EnemyCtl.cs" t="Include" />
-                <e p="HalfRest" t="Include">
-                  <e p="HalfRestApproachState.cs" t="Include" />
-                  <e p="HalfRestCtl.cs" t="Include" />
-                  <e p="HalfRestIdleState.cs" t="Include" />
-                  <e p="HalfRestStateMachine.cs" t="Include" />
-                </e>
-                <e p="QuarterRest" t="Include">
-                  <e p="QuarterRestApproachState.cs" t="Include" />
-                  <e p="QuarterRestCtl.cs" t="Include" />
-                  <e p="QuarterRestIdleState.cs" t="Include" />
-                  <e p="QuarterRestStateMachine.cs" t="Include" />
-                </e>
-                <e p="WholeRest" t="Include">
-                  <e p="WholeRestApproachState.cs" t="Include" />
-                  <e p="WholeRestCtl.cs" t="Include" />
-                  <e p="WholeRestExitState.cs" t="Include" />
-                  <e p="WholeRestIdleState.cs" t="Include" />
-                  <e p="WholeRestShotState.cs" t="Include" />
-                  <e p="WholeRestStateMachine.cs" t="Include" />
-                </e>
+                <e p="EnemyMover.cs" t="Include" />
+                <e p="IdleState.cs" t="Include" />
+                <e p="SerialStateMachine.cs" t="Include" />
+                <e p="SingleShotState.cs" t="Include" />
               </e>
               <e p="Player" t="Include">
                 <e p="PlayerBulletCtl.cs" t="Include" />
