@@ -26,6 +26,7 @@
                 <e p="LookAtState.cs" t="Include" />
                 <e p="SerialStateMachine.cs" t="Include" />
                 <e p="SingleShotState.cs" t="Include" />
+                <e p="TimeState.cs" t="Include" />
               </e>
               <e p="Player" t="Include">
                 <e p="PlayerBulletCtl.cs" t="Include" />

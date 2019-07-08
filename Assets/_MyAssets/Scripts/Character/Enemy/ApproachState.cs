@@ -2,6 +2,7 @@ using System;
 using _MyAssets.Scripts.Base;
 using _MyAssets.Scripts.Common;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _MyAssets.Scripts.Character.Enemy
@@ -21,7 +22,7 @@ namespace _MyAssets.Scripts.Character.Enemy
         private int _approachCnt = 10;
 
         // 接近する間隔
-        [SerializeField] private float _duration = 2f;
+        [SerializeField] private float _span = 2f;
         private float _currentSec = 0;
 
         // 接近可能か
@@ -29,7 +30,7 @@ namespace _MyAssets.Scripts.Character.Enemy
         
         // 移動速度
         [SerializeField] private float _speed = 30f;
-        
+
         // プレイヤーの位置
         private Transform _player;
 
@@ -52,7 +53,7 @@ namespace _MyAssets.Scripts.Character.Enemy
             
             _currentSec += Time.deltaTime;
 
-            if (_currentSec > _duration)
+            if (_currentSec > _span)
             {
                 _currentSec = 0;
                 _approachCnt--;

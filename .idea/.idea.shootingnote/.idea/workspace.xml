@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1dca47db-bf3f-4a3b-8e48-e2427e579a45" name="Default Changelist" comment="敵配置を修正" />
+    <list default="true" id="1dca47db-bf3f-4a3b-8e48-e2427e579a45" name="Default Changelist" comment="敵配置を修正">
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/PercussionNote.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/PercussionNote.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recordings/movie.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Recordings/movie.mp4" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/DestroyState.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -45,6 +48,59 @@
                 <marker date="1562588730992" expanded="true" signature="168:231" ph="/// 削除ステート ... " />
                 <marker date="1562588730992" expanded="true" signature="292:401" ph="{...}" />
                 <marker date="1562588730992" expanded="true" signature="342:395" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ApproachState.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+              <folding>
+                <marker date="1562586311037" expanded="false" signature="6:149" ph="..." />
+                <marker date="1562586311037" expanded="true" signature="194:2418" ph="{...}" />
+                <marker date="1562586311037" expanded="true" signature="201:267" ph="/// 接近ステート ... " />
+                <marker date="1562586311037" expanded="true" signature="329:2416" ph="{...}" />
+                <marker date="1562586311037" expanded="true" signature="854:987" ph="{...}" />
+                <marker date="1562586311037" expanded="true" signature="1033:1689" ph="{...}" />
+                <marker date="1562586311037" expanded="true" signature="1074:1203" ph="{...}" />
+                <marker date="1562586311037" expanded="true" signature="1297:1428" ph="{...}" />
+                <marker date="1562586311037" expanded="true" signature="1463:1679" ph="{...}" />
+                <marker date="1562586311037" expanded="true" signature="1494:1541" ph="/* アプローチ回数を超えたら ... */" />
+                <marker date="1562586311037" expanded="true" signature="1699:1761" ph="/// プレイヤーへの接近を始める ... " />
+                <marker date="1562586311037" expanded="true" signature="1798:2051" ph="{...}" />
+                <marker date="1562586311037" expanded="true" signature="1841:2041" ph="{...}" />
+                <marker date="1562586311037" expanded="true" signature="2061:2121" ph="/// プレイヤーの方向を向く ... " />
+                <marker date="1562586311037" expanded="true" signature="2157:2410" ph="{...}" />
+                <marker date="1562586311037" expanded="true" signature="2200:2400" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/TimeState.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1562592042482" expanded="false" signature="6:149" ph="..." />
+                <marker date="1562592042482" expanded="true" signature="194:2418" ph="{...}" />
+                <marker date="1562592042482" expanded="true" signature="201:267" ph="/// 接近ステート ... " />
+                <marker date="1562592042482" expanded="true" signature="329:2416" ph="{...}" />
+                <marker date="1562592042482" expanded="true" signature="854:987" ph="{...}" />
+                <marker date="1562592042482" expanded="true" signature="1033:1689" ph="{...}" />
+                <marker date="1562592042482" expanded="true" signature="1074:1203" ph="{...}" />
+                <marker date="1562592042482" expanded="true" signature="1297:1428" ph="{...}" />
+                <marker date="1562592042482" expanded="true" signature="1463:1679" ph="{...}" />
+                <marker date="1562592042482" expanded="true" signature="1494:1541" ph="/* アプローチ回数を超えたら ... */" />
+                <marker date="1562592042482" expanded="true" signature="1699:1761" ph="/// プレイヤーへの接近を始める ... " />
+                <marker date="1562592042482" expanded="true" signature="1798:2051" ph="{...}" />
+                <marker date="1562592042482" expanded="true" signature="1841:2041" ph="{...}" />
+                <marker date="1562592042482" expanded="true" signature="2061:2121" ph="/// プレイヤーの方向を向く ... " />
+                <marker date="1562592042482" expanded="true" signature="2157:2410" ph="{...}" />
+                <marker date="1562592042482" expanded="true" signature="2200:2400" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -63,28 +119,29 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/IdleState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerBulletCtl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/CameraCtl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EnemyBulletCtl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/PixelObjectBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EnemyCtl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/ScreenShot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteCtl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FlipbookGames/FavoritesTab/Editor/Scripts/FavoritesTab.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ApproachState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ExitState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/DestroyState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/ExplosionCtl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EightShotState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/Scroll.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/LookAtState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/TimeState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/SingleShotState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/SerialStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerBulletCtl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EnemyBulletCtl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteCtl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ExitState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/DestroyState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/LookAtState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/StateBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Others/ReleaseLine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/SerialStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -138,12 +195,12 @@
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerBulletCtl.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/LookAtState.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ExitState.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ApproachState.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/DestroyState.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ApproachState.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1144" />
     <option name="height" value="1047" />
@@ -293,7 +350,7 @@
       <workItem from="1562385411503" duration="211000" />
       <workItem from="1562386271691" duration="38613000" />
       <workItem from="1562507116410" duration="10332000" />
-      <workItem from="1562567660541" duration="12224000" />
+      <workItem from="1562567660541" duration="12672000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1562331841533</created>
@@ -355,7 +412,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104914000" />
+    <option name="totallyTimeSpent" value="105362000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,7 +424,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -425,7 +482,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Note/NoteStateMachine.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/.gitignore" />
     <entry file="file://$PROJECT_DIR$/Assets/FlipbookGames/FavoritesTab/Editor/Scripts/FavoritesTab.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -1305,31 +1361,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ApproachState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="67" column="41" selection-start-line="67" selection-start-column="41" selection-end-line="67" selection-end-column="41" />
-          <folding>
-            <marker date="1562586311037" expanded="false" signature="6:116" ph="..." />
-            <marker date="1562586311037" expanded="true" signature="161:2401" ph="{...}" />
-            <marker date="1562586311037" expanded="true" signature="168:234" ph="/// 接近ステート ... " />
-            <marker date="1562586311037" expanded="true" signature="296:2399" ph="{...}" />
-            <marker date="1562586311037" expanded="true" signature="833:966" ph="{...}" />
-            <marker date="1562586311037" expanded="true" signature="1012:1672" ph="{...}" />
-            <marker date="1562586311037" expanded="true" signature="1053:1182" ph="{...}" />
-            <marker date="1562586311037" expanded="true" signature="1280:1411" ph="{...}" />
-            <marker date="1562586311037" expanded="true" signature="1446:1662" ph="{...}" />
-            <marker date="1562586311037" expanded="true" signature="1477:1524" ph="/* アプローチ回数を超えたら ... */" />
-            <marker date="1562586311037" expanded="true" signature="1682:1744" ph="/// プレイヤーへの接近を始める ... " />
-            <marker date="1562586311037" expanded="true" signature="1781:2034" ph="{...}" />
-            <marker date="1562586311037" expanded="true" signature="1824:2024" ph="{...}" />
-            <marker date="1562586311037" expanded="true" signature="2044:2104" ph="/// プレイヤーの方向を向く ... " />
-            <marker date="1562586311037" expanded="true" signature="2140:2393" ph="{...}" />
-            <marker date="1562586311037" expanded="true" signature="2183:2383" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/IdleState.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1402,6 +1433,55 @@
             <marker date="1562588730992" expanded="true" signature="168:231" ph="/// 削除ステート ... " />
             <marker date="1562588730992" expanded="true" signature="292:401" ph="{...}" />
             <marker date="1562588730992" expanded="true" signature="342:395" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ApproachState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+          <folding>
+            <marker date="1562586311037" expanded="false" signature="6:149" ph="..." />
+            <marker date="1562586311037" expanded="true" signature="194:2418" ph="{...}" />
+            <marker date="1562586311037" expanded="true" signature="201:267" ph="/// 接近ステート ... " />
+            <marker date="1562586311037" expanded="true" signature="329:2416" ph="{...}" />
+            <marker date="1562586311037" expanded="true" signature="854:987" ph="{...}" />
+            <marker date="1562586311037" expanded="true" signature="1033:1689" ph="{...}" />
+            <marker date="1562586311037" expanded="true" signature="1074:1203" ph="{...}" />
+            <marker date="1562586311037" expanded="true" signature="1297:1428" ph="{...}" />
+            <marker date="1562586311037" expanded="true" signature="1463:1679" ph="{...}" />
+            <marker date="1562586311037" expanded="true" signature="1494:1541" ph="/* アプローチ回数を超えたら ... */" />
+            <marker date="1562586311037" expanded="true" signature="1699:1761" ph="/// プレイヤーへの接近を始める ... " />
+            <marker date="1562586311037" expanded="true" signature="1798:2051" ph="{...}" />
+            <marker date="1562586311037" expanded="true" signature="1841:2041" ph="{...}" />
+            <marker date="1562586311037" expanded="true" signature="2061:2121" ph="/// プレイヤーの方向を向く ... " />
+            <marker date="1562586311037" expanded="true" signature="2157:2410" ph="{...}" />
+            <marker date="1562586311037" expanded="true" signature="2200:2400" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/TimeState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1562592042482" expanded="false" signature="6:149" ph="..." />
+            <marker date="1562592042482" expanded="true" signature="194:2418" ph="{...}" />
+            <marker date="1562592042482" expanded="true" signature="201:267" ph="/// 接近ステート ... " />
+            <marker date="1562592042482" expanded="true" signature="329:2416" ph="{...}" />
+            <marker date="1562592042482" expanded="true" signature="854:987" ph="{...}" />
+            <marker date="1562592042482" expanded="true" signature="1033:1689" ph="{...}" />
+            <marker date="1562592042482" expanded="true" signature="1074:1203" ph="{...}" />
+            <marker date="1562592042482" expanded="true" signature="1297:1428" ph="{...}" />
+            <marker date="1562592042482" expanded="true" signature="1463:1679" ph="{...}" />
+            <marker date="1562592042482" expanded="true" signature="1494:1541" ph="/* アプローチ回数を超えたら ... */" />
+            <marker date="1562592042482" expanded="true" signature="1699:1761" ph="/// プレイヤーへの接近を始める ... " />
+            <marker date="1562592042482" expanded="true" signature="1798:2051" ph="{...}" />
+            <marker date="1562592042482" expanded="true" signature="1841:2041" ph="{...}" />
+            <marker date="1562592042482" expanded="true" signature="2061:2121" ph="/// プレイヤーの方向を向く ... " />
+            <marker date="1562592042482" expanded="true" signature="2157:2410" ph="{...}" />
+            <marker date="1562592042482" expanded="true" signature="2200:2400" ph="{...}" />
           </folding>
         </state>
       </provider>
