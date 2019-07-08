@@ -1,3 +1,5 @@
+using _MyAssets.Scripts.Base;
+
 namespace _MyAssets.Scripts.Character.Player
 {
     /**

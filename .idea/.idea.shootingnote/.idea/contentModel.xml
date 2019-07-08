@@ -11,12 +11,11 @@
         <e p="_MyAssets" t="Include">
           <e p="Scripts" t="Include">
             <e p="Base" t="Include">
+              <e p="IStateBase.cs" t="Include" />
               <e p="PixelObjectBase.cs" t="Include" />
-              <e p="PressButtonBase.cs" t="Include" />
               <e p="StateMachineBase.cs" t="Include" />
             </e>
             <e p="Character" t="Include">
-              <e p="Character.cs" t="Include" />
               <e p="Enemy" t="Include">
                 <e p="EighthRest" t="Include">
                   <e p="EighthRestCtl.cs" t="Include" />
@@ -47,7 +46,6 @@
                   <e p="WholeRestStateMachine.cs" t="Include" />
                 </e>
               </e>
-              <e p="IStateBase.cs" t="Include" />
               <e p="Player" t="Include">
                 <e p="PlayerBulletCtl.cs" t="Include" />
                 <e p="PlayerCtl.cs" t="Include" />

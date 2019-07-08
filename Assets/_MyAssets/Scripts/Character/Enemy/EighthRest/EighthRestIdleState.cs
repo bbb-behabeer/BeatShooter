@@ -1,4 +1,5 @@
 using System;
+using _MyAssets.Scripts.Base;
 
 namespace _MyAssets.Scripts.Character.Enemy.EighthRest
 {

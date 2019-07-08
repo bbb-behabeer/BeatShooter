@@ -1,4 +1,5 @@
 using System;
+using _MyAssets.Scripts.Base;
 using _MyAssets.Scripts.Character.Enemy.HalfRest;
 
 namespace _MyAssets.Scripts.Character.Enemy.QuarterRest

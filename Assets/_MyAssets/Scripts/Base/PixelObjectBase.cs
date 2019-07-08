@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-/**
- * https://qiita.com/pixelflag/items/ad817bdd64931e084a46
- */
+/// <summary>
+/// ドットバイドットを実現するクラス
+/// ソース元
+/// https://qiita.com/pixelflag/items/ad817bdd64931e084a46
+/// </summary>
 public class PixelObjectBase : MonoBehaviour
 {
     private Vector3 cashPosition;

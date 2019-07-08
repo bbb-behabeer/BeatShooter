@@ -1,29 +1,27 @@
-using System;
-using _MyAssets.Scripts.Character;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Base
 {
-    /**
-      * ステートマシーン基底
-     */
+    /// <summary>
+    /// 基底ステートマシン
+    /// </summary>
     public class StateMachineBase: MonoBehaviour
     {
         // ステート
         protected IStateBase _state = null;
-        protected IStateBase _cacheState = null;
-        
-        /**
-         * ステートからアクセスして
-         * 実行ステートを変更する
-         */
+        private IStateBase _cacheState = null;
+
+        /// <summary>
+        /// 実行ステートを遷移する
+        /// </summary>
+        /// <param name="state">遷移先ステート</param>
         public void Transition(IStateBase state)
         {
             // ステート離脱処理
             _state.OnStateExit();
             _state = state;
         }
-
+        
         void Update()
         {
             // ステートが設定されていないとき退避
@@ -42,19 +40,5 @@ namespace _MyAssets.Scripts.Base
         {
             _state.OnStateFixedUpdate();
         }
-
-        void OnWillRenderObject()
-        {
-        }
-
-
-        // （必要であれば外部からもステート操作を可能に）
-        // 次のステートへ移動する
-        /*public void NextState()
-        {
-            // ステート離脱とみなしてOnStateExitを実行する
-            _state.OnStateExit();
-            _state = _state.Next;
-        }*/
     }
 }
