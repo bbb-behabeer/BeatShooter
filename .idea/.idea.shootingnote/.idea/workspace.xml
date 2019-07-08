@@ -10,7 +10,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
@@ -29,6 +29,22 @@
                 <marker date="1562507416036" expanded="true" signature="1993:2114" ph="{...}" />
                 <marker date="1562507416036" expanded="true" signature="2124:2240" ph="/// メロディが再生可能かを設定する ... " />
                 <marker date="1562507416036" expanded="true" signature="2287:2368" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/DestroyState.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+              <folding>
+                <marker date="1562588730992" expanded="false" signature="6:116" ph="..." />
+                <marker date="1562588730992" expanded="true" signature="161:403" ph="{...}" />
+                <marker date="1562588730992" expanded="true" signature="168:231" ph="/// 削除ステート ... " />
+                <marker date="1562588730992" expanded="true" signature="292:401" ph="{...}" />
+                <marker date="1562588730992" expanded="true" signature="342:395" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -120,14 +136,14 @@
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/SerialStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/SingleShotState.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerBulletCtl.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/DestroyState.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/LookAtState.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ExitState.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ApproachState.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/DestroyState.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="1144" />
     <option name="height" value="1047" />
@@ -277,7 +293,7 @@
       <workItem from="1562385411503" duration="211000" />
       <workItem from="1562386271691" duration="38613000" />
       <workItem from="1562507116410" duration="10332000" />
-      <workItem from="1562567660541" duration="11855000" />
+      <workItem from="1562567660541" duration="12224000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1562331841533</created>
@@ -339,7 +355,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104545000" />
+    <option name="totallyTimeSpent" value="104914000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -351,10 +367,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.26066098" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="1" />
@@ -367,7 +384,7 @@
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
       <window_info anchor="bottom" id="Run" order="10" />
-      <window_info active="true" anchor="bottom" id="Debug" order="11" sideWeight="0.49946696" visible="true" weight="0.39978677" />
+      <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.49946696" visible="true" weight="0.39978677" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
@@ -1313,20 +1330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/DestroyState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <marker date="1562585840982" expanded="false" signature="6:116" ph="..." />
-            <marker date="1562585840982" expanded="true" signature="161:380" ph="{...}" />
-            <marker date="1562585840982" expanded="true" signature="168:231" ph="/// 削除ステート ... " />
-            <marker date="1562585840982" expanded="true" signature="292:378" ph="{...}" />
-            <marker date="1562585840982" expanded="true" signature="319:372" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/IdleState.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -1385,6 +1388,20 @@
             <marker date="1562507416036" expanded="true" signature="1993:2114" ph="{...}" />
             <marker date="1562507416036" expanded="true" signature="2124:2240" ph="/// メロディが再生可能かを設定する ... " />
             <marker date="1562507416036" expanded="true" signature="2287:2368" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/DestroyState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <marker date="1562588730992" expanded="false" signature="6:116" ph="..." />
+            <marker date="1562588730992" expanded="true" signature="161:403" ph="{...}" />
+            <marker date="1562588730992" expanded="true" signature="168:231" ph="/// 削除ステート ... " />
+            <marker date="1562588730992" expanded="true" signature="292:401" ph="{...}" />
+            <marker date="1562588730992" expanded="true" signature="342:395" ph="{...}" />
           </folding>
         </state>
       </provider>

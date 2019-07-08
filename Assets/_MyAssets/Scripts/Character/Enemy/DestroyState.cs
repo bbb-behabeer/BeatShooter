@@ -13,7 +13,7 @@ namespace _MyAssets.Scripts.Character.Enemy
     [Serializable]
     public class DestroyState : StateBase
     {
-        void Start()
+        public override void OnStateEnter()
         {
             Destroy(gameObject);
         }
