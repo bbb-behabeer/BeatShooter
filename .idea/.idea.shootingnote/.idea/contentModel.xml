@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\furik\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\furik\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_shootingnote.1924636901.00" t="ExcludeRecursive" />
+    <e p="E:\work\Unity\shootingnote" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="_MyAssets" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Base" t="Include">
+              <e p="PixelObjectBase.cs" t="Include" />
+              <e p="PressButtonBase.cs" t="Include" />
+              <e p="StateMachineBase.cs" t="Include" />
+            </e>
+            <e p="Character" t="Include">
+              <e p="Character.cs" t="Include" />
+              <e p="Enemy" t="Include">
+                <e p="EighthRest" t="Include">
+                  <e p="EighthRestCtl.cs" t="Include" />
+                  <e p="EighthRestIdleState.cs" t="Include" />
+                  <e p="EighthRestShotState.cs" t="Include" />
+                  <e p="EighthRestStateMachine.cs" t="Include" />
+                </e>
+                <e p="EnemyBulletCtl.cs" t="Include" />
+                <e p="EnemyCtl.cs" t="Include" />
+                <e p="HalfRest" t="Include">
+                  <e p="HalfRestApproachState.cs" t="Include" />
+                  <e p="HalfRestCtl.cs" t="Include" />
+                  <e p="HalfRestIdleState.cs" t="Include" />
+                  <e p="HalfRestStateMachine.cs" t="Include" />
+                </e>
+                <e p="QuarterRest" t="Include">
+                  <e p="QuarterRestApproachState.cs" t="Include" />
+                  <e p="QuarterRestCtl.cs" t="Include" />
+                  <e p="QuarterRestIdleState.cs" t="Include" />
+                  <e p="QuarterRestStateMachine.cs" t="Include" />
+                </e>
+                <e p="WholeRest" t="Include">
+                  <e p="WholeRestApproachState.cs" t="Include" />
+                  <e p="WholeRestCtl.cs" t="Include" />
+                  <e p="WholeRestExitState.cs" t="Include" />
+                  <e p="WholeRestIdleState.cs" t="Include" />
+                  <e p="WholeRestShotState.cs" t="Include" />
+                  <e p="WholeRestStateMachine.cs" t="Include" />
+                </e>
+              </e>
+              <e p="IStateBase.cs" t="Include" />
+              <e p="Player" t="Include">
+                <e p="PlayerBulletCtl.cs" t="Include" />
+                <e p="PlayerCtl.cs" t="Include" />
+                <e p="PlayerIdleState.cs" t="Include" />
+                <e p="PlayerKnockBackState.cs" t="Include" />
+                <e p="PlayerStateMachine.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Common" t="Include">
+              <e p="CameraCtl.cs" t="Include" />
+              <e p="ExplosionCtl.cs" t="Include" />
+              <e p="PlayerInput.cs" t="Include" />
+              <e p="ScreenShot.cs" t="Include" />
+              <e p="Scroll.cs" t="Include" />
+            </e>
+            <e p="Note" t="Include">
+              <e p="NoteCtl.cs" t="Include" />
+              <e p="NoteManager.cs" t="Include" />
+            </e>
+            <e p="Others" t="Include">
+              <e p="ReleaseLine.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ConsolePro" t="Include">
+          <e p="ConsoleProDebug.cs" t="Include" />
+          <e p="Remote" t="Include">
+            <e p="ConsoleProRemoteServer.cs" t="Include" />
+            <e p="LiteNetLib" t="Include">
+              <e p="FastBitConverter.cs" t="Include" />
+              <e p="INetEventListener.cs" t="Include" />
+              <e p="NatPunchModule.cs" t="Include" />
+              <e p="NetConstants.cs" t="Include" />
+              <e p="NetDataReader.cs" t="Include" />
+              <e p="NetDataWriter.cs" t="Include" />
+              <e p="NetDebug.cs" t="Include" />
+              <e p="NetEndPoint.cs" t="Include" />
+              <e p="NetManager.cs" t="Include" />
+              <e p="NetPacket.cs" t="Include" />
+              <e p="NetPacketPool.cs" t="Include" />
+              <e p="NetPeer.cs" t="Include" />
+              <e p="NetPeerCollection.cs" t="Include" />
+              <e p="NetSerializer.cs" t="Include" />
+              <e p="NetSocket.cs" t="Include" />
+              <e p="NetThread.cs" t="Include" />
+              <e p="NetUtils.cs" t="Include" />
+              <e p="NtpSyncModule.cs" t="Include" />
+              <e p="ReliableChannel.cs" t="Include" />
+              <e p="SequencedChannel.cs" t="Include" />
+              <e p="SimpleChannel.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="FlipbookGames" t="Include">
+          <e p="Common" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="FG_GameObjectGUIDs.cs" t="Include" />
+            </e>
+          </e>
+          <e p="FavoritesTab" t="Include">
+            <e p="_readme.txt" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="AboutFavoritesTab.cs" t="Include" />
+                <e p="FavoritesTab.cs" t="Include" />
+                <e p="GameObjectGUIDsInspector.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Sirenix" t="Include">
+            <e p="Assemblies" t="Include">
+              <e p="link.xml" t="Include" />
+              <e p="Sirenix.OdinInspector.Attributes.xml" t="Include" />
+              <e p="Sirenix.OdinInspector.Editor.xml" t="Include" />
+              <e p="Sirenix.Serialization.Config.xml" t="Include" />
+              <e p="Sirenix.Utilities.Editor.xml" t="Include" />
+              <e p="Sirenix.Utilities.xml" t="Include" />
+            </e>
+            <e p="Demos" t="Include">
+              <e p="Attributes Overview" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="AssetListExamples.cs" t="Include" />
+                  <e p="AttributesOnClassesExample.cs" t="Include" />
+                  <e p="BoxGroupExamples.cs" t="Include" />
+                  <e p="ButtonExamples.cs" t="Include" />
+                  <e p="ButtonGroupExamples.cs" t="Include" />
+                  <e p="ButtonWithParametersExamples.cs" t="Include" />
+                  <e p="ColorPaletteExamples.cs" t="Include" />
+                  <e p="CombineGroupAttributeExample1.cs" t="Include" />
+                  <e p="CombineGroupAttributeExample2.cs" t="Include" />
+                  <e p="CombineGroupAttributeExample3.cs" t="Include" />
+                  <e p="CustomContextMenuExamples.cs" t="Include" />
+                  <e p="CustomValueDrawerExamples.cs" t="Include" />
+                  <e p="DebugSerializationExample.cs" t="Include" />
+                  <e p="DefaultDrawerChanges.cs" t="Include" />
+                  <e p="DelegateExamples.cs" t="Include" />
+                  <e p="DictionaryExamples.cs" t="Include" />
+                  <e p="DisableContextMenuExamples.cs" t="Include" />
+                  <e p="DisableInEditorAndPlayModeExamples.cs" t="Include" />
+                  <e p="DisplayAsStringExamples.cs" t="Include" />
+                  <e p="DrawWithUnityExamples.cs" t="Include" />
+                  <e p="EnableAndDisableIfExamples.cs" t="Include" />
+                  <e p="EnumPagingExamples.cs" t="Include" />
+                  <e p="EnumToggleButtonsExamples.cs" t="Include" />
+                  <e p="FilePathExamples.cs" t="Include" />
+                  <e p="FolderPathExamples.cs" t="Include" />
+                  <e p="FoldoutGroupAttributeExamples.cs" t="Include" />
+                  <e p="GUIColorExamples.cs" t="Include" />
+                  <e p="HideInEditorAndPlayModeExamples.cs" t="Include" />
+                  <e p="HideLabelExamples.cs" t="Include" />
+                  <e p="HideReferenceObjectPickerExamples.cs" t="Include" />
+                  <e p="HorizontalGroupAttributeExamples.cs" t="Include" />
+                  <e p="IncorrectUseOfOdinSerializeAttributeExamples1.cs" t="Include" />
+                  <e p="IncorrectUseOfOdinSerializeAttributeExamples2.cs" t="Include" />
+                  <e p="IndentExamples.cs" t="Include" />
+                  <e p="InfoBoxExamples.cs" t="Include" />
+                  <e p="InlineButtonExamples.cs" t="Include" />
+                  <e p="InlineEditorExamples.cs" t="Include" />
+                  <e p="InlinePropertyExamples.cs" t="Include" />
+                  <e p="LabelTextExamples.cs" t="Include" />
+                  <e p="ListExamples.cs" t="Include" />
+                  <e p="MinMaxSliderExamples.cs" t="Include" />
+                  <e p="MinMaxValueValueExamples.cs" t="Include" />
+                  <e p="MultiLinePropertyExamples.cs" t="Include" />
+                  <e p="NoBoilerplate.cs" t="Include" />
+                  <e p="OnInspectorGUIExamples.cs" t="Include" />
+                  <e p="OnValueChangedExamples.cs" t="Include" />
+                  <e p="PrefabRelatedAttributesExamples.cs" t="Include" />
+                  <e p="ProgressBarExamples.cs" t="Include" />
+                  <e p="PropertyOrderExamples.cs" t="Include" />
+                  <e p="PropertyTooltipExamples.cs" t="Include" />
+                  <e p="ReadOnlyExamples.cs" t="Include" />
+                  <e p="RequiredExamples.cs" t="Include" />
+                  <e p="ResponsiveButtonGroupExample.cs" t="Include" />
+                  <e p="SceneAndAssetsOnlyExamples.cs" t="Include" />
+                  <e p="SerializeAnything.cs" t="Include" />
+                  <e p="ShowAndHideIfExamples.cs" t="Include" />
+                  <e p="ShowDrawerChainExamples.cs" t="Include" />
+                  <e p="ShowInInspectorExamples.cs" t="Include" />
+                  <e p="ShowPropertiesInTheInspectorExamples.cs" t="Include" />
+                  <e p="StaticInspectorsExample.cs" t="Include" />
+                  <e p="SuffixLabelExamples.cs" t="Include" />
+                  <e p="TabExamples.cs" t="Include" />
+                  <e p="TableListExamples.cs" t="Include" />
+                  <e p="TableMatrixExamples.cs" t="Include" />
+                  <e p="TitleExamples.cs" t="Include" />
+                  <e p="TitleGroupExamples.cs" t="Include" />
+                  <e p="ToggleExamples.cs" t="Include" />
+                  <e p="ToggleLeftExamples.cs" t="Include" />
+                  <e p="TwoDimensionalArrayExamples.cs" t="Include" />
+                  <e p="TypeFilterExamples.cs" t="Include" />
+                  <e p="UnityPreviewFieldsExamples.cs" t="Include" />
+                  <e p="ValidateInputExamples.cs" t="Include" />
+                  <e p="ValueDropdownExamples.cs" t="Include" />
+                  <e p="VerticalGroupExamples.cs" t="Include" />
+                  <e p="WrapExamples.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Odin Inspector" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="AssemblyImportSettingsAutomation.cs" t="Include" />
+                  <e p="BuildAOTAutomation.cs" t="Include" />
+                  <e p="EnsureOdinInspectorDefine.cs" t="Include" />
+                  <e p="FixBrokenUnityObjectWrapperDrawer.cs" t="Include" />
+                  <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.asmdef" t="Include" />
+                  <e p="SyncListDrawer.cs" t="Include" />
+                  <e p="SyncVarAttributeDrawer.cs" t="Include" />
+                  <e p="Vector2IntMinMaxAttributeDrawer.cs" t="Include" />
+                  <e p="VectorIntDrawers.cs" t="Include" />
+                  <e p="VectorIntPropertyResolvers.cs" t="Include" />
+                </e>
+                <e p="SerializedNetworkBehaviour.cs" t="Include" />
+                <e p="Sirenix.OdinInspector.CompatibilityLayer.asmdef" t="Include" />
+                <e p="VectorIntFormatters.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Readme.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Samples" t="Include">
+          <e p="Unity Recorder" t="Include">
+            <e p="2.0.1-preview.1" t="Include">
+              <e p="Recorder Editor Sample" t="Include">
+                <e p="RecorderEditorExample.cs" t="Include" />
+                <e p="Unity.Recorder.Samples.Editor.asmdef" t="Include" />
+              </e>
+              <e p="Screenshot Capture Sample" t="Include">
+                <e p="CaptureScreenShotExample.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="shootingnote.sln" t="IncludeFlat" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.csproj" t="IncludeRecursive" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Unity.Recorder.Samples.Editor.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>
