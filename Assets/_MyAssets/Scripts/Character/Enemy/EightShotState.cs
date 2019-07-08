@@ -11,7 +11,7 @@ namespace _MyAssets.Scripts.Character.Enemy
     /// オフセットの位置で次のステートへ
     /// </summary>
     [Serializable]
-    public class EightShotState : MonoBehaviour, IStateBase
+    public class EightShotState : StateBase
     {
         // 弾丸
         [SerializeField] private GameObject _bullet;
@@ -35,11 +35,7 @@ namespace _MyAssets.Scripts.Character.Enemy
         // 弾丸の速度
         private float _bulletSpeed = 100f;
 
-        public void OnStateEnter()
-        {
-        }
-
-        public void OnStateUpdate()
+        public new void OnStateUpdate()
         {
             if (_shootable)
             {
@@ -67,14 +63,6 @@ namespace _MyAssets.Scripts.Character.Enemy
             }
         }
 
-        public void OnStateFixedUpdate()
-        {
-        }
-
-        public void OnStateExit()
-        {
-        }
-        
         /// <summary>
         /// 射撃する
         /// </summary>

@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 5923373787793158191}
   - component: {fileID: 4103337217934645624}
   - component: {fileID: -4065630208784139169}
-  - component: {fileID: 8009230555050242860}
-  - component: {fileID: 8009230555050242861}
+  - component: {fileID: 4448737390913776136}
+  - component: {fileID: 7414117124936151131}
+  - component: {fileID: 514844897610537970}
+  - component: {fileID: -9132500433775857576}
   m_Layer: 0
   m_Name: 8buKyuhu
   m_TagString: Enemy
@@ -146,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explosion: {fileID: 2501792985075724444, guid: c1fbbc6bccaa4c544accafa657b677ab,
     type: 3}
---- !u!114 &8009230555050242860
+--- !u!114 &4448737390913776136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,16 +157,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 857626769000194195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84653b1141034d118bbfd6f31f28ef1d, type: 3}
+  m_Script: {fileID: 11500000, guid: baa0b33500ba7404a93a04bc137ed43a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 80
+  _stateList:
+  - {fileID: 7414117124936151131}
+  - {fileID: 514844897610537970}
+  - {fileID: -9132500433775857576}
+--- !u!114 &7414117124936151131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857626769000194195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d6ffb6442b4760bd3642ab370955bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _offset: 120
+  _stateMachine: {fileID: 4448737390913776136}
+--- !u!114 &514844897610537970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857626769000194195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1695681391447cc8f980c902840e5ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _bullet: {fileID: 315586445128424836, guid: 93dd20d5422ec404e9a5272e8f4fc5e9, type: 3}
-  _bulletSpeed: 80
-  _shotWaitSec: 1
-  _offsetY: 140
-  _shotLimit: 3
---- !u!114 &8009230555050242861
+  _stateMachine: {fileID: 4448737390913776136}
+  _duration: 2
+  _shotCnt: 4
+  _bulletSpeed: 100
+--- !u!114 &-9132500433775857576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,7 +204,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 857626769000194195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 491f7c4d8b5f4840a19d41c44aff0c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b2b9151c72e40e59867f786ed40bcad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ctl: {fileID: 8009230555050242860}
+  _speed: 100

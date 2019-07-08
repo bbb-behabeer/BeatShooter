@@ -11,7 +11,7 @@ namespace _MyAssets.Scripts.Character.Enemy
     /// プレイヤーに接近する
     /// </summary>
     [Serializable]
-    public class ApproachState : MonoBehaviour, IStateBase
+    public class ApproachState : StateBase
     {
         private SerialStateMachine _stateMachine;
         
@@ -39,15 +39,13 @@ namespace _MyAssets.Scripts.Character.Enemy
             _player = GameObject.FindWithTag("Player").transform;
             _rb = GetComponent<Rigidbody2D>();
         }
-        public void OnStateEnter()
-        {
-        }
 
-        public void OnStateUpdate()
+        public override void OnStateUpdate()
         {
             if (_approachable)
             {
                 // 角度を変えてプレイヤーに接近する
+                LookAtPlayer();
                 StartApproach();
             }
             
@@ -68,18 +66,10 @@ namespace _MyAssets.Scripts.Character.Enemy
             }
         }
 
-        public void OnStateFixedUpdate()
-        {
-        }
-
-        public void OnStateExit()
-        {
-        }
-        
         /// <summary>
         /// プレイヤーへの接近を始める
         /// </summary>
-        public void StartApproach()
+        private void StartApproach()
         {
             if (_player != null)
             {
@@ -93,7 +83,7 @@ namespace _MyAssets.Scripts.Character.Enemy
         /// <summary>
         /// プレイヤーの方向を向く
         /// </summary>
-        public void LookAtPlayer()
+        private void LookAtPlayer()
         {
             if (_player != null)
             {

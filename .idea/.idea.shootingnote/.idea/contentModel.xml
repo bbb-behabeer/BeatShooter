@@ -11,8 +11,8 @@
         <e p="_MyAssets" t="Include">
           <e p="Scripts" t="Include">
             <e p="Base" t="Include">
-              <e p="IStateBase.cs" t="Include" />
               <e p="PixelObjectBase.cs" t="Include" />
+              <e p="StateBase.cs" t="Include" />
             </e>
             <e p="Character" t="Include">
               <e p="Enemy" t="Include">
@@ -20,8 +20,9 @@
                 <e p="EightShotState.cs" t="Include" />
                 <e p="EnemyBulletCtl.cs" t="Include" />
                 <e p="EnemyCtl.cs" t="Include" />
-                <e p="EnemyMover.cs" t="Include" />
+                <e p="ExitState.cs" t="Include" />
                 <e p="IdleState.cs" t="Include" />
+                <e p="LookAtState.cs" t="Include" />
                 <e p="SerialStateMachine.cs" t="Include" />
                 <e p="SingleShotState.cs" t="Include" />
               </e>

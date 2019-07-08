@@ -11,7 +11,7 @@ namespace _MyAssets.Scripts.Character.Enemy
     /// オフセットの位置で次のステートへ
     /// </summary>
     [Serializable]
-    public class IdleState : MonoBehaviour, IStateBase
+    public class IdleState : StateBase
     {
         // オフセット
         [SerializeField] private float _offset = 100f;
@@ -20,27 +20,18 @@ namespace _MyAssets.Scripts.Character.Enemy
         [SerializeField]
         private SerialStateMachine _stateMachine;
 
-        public void OnStateEnter()
-        {
-        }
-
-        public void OnStateUpdate()
+        public override void OnStateUpdate()
         {
             // オフセットまで待機
             if (transform.position.y < _offset)
             {
                 // オフセットに入ったら
+                // その場で静止
+                transform.parent = null;
+                
                 // ステート遷移する
                 _stateMachine.Next();
             }
-        }
-
-        public void OnStateFixedUpdate()
-        {
-        }
-
-        public void OnStateExit()
-        {
         }
     }
 }

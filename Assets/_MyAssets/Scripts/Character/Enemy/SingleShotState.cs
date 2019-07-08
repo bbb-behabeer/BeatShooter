@@ -11,7 +11,7 @@ namespace _MyAssets.Scripts.Character.Enemy
     /// オフセットの位置で次のステートへ
     /// </summary>
     [Serializable]
-    public class SingleShotState : MonoBehaviour, IStateBase
+    public class SingleShotState : StateBase
     {
         // 弾丸
         [SerializeField] private GameObject _bullet;
@@ -42,11 +42,7 @@ namespace _MyAssets.Scripts.Character.Enemy
             _player = GameObject.FindWithTag("Player").transform;
         }
 
-        public void OnStateEnter()
-        {
-        }
-
-        public void OnStateUpdate()
+        public override void OnStateUpdate()
         {
             if (_shootable)
             {
@@ -74,20 +70,12 @@ namespace _MyAssets.Scripts.Character.Enemy
             }
         }
 
-        public void OnStateFixedUpdate()
-        {
-        }
-
-        public void OnStateExit()
-        {
-        }
-        
         /// <summary>
         /// 射撃する
         /// </summary>
-        public void Shot()
+        private void Shot()
         {
-            if (_bullet != null)
+            if (_bullet != null && _player != null)
             {
                 // 弾丸を生成
                 var b = UnityEngine.Object.Instantiate(_bullet);

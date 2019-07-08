@@ -14,17 +14,31 @@ namespace _MyAssets.Scripts.Character
 
         private Rigidbody2D _rb;
 
+        private Vector3 _cache;
+
+        // 最大距離
+        [SerializeField]
+        private float _dist;
+        
         void Start()
         {
             // 速度を設定
             _rb = GetComponent<Rigidbody2D>();
             _rb.velocity = velocity;
+            
+            // 生成位置をキャッシュ
+            _cache = transform.position;
         }
 
-        void OnBecameInvisible()
+        void Update()
         {
-            // 画面外で消去
-            Destroy(this.gameObject);
+            // キャッシュと現在位置の差分を計算
+            var diff = transform.position - _cache;
+            
+            // 差分が最大距離を超えると
+            // 自身を削除する
+            if (diff.magnitude > _dist)
+                Destroy(gameObject);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -33,7 +47,7 @@ namespace _MyAssets.Scripts.Character
             {
                 // ノートに接触したとき
                 // ゲームオブジェクトを削除
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
 
