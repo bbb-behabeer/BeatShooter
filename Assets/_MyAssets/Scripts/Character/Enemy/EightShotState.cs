@@ -2,6 +2,7 @@ using System;
 using _MyAssets.Scripts.Base;
 using _MyAssets.Scripts.Common;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _MyAssets.Scripts.Character.Enemy
@@ -21,21 +22,21 @@ namespace _MyAssets.Scripts.Character.Enemy
         private SerialStateMachine _stateMachine;
 
         // 現在の秒数
-        private float _shotCurrentSec;
+        private float _shotCurrentSec = 0;
         // 射撃間隔
         [SerializeField]
-        private float _duration;
+        private float _span;
 
         // 射撃回数
         [SerializeField] private int _shotCnt;
 
-        private bool _shootable;
+        private bool _shootable = false;
         
         [SerializeField]
         // 弾丸の速度
         private float _bulletSpeed = 100f;
 
-        public new void OnStateUpdate()
+        public override void OnStateUpdate()
         {
             if (_shootable)
             {
@@ -47,7 +48,7 @@ namespace _MyAssets.Scripts.Character.Enemy
             // 現在の秒数を経過させる
             _shotCurrentSec += Time.deltaTime;
 
-            if (_shotCurrentSec > _duration)
+            if (_shotCurrentSec > _span)
             {
                 // 射撃間隔を経過したとき
                 // 射撃をリセットする
@@ -66,7 +67,7 @@ namespace _MyAssets.Scripts.Character.Enemy
         /// <summary>
         /// 射撃する
         /// </summary>
-        public void Shot()
+        private void Shot()
         {
             if (_bullet != null)
             {

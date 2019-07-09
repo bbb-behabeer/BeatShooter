@@ -117,8 +117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 1000, z: 0}
-  _upperBound: 160
-  _dist: 160
+  _upperBound: 120
+  _dist: 120
 --- !u!61 &2395394922895911071
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 315586445128424836, guid: 93dd20d5422ec404e9a5272e8f4fc5e9, type: 3}
   _stateMachine: {fileID: -4254765565955641241}
-  _duration: 1
+  _span: 1
   _shotCnt: 4
   _bulletSpeed: 100
 --- !u!114 &221936555122312405
