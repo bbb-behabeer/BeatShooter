@@ -35,9 +35,16 @@ namespace _MyAssets.Scripts.Note
         // リリースノートのキャッシュ
         private GameObject _releaseNoteCache;
 
+        // スプライトレンダラー
         private SpriteRenderer _sprite;
+        // スプライトの今の色
         private Color _cacheColor;
+        // 押下したときの色
         [SerializeField] Color _pressedColor;
+
+        // スプライトの色の変更期間
+        [SerializeField]
+        private float _colorDuration = 1.2f;
 
         private void Start()
         {
@@ -48,10 +55,9 @@ namespace _MyAssets.Scripts.Note
 
         private void Update()
         {
-            // スプライトの色をデフォルトに
-            _sprite.color = _cacheColor;
+            
 
-            if (PlayerInput.MouseButtonState.Equals(MouseButtonState.Press))
+            if (PlayerInput.ButtonDown)
             {
                 // マウス押下時
                 
@@ -60,6 +66,11 @@ namespace _MyAssets.Scripts.Note
                 
                 // リリースする
                 Release();
+            }
+            else
+            {
+                // スプライトの色をデフォルトに
+                _sprite.color = Color.Lerp(_sprite.color, _cacheColor, Time.deltaTime * _colorDuration);
             }
         }
 
@@ -77,7 +88,10 @@ namespace _MyAssets.Scripts.Note
             if (other.CompareTag("ReleaseNote"))
             {
                 // リリースラインからリリースノートが離脱したとき
-                Release();
+                // リリースラインとノートを削除する
+                ReleaseEffect();
+                DestroyAllNote();
+                _releaseNoteCache = null;
             }
         }
 

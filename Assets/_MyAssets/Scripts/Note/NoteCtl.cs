@@ -22,10 +22,14 @@ namespace _MyAssets.Scripts.Character.Note
     {
         // 担当するパート
         [SerializeField] private Part _part;
+        // ノート再生時のエフェクト
         [SerializeField] private GameObject _effect;
         
         // ノート管理オブジェクト
         private NoteManager _noteManager;
+
+        // 削除可能となるY座標
+        [SerializeField] private float _destroyable = 200;
         
         void Start()
         {
@@ -58,8 +62,8 @@ namespace _MyAssets.Scripts.Character.Note
         /// <returns></returns>
         public bool CanDestroy()
         {
-            // 自身がその場に停止しているとき
-            if (transform.parent == null)
+            // 削除可能となる座標を超えたとき
+            if (transform.position.y < _destroyable)
                 return true;
             return false;
         }

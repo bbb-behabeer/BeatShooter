@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -742444121
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: -3883955804096681673, guid: 65304f2d8f7d2b34f9cc3a69b1a52f2f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _part: 0
   _effect: {fileID: 6178847348995951011, guid: d56eef5bd8769c7458fffac1fbeb672d, type: 3}
+  _destroyable: 200
 --- !u!95 &1779687512
 Animator:
   serializedVersion: 3
