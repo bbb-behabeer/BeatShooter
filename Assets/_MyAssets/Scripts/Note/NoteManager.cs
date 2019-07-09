@@ -61,7 +61,7 @@ namespace _MyAssets.Scripts.Note
                 // ノートを再生する
                 //_audioSource.clip = _noteList[_offset];
                 _audioSource.PlayOneShot(_noteList[_offset]);
-                _volumeUI.Play("Playing");
+                _volumeUI.Play("VolumePlaying");
                 
                 // ボリュームを最大に
                 _audioSource.volume = _volumeMax;
