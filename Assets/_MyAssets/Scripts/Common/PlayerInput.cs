@@ -37,14 +37,7 @@ namespace _MyAssets.Scripts.Common
 
         public static bool ButtonDown => _buttonDown;
 
-        public static MouseButtonState MouseButtonState
-        {
-            get
-            {
-                //UpdateState();
-                return _mouseButtonState;
-            }
-        }
+        public static MouseButtonState MouseButtonState => _mouseButtonState;
 
         // 監視するボタン番号
         private static int _mouseLeftButton = 0;
