@@ -12,6 +12,8 @@ namespace _MyAssets.Scripts.Character
         // 弾丸の速度
         [SerializeField] private Vector3 velocity;
 
+        [SerializeField] private float _upperBound = 200f;
+
         private Rigidbody2D _rb;
 
         private Vector3 _cache;
@@ -35,9 +37,10 @@ namespace _MyAssets.Scripts.Character
             // キャッシュと現在位置の差分を計算
             var diff = transform.position - _cache;
             
-            // 差分が最大距離を超えると
+            // 差分が最大距離を超えるか
+            // 位置が一定の値を超えると
             // 自身を削除する
-            if (diff.magnitude > _dist)
+            if (diff.magnitude > _dist || transform.position.y > _upperBound)
                 Destroy(gameObject);
         }
 
