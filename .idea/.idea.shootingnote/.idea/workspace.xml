@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dca47db-bf3f-4a3b-8e48-e2427e579a45" name="Default Changelist" comment="敵配置を修正">
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/Effect/11.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/Effect/11.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/Effect/13.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sounds/Effect/13.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/UraMelody/11.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sounds/UraMelody/11.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recordings/movie.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Recordings/movie.mp4" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

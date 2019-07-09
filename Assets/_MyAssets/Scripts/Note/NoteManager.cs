@@ -22,7 +22,7 @@ namespace _MyAssets.Scripts.Note
         private AudioSource _audioSource;
         
         // ボリュームUI
-        //[SerializeField] private Animator _volumeUI;
+        [SerializeField] private Animator _volumeUI;
         
         // ボリューム
         [SerializeField] private float _volumeMax = 1f;
@@ -61,7 +61,7 @@ namespace _MyAssets.Scripts.Note
                 // ノートを再生する
                 //_audioSource.clip = _noteList[_offset];
                 _audioSource.PlayOneShot(_noteList[_offset]);
-                //_volumeUI.Play("Playing");
+                _volumeUI.Play("Playing");
                 
                 // ボリュームを最大に
                 _audioSource.volume = _volumeMax;
