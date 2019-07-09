@@ -1,4 +1,5 @@
 using System;
+using _MyAssets.Scripts.Note;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Character.Note

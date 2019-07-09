@@ -9,9 +9,8 @@ TagManager:
   - Note
   - OutBound
   - ReleaseNote
-  - UpperFrame
-  - LowerFrame
   - Object
+  - LowerBound
   layers:
   - Default
   - TransparentFX
@@ -48,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Note
+    uniqueID: 3552523175
     locked: 0

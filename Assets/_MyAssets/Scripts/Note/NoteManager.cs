@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using _MyAssets.Scripts.Character.Note;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Character.Note
+namespace _MyAssets.Scripts.Note
 {
     /// <summary>
     /// ノートの管理
@@ -21,7 +22,7 @@ namespace _MyAssets.Scripts.Character.Note
         private AudioSource _audioSource;
         
         // ボリュームUI
-        [SerializeField] private Animator _volumeUI;
+        //[SerializeField] private Animator _volumeUI;
         
         // ボリューム
         [SerializeField] private float _volumeMax = 1f;
@@ -58,9 +59,9 @@ namespace _MyAssets.Scripts.Character.Note
             {
                 // 再生可能のとき
                 // ノートを再生する
-                _audioSource.clip = _noteList[_offset];
-                _audioSource.Play();
-                _volumeUI.Play("Playing");
+                //_audioSource.clip = _noteList[_offset];
+                _audioSource.PlayOneShot(_noteList[_offset]);
+                //_volumeUI.Play("Playing");
                 
                 // ボリュームを最大に
                 _audioSource.volume = _volumeMax;
