@@ -13,6 +13,8 @@ namespace _MyAssets.Scripts.Common
         // 爆発エフェクト
         [SerializeField] private GameObject _explosion;
         
+        // TODO 体力を追加
+        
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("PlayerBullet") || other.CompareTag("Player"))

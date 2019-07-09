@@ -3,6 +3,7 @@ using _MyAssets.Scripts.Character.Note;
 using _MyAssets.Scripts.Common;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace _MyAssets.Scripts.Note
 {
@@ -36,11 +37,19 @@ namespace _MyAssets.Scripts.Note
         private GameObject _releaseNoteCache;
 
         // スプライトレンダラー
-        private SpriteRenderer _sprite;
-        // スプライトの今の色
+        private SpriteRenderer _myRenderer;
+        // アイコンのスプライトレンダラー
+        [SerializeField] private SpriteRenderer _iconRenderer;
+        
+        // スプライトの色のキャッシュ
         private Color _cacheColor;
         // 押下したときの色
         [SerializeField] Color _pressedColor;
+        
+        // スプライト画像のキャッシュ
+        private Sprite _cacheSprite;
+        // 謳歌したときのアイコン
+        [SerializeField] private Sprite _pressedSprite;
 
         // スプライトの色の変更期間
         [SerializeField]
@@ -48,29 +57,27 @@ namespace _MyAssets.Scripts.Note
 
         private void Start()
         {
-            _sprite = GetComponent<SpriteRenderer>();
+            _myRenderer = GetComponent<SpriteRenderer>();
             // 色をキャッシュする
-            _cacheColor = _sprite.color;
+            _cacheColor = _myRenderer.color;
+            _cacheSprite = _iconRenderer.sprite;
         }
 
         private void Update()
         {
-            
-
-            if (PlayerInput.ButtonDown)
+            if (PlayerInput.MouseButtonState.Equals(MouseButtonState.Press))
             {
-                // マウス押下時
-                
-                // スプライトの色を変更する
-                _sprite.color = _pressedColor;
-                
-                // リリースする
-                Release();
+                // マウス押下中
+                // スプライトを押下時のものに変更する
+                _myRenderer.color = _pressedColor;
+                _iconRenderer.sprite = _pressedSprite;
             }
             else
             {
-                // スプライトの色をデフォルトに
-                _sprite.color = Color.Lerp(_sprite.color, _cacheColor, Time.deltaTime * _colorDuration);
+                // 無操作時
+                // スプライトをデフォルトに
+                _myRenderer.color = Color.Lerp(_myRenderer.color, _cacheColor, Time.deltaTime * _colorDuration);
+                _iconRenderer.sprite = _cacheSprite;
             }
         }
 
@@ -78,20 +85,26 @@ namespace _MyAssets.Scripts.Note
         {
             if (other.CompareTag("ReleaseNote"))
             {
-                // プレイヤーとの衝突時
-                _releaseNoteCache = other.gameObject;
-            }
-        }
-        
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            if (other.CompareTag("ReleaseNote"))
-            {
-                // リリースラインからリリースノートが離脱したとき
-                // リリースラインとノートを削除する
-                ReleaseEffect();
-                DestroyAllNote();
-                _releaseNoteCache = null;
+                if (PlayerInput.MouseButtonState.Equals(MouseButtonState.Press))
+                {
+                    // マウス押下時
+                    
+                    // リリースラインとノートを削除する
+                    ReleaseEffect();
+                    // releaseNoteを削除する
+                    Destroy(_releaseNoteCache);
+                    // ノートを削除する
+                    DestroyAllNote();
+                    // キャッシュを消去する
+                    _releaseNoteCache = null;
+                }
+                else
+                {
+                    // プレイヤーとの衝突時
+                    _releaseNoteCache = other.gameObject;
+                    // リリースする
+                    Release();
+                }
             }
         }
 
