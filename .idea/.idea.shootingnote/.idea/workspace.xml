@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/Effect/11.wav.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/Effect/13.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sounds/Effect/13.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/UraMelody/11.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sounds/UraMelody/11.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +158,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1144" />
     <option name="height" value="1047" />
@@ -302,7 +301,7 @@
       <workItem from="1562385411503" duration="211000" />
       <workItem from="1562386271691" duration="38613000" />
       <workItem from="1562507116410" duration="10332000" />
-      <workItem from="1562567660541" duration="22080000" />
+      <workItem from="1562567660541" duration="22361000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1562331841533</created>
@@ -364,7 +363,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114770000" />
+    <option name="totallyTimeSpent" value="115051000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -376,7 +375,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
