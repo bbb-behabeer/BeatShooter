@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stateMachine: {fileID: 2221852617352476073}
-  _duration: 3
+  _duration: 1
 --- !u!114 &1863821958773135639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stateMachine: {fileID: 2221852617352476073}
   _approachCnt: 1
-  _duration: 5
+  _span: 2
   _speed: 100
 --- !u!114 &6673713599831110442
 MonoBehaviour:
