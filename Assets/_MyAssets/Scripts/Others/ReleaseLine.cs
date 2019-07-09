@@ -21,20 +21,12 @@ namespace _MyAssets.Scripts.Others
         [SerializeField]
         private NoteManager _percussion;
 
-        private Animator _anim;
-
         [SerializeField]
         private GameObject _HitEffect;
         
         // エフェクトの位置
         [SerializeField] 
         private Transform _effectPosition;
-        
-        private void Start()
-        {
-            // アニメーターを取得
-            _anim = GetComponent<Animator>();
-        }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -77,7 +69,7 @@ namespace _MyAssets.Scripts.Others
                 var n = obj.GetComponent<NoteCtl>();
                 if (n.CanDestroy())
                 {
-                    n.Destroy();
+                    n.DestroyThis();
                 }
             }
         }

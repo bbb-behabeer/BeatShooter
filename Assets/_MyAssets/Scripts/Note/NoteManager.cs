@@ -41,6 +41,8 @@ namespace _MyAssets.Scripts.Character.Note
             
             // オーディオソースを設定
             _audioSource = gameObject.AddComponent<AudioSource>();
+            _audioSource.playOnAwake = false;
+            _audioSource.loop = false;
         }
 
         /// <summary>

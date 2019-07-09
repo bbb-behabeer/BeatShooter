@@ -9,7 +9,9 @@ namespace _MyAssets.Scripts.Character.Note
         Melody,
         UraMelody,
         Percussion,
-        Bass
+        Bass,
+        FillIn,
+        Effect
     }
     
     /// <summary>
@@ -34,19 +36,18 @@ namespace _MyAssets.Scripts.Character.Note
         {
             if (other.CompareTag("PlayerBullet"))
             {
-                // プレイヤーと衝突したとき
                 // パートを再生可能に
                 if (_noteManager != null)
                     _noteManager.SetPlayable(true);
                 // 自身をその場に停止 
                 transform.parent = null;
-            } else if (other.CompareTag("LowerFrame"))
+            } else if (other.CompareTag("LowerBound"))
             {
                 // カメラ範囲を超えたとき
                 // ノートをスキップ
                 if (_noteManager != null)
                     _noteManager.SkipClip();
-                Destroy();
+                Destroy(gameObject);
             }
         }
         
@@ -65,7 +66,7 @@ namespace _MyAssets.Scripts.Character.Note
         /// <summary>
         /// 削除する
         /// </summary>
-        public void Destroy()
+        public void DestroyThis()
         {
             var effect = Instantiate(_effect);
             effect.transform.position = transform.position;

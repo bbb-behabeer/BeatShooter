@@ -43,7 +43,7 @@ namespace _MyAssets.Scripts.Character
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Note") || other.CompareTag("UpperFrame"))
+            if (other.CompareTag("Note") || other.CompareTag("Enemy"))
             {
                 // ノートに接触したとき
                 // ゲームオブジェクトを削除

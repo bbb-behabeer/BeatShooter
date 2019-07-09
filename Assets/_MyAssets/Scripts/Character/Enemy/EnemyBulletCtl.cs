@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Character.Enemy
@@ -11,7 +12,7 @@ namespace _MyAssets.Scripts.Character.Enemy
         // 弾丸の速度
         private Vector3 velocity;
         private Rigidbody2D _rb;
-
+        
         void Start()
         {
             // 速度を設定
@@ -22,7 +23,7 @@ namespace _MyAssets.Scripts.Character.Enemy
         void OnBecameInvisible()
         {
             // 画面外で消去
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

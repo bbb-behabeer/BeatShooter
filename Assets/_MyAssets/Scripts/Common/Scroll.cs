@@ -8,23 +8,26 @@ namespace _MyAssets.Scripts.Common
     /// </summary>
     public class Scroll: MonoBehaviour
     {
-        // スクロールする速度
+        // スクロールする距離
         [SerializeField]
-        private Vector2 _velocity;
+        private Vector2 _dist;
+
+        // スクロールする時間
+        [SerializeField] private float _sec = 60;
 
         // 位置Zのキャッシュ
-        private float _cacheZ;
-        
+        private Vector3 _cache;
+
         void Start()
         {
-            _cacheZ = transform.position.z;
+            _cache = transform.position;
         }
 
         private void FixedUpdate()
         {
-            var nx = transform.position.x + _velocity.x * Time.deltaTime;
-            var ny = transform.position.y + _velocity.y * Time.deltaTime;
-            transform.position = new Vector3(nx, ny, _cacheZ);
+            var nx = _dist.x * (Time.timeSinceLevelLoad / _sec) + _cache.x;
+            var ny = _dist.y * (Time.timeSinceLevelLoad / _sec) + _cache.y;
+            transform.position = new Vector3(nx, ny, _cache.z);
         }
     }
 }
