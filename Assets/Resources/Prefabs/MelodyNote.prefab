@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2578398884119914600}
   - component: {fileID: 2335291383492601265}
   - component: {fileID: 1779687512}
+  - component: {fileID: 9199176924546879625}
   m_Layer: 0
   m_Name: MelodyNote
   m_TagString: Note
@@ -145,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _part: 0
   _effect: {fileID: 6178847348995951011, guid: d56eef5bd8769c7458fffac1fbeb672d, type: 3}
-  _destroyable: 200
+  _visible: 0
 --- !u!95 &1779687512
 Animator:
   serializedVersion: 3
@@ -165,3 +166,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9199176924546879625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3420967928975849918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7daa848b2559407284c170497105e8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: PlayerBullet
+  _clip: {fileID: 8300000, guid: 18ddf341fe3160a408b1c1759276de6c, type: 3}

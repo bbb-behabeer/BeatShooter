@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 514844897610537970}
   - component: {fileID: -9132500433775857576}
   - component: {fileID: -7533815844850746263}
+  - component: {fileID: 7938097711768804688}
   m_Layer: 0
   m_Name: 8buKyuhu
   m_TagString: Enemy
@@ -224,3 +225,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d5025aba114f68a8f0ce969cde3249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7938097711768804688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857626769000194195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7daa848b2559407284c170497105e8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: PlayerBullet
+  _clip: {fileID: 8300000, guid: 18ddf341fe3160a408b1c1759276de6c, type: 3}

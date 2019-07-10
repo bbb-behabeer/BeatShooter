@@ -30,7 +30,7 @@ namespace _MyAssets.Scripts.Character.Note
 
         // 削除可能となるY座標
         [SerializeField] private bool _visible = false;
-        
+
         void Start()
         {
             // NoteManagerをシーンから取得

@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8729092559039132807}
   - component: {fileID: 221936555122312405}
   - component: {fileID: 2036555443893288737}
+  - component: {fileID: 6529422716061454763}
   m_Layer: 0
   m_Name: WhoreRest
   m_TagString: Enemy
@@ -240,3 +241,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d5025aba114f68a8f0ce969cde3249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6529422716061454763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222185766718662573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7daa848b2559407284c170497105e8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: PlayerBullet
+  _clip: {fileID: 8300000, guid: 18ddf341fe3160a408b1c1759276de6c, type: 3}

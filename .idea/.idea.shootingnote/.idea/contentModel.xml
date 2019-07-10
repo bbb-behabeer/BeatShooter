@@ -36,6 +36,7 @@
             <e p="Common" t="Include">
               <e p="CameraCtl.cs" t="Include" />
               <e p="ExplosionCtl.cs" t="Include" />
+              <e p="HitSound.cs" t="Include" />
               <e p="PlayerInput.cs" t="Include" />
               <e p="ScreenShot.cs" t="Include" />
               <e p="Scroll.cs" t="Include" />

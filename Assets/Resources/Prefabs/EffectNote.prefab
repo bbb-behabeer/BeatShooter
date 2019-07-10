@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3053454121605683481}
   - component: {fileID: 735503731980774435}
   - component: {fileID: 690677485113729530}
+  - component: {fileID: 2317740420393462543}
   m_Layer: 0
   m_Name: EffectNote
   m_TagString: Note
@@ -144,4 +145,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _part: 5
   _effect: {fileID: 6178847348995951011, guid: d56eef5bd8769c7458fffac1fbeb672d, type: 3}
-  _destroyable: 200
+  _visible: 0
+--- !u!114 &2317740420393462543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469747188622228981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7daa848b2559407284c170497105e8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: PlayerBullet
+  _clip: {fileID: 8300000, guid: 18ddf341fe3160a408b1c1759276de6c, type: 3}
