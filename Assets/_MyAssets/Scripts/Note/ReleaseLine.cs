@@ -82,25 +82,13 @@ namespace _MyAssets.Scripts.Note
         {
             if (other.CompareTag("ReleaseNote"))
             {
-                if (PlayerInput.MouseButtonState.Equals(MouseButtonState.Press))
-                {
-                    // マウス押下時
-                    // releaseNoteを削除する
-                    Destroy(other.gameObject);
-                    // リリースする
-                    Release();
-                    
-                }
-                else
-                {
-                    // 無操作時
-                    // リリースラインとノートを削除する
-                    ReleaseEffect();
-                    // releaseNoteを削除する
-                    Destroy(other.gameObject);
-                    // ノートを削除する
-                    DestroyAllNote();
-                }
+                // マウス押下時
+                // releaseNoteを削除する
+                Destroy(other.gameObject);
+                // リリースする
+                Release();
+                // ノートを削除する
+                DestroyAllNote();
             }
         }
 

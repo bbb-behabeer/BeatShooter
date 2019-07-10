@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using _MyAssets.Scripts.Character.Note;
+using _MyAssets.Scripts.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -57,6 +58,20 @@ namespace _MyAssets.Scripts.Note
             // 曲が終了していたら処理をしない
             if (_offset >= _noteList.Count) return;
 
+            // ボリュームを変更
+            if (PlayerInput.MouseButtonState.Equals(MouseButtonState.Press))
+            {
+                // ボタン押下時
+                // ボリュームを最大に
+                _audioSource.volume = _volumeMax;
+            }
+            else
+            {
+                // 無操作時
+                // ボリュームを最小に
+                _audioSource.volume = _volumeMin;
+            }
+            
             if (_playable)
             {
                 // ノートを再生
@@ -67,12 +82,8 @@ namespace _MyAssets.Scripts.Note
                 //_audioSource.clip = _noteList[_offset];
                 _volumeUI.Play("VolumePlaying");
                 
-                // ボリュームを最大に
-                _audioSource.volume = _volumeMax;
-                
                 // オフセットを増やす
                 _offset++;
-                
                 // スキップ可能に
                 _skipable = true;
                 // 再生不可能に
@@ -83,15 +94,15 @@ namespace _MyAssets.Scripts.Note
                 // ノートを再生
                 _audioSource.PlayOneShot(_noteList[_offset]);
                 
+                // ボリュームを下げる
+                _audioSource.volume = _volumeMin;
+                
                 // オフセットを増やす
                 _offset++;
                 // スキップ不可能に
                 _skipable = false;
-                // 再生可能に
-                _playable = true;
-
-                // ボリュームを下げる
-                _audioSource.volume = _volumeMin;
+                // 再生不可能に
+                _playable = false;
             }
         }
 
@@ -111,7 +122,6 @@ namespace _MyAssets.Scripts.Note
         /// </summary>
         public void SetSkippable()
         {
-            // 再生不可能に設定
             _playable = false;
             // 再生不可能のときスキップ可能
             _skipable = true;

@@ -49,15 +49,18 @@ namespace _MyAssets.Scripts.Character.Note
             }
         }
 
-        private void OnWillRenderObject()
+        private void OnBecameVisible()
         {
             if (Camera.current.name != "SceneCamera" && Camera.current.name != "Preview Camera")
             {
-                // カメラ内に表示されたとき（シーンプレビュー以外）
+                // すでに可視なら処理を無視
+                if (_visible) return;
+                
+                // カメラ内に表示されたとき（ゲームビューのみ）
                 if (_noteManager != null)
                 {
                     // スキップ可能に設定
-                    // 可視に
+                    // 可視に設定
                     _noteManager.SetSkippable();
                     _visible = true;
                 }
