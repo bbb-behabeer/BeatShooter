@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1dca47db-bf3f-4a3b-8e48-e2427e579a45" name="Default Changelist" comment="敵配置を修正" />
+    <list default="true" id="1dca47db-bf3f-4a3b-8e48-e2427e579a45" name="Default Changelist" comment="敵配置を修正">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/ReleaseLine.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1505">
-              <caret line="133" column="23" lean-forward="true" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="23" />
+              <caret line="133" column="23" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="23" />
               <folding>
                 <marker date="1562728634485" expanded="true" signature="6:181" ph="..." />
                 <marker date="1562728634485" expanded="true" signature="215:4592" ph="{...}" />
@@ -85,24 +88,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteCtl.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+            <state relative-caret-position="155">
+              <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
               <folding>
-                <marker date="1562732104608" expanded="true" signature="6:62" ph="..." />
-                <marker date="1562732104608" expanded="true" signature="106:2047" ph="{...}" />
-                <marker date="1562732104608" expanded="true" signature="142:254" ph="{...}" />
-                <marker date="1562732104608" expanded="true" signature="264:311" ph="/// ノートの制御 ... " />
-                <marker date="1562732104608" expanded="true" signature="351:2045" ph="{...}" />
-                <marker date="1562732104608" expanded="true" signature="681:835" ph="{...}" />
-                <marker date="1562732104608" expanded="true" signature="892:1180" ph="{...}" />
-                <marker date="1562732104608" expanded="true" signature="952:1170" ph="{...}" />
-                <marker date="1562732104608" expanded="true" signature="1223:1467" ph="{...}" />
-                <marker date="1562732104608" expanded="true" signature="1299:1457" ph="{...}" />
-                <marker date="1562732104608" expanded="true" signature="1330:1365" ph="/* スキップ可能に設定 ... */" />
-                <marker date="1562732104608" expanded="true" signature="1477:1564" ph="/// 削除できるか ... " />
-                <marker date="1562732104608" expanded="true" signature="1597:1719" ph="{...}" />
-                <marker date="1562732104608" expanded="true" signature="1729:1782" ph="/// 削除する ... " />
-                <marker date="1562732104608" expanded="true" signature="1816:2039" ph="{...}" />
+                <marker date="1562732191940" expanded="true" signature="6:62" ph="..." />
+                <marker date="1562732191940" expanded="true" signature="106:2216" ph="{...}" />
+                <marker date="1562732191940" expanded="true" signature="142:254" ph="{...}" />
+                <marker date="1562732191940" expanded="true" signature="264:311" ph="/// ノートの制御 ... " />
+                <marker date="1562732191940" expanded="true" signature="351:2214" ph="{...}" />
+                <marker date="1562732191940" expanded="true" signature="681:835" ph="{...}" />
+                <marker date="1562732191940" expanded="true" signature="892:1180" ph="{...}" />
+                <marker date="1562732191940" expanded="true" signature="952:1170" ph="{...}" />
+                <marker date="1562732191940" expanded="true" signature="1223:1636" ph="{...}" />
+                <marker date="1562732191940" expanded="true" signature="1330:1626" ph="{...}" />
+                <marker date="1562732191940" expanded="true" signature="1430:1612" ph="{...}" />
+                <marker date="1562732191940" expanded="true" signature="1469:1508" ph="/* スキップ可能に設定 ... */" />
+                <marker date="1562732191940" expanded="true" signature="1646:1733" ph="/// 削除できるか ... " />
+                <marker date="1562732191940" expanded="true" signature="1766:1888" ph="{...}" />
+                <marker date="1562732191940" expanded="true" signature="1898:1951" ph="/// 削除する ... " />
+                <marker date="1562732191940" expanded="true" signature="1985:2208" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -349,10 +353,10 @@
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="30004">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="26720">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="30004" />
+      <option name="pid" value="26720" />
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
@@ -371,7 +375,7 @@
       <workItem from="1562385411503" duration="211000" />
       <workItem from="1562386271691" duration="38613000" />
       <workItem from="1562507116410" duration="10332000" />
-      <workItem from="1562567660541" duration="40644000" />
+      <workItem from="1562567660541" duration="41322000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1562331841533</created>
@@ -433,7 +437,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133334000" />
+    <option name="totallyTimeSpent" value="134012000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,7 +450,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26066098" />
@@ -462,7 +465,7 @@
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
       <window_info anchor="bottom" id="Run" order="10" />
-      <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.49946696" visible="true" weight="0.39978677" />
+      <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.49946696" weight="0.39978677" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
@@ -1183,7 +1186,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/ReleaseLine.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1505">
-          <caret line="133" column="23" lean-forward="true" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="23" />
+          <caret line="133" column="23" selection-start-line="133" selection-start-column="23" selection-end-line="133" selection-end-column="23" />
           <folding>
             <marker date="1562728634485" expanded="true" signature="6:181" ph="..." />
             <marker date="1562728634485" expanded="true" signature="215:4592" ph="{...}" />
@@ -1216,24 +1219,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteCtl.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+        <state relative-caret-position="155">
+          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
           <folding>
-            <marker date="1562732104608" expanded="true" signature="6:62" ph="..." />
-            <marker date="1562732104608" expanded="true" signature="106:2047" ph="{...}" />
-            <marker date="1562732104608" expanded="true" signature="142:254" ph="{...}" />
-            <marker date="1562732104608" expanded="true" signature="264:311" ph="/// ノートの制御 ... " />
-            <marker date="1562732104608" expanded="true" signature="351:2045" ph="{...}" />
-            <marker date="1562732104608" expanded="true" signature="681:835" ph="{...}" />
-            <marker date="1562732104608" expanded="true" signature="892:1180" ph="{...}" />
-            <marker date="1562732104608" expanded="true" signature="952:1170" ph="{...}" />
-            <marker date="1562732104608" expanded="true" signature="1223:1467" ph="{...}" />
-            <marker date="1562732104608" expanded="true" signature="1299:1457" ph="{...}" />
-            <marker date="1562732104608" expanded="true" signature="1330:1365" ph="/* スキップ可能に設定 ... */" />
-            <marker date="1562732104608" expanded="true" signature="1477:1564" ph="/// 削除できるか ... " />
-            <marker date="1562732104608" expanded="true" signature="1597:1719" ph="{...}" />
-            <marker date="1562732104608" expanded="true" signature="1729:1782" ph="/// 削除する ... " />
-            <marker date="1562732104608" expanded="true" signature="1816:2039" ph="{...}" />
+            <marker date="1562732191940" expanded="true" signature="6:62" ph="..." />
+            <marker date="1562732191940" expanded="true" signature="106:2216" ph="{...}" />
+            <marker date="1562732191940" expanded="true" signature="142:254" ph="{...}" />
+            <marker date="1562732191940" expanded="true" signature="264:311" ph="/// ノートの制御 ... " />
+            <marker date="1562732191940" expanded="true" signature="351:2214" ph="{...}" />
+            <marker date="1562732191940" expanded="true" signature="681:835" ph="{...}" />
+            <marker date="1562732191940" expanded="true" signature="892:1180" ph="{...}" />
+            <marker date="1562732191940" expanded="true" signature="952:1170" ph="{...}" />
+            <marker date="1562732191940" expanded="true" signature="1223:1636" ph="{...}" />
+            <marker date="1562732191940" expanded="true" signature="1330:1626" ph="{...}" />
+            <marker date="1562732191940" expanded="true" signature="1430:1612" ph="{...}" />
+            <marker date="1562732191940" expanded="true" signature="1469:1508" ph="/* スキップ可能に設定 ... */" />
+            <marker date="1562732191940" expanded="true" signature="1646:1733" ph="/// 削除できるか ... " />
+            <marker date="1562732191940" expanded="true" signature="1766:1888" ph="{...}" />
+            <marker date="1562732191940" expanded="true" signature="1898:1951" ph="/// 削除する ... " />
+            <marker date="1562732191940" expanded="true" signature="1985:2208" ph="{...}" />
           </folding>
         </state>
       </provider>

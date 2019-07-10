@@ -56,11 +56,12 @@ namespace _MyAssets.Scripts.Note
         {
             // 曲が終了していたら処理をしない
             if (_offset >= _noteList.Count) return;
-            
-            _audioSource.PlayOneShot(_noteList[_offset]);
-            
+
             if (_playable)
             {
+                // ノートを再生
+                _audioSource.PlayOneShot(_noteList[_offset]);
+                
                 // 再生可能のとき
                 // ノートを再生する
                 //_audioSource.clip = _noteList[_offset];
@@ -79,6 +80,9 @@ namespace _MyAssets.Scripts.Note
             }
             else if (_skipable)
             {
+                // ノートを再生
+                _audioSource.PlayOneShot(_noteList[_offset]);
+                
                 // オフセットを増やす
                 _offset++;
                 // スキップ不可能に
