@@ -1,9 +1,6 @@
-using System;
 using _MyAssets.Scripts.Character.Note;
 using _MyAssets.Scripts.Common;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace _MyAssets.Scripts.Note
 {

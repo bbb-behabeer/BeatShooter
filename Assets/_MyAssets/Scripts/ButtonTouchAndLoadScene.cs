@@ -9,7 +9,7 @@ namespace _MyAssets.Scripts
     /// <summary>
     /// 画面をタッチしてシーンをロードする
     /// </summary>
-    public class TouchAndLoadScene: MonoBehaviour
+    public class ButtonTouchAndLoadScene: MonoBehaviour
     {
         // ロードするシーン
         [SerializeField] private string _scene;
@@ -28,7 +28,7 @@ namespace _MyAssets.Scripts
             // ロード時にゲームオブジェクトを破壊されないように
             DontDestroyOnLoad(this.gameObject);
         }
-
+        
         private void Start()
         {
             // フェードオブジェクトを生成して
@@ -36,19 +36,11 @@ namespace _MyAssets.Scripts
             _transitionEffect = _FadeObject.GetComponent<TransitionEffect>();
         }
 
-        private void Update()
-        {
-            if (PlayerInput.ButtonDown)
-            {
-                FadeScene();
-            }
-        }
-
         /// <summary>
         /// 次のシーンへフェード
         /// </summary>
         /// <returns></returns>
-        private async Task FadeScene()
+        public async Task FadeScene()
         {
             // ロード中のとき処理をしない
             if (_loading) return;
@@ -58,9 +50,14 @@ namespace _MyAssets.Scripts
             if (_transitionEffect != null)
                 await _transitionEffect.FadeOut();
             
-            SceneManager.LoadSceneAsync(_scene);
+            SceneManager.LoadScene(_scene);
 
             Destroy(gameObject);
+        }
+
+        public void FadeSceneOnClick()
+        {
+            FadeScene();
         }
     }
 }

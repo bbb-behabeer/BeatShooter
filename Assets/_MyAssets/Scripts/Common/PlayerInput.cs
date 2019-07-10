@@ -1,7 +1,3 @@
-using System;
-using System.Runtime.Serialization;
-using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Common

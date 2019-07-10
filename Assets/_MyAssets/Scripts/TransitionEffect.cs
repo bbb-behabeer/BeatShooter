@@ -23,9 +23,7 @@ namespace _MyAssets.Scripts
         
         // 期間
         [SerializeField] private float _duration = 4f;
-        
-        // TODO エフェクトをプレハブに
-        
+
         private void Awake()
         {
             // ロード時にゲームオブジェクトを破壊されないように
@@ -35,12 +33,13 @@ namespace _MyAssets.Scripts
         private void Start()
         {
             _spriteMask = GetComponent<SpriteMask>();
-            _spriteMask.alphaCutoff = _start;
+            FadeIn();
         }
 
         [Button("FadeIn")]
         public async Task FadeIn()
         {
+            _spriteMask.alphaCutoff = _end;
             // 終了値までカットオフを遷移
             while (_spriteMask.alphaCutoff < _start - _offset  || _spriteMask.alphaCutoff > _start + _offset)
             {
@@ -50,11 +49,14 @@ namespace _MyAssets.Scripts
 
             // カットオフを開始値に設定
             _spriteMask.alphaCutoff = _start;
+            
+            //Destroy(gameObject);
         }
 
         [Button("FadeOut")]
         public async Task FadeOut()
         {
+            _spriteMask.alphaCutoff = _start;
             // 終了値までカットオフを遷移
             while (_spriteMask.alphaCutoff < _end - _offset  || _spriteMask.alphaCutoff > _end + _offset)
             {
@@ -64,6 +66,8 @@ namespace _MyAssets.Scripts
             
             // カットオフを終了値に設定
             _spriteMask.alphaCutoff = _end;
+            
+            //Destroy(gameObject);
         }
     }
 }
