@@ -16,9 +16,9 @@ namespace _MyAssets.Scripts.Note
         private List<AudioClip> _noteList;
 
         // 各パートの再生フラグ
-        private bool _playable;
+        private bool _playable = false;
         // 各パートのスキップフラグ
-        private bool _skipable;
+        private bool _skipable = false;
 
         // 各パートのオーディオソース
         private AudioSource _audioSource;
@@ -57,12 +57,13 @@ namespace _MyAssets.Scripts.Note
             // 曲が終了していたら処理をしない
             if (_offset >= _noteList.Count) return;
             
+            _audioSource.PlayOneShot(_noteList[_offset]);
+            
             if (_playable)
             {
                 // 再生可能のとき
                 // ノートを再生する
                 //_audioSource.clip = _noteList[_offset];
-                _audioSource.PlayOneShot(_noteList[_offset]);
                 _volumeUI.Play("VolumePlaying");
                 
                 // ボリュームを最大に
@@ -71,19 +72,19 @@ namespace _MyAssets.Scripts.Note
                 // オフセットを増やす
                 _offset++;
                 
-                // スキップ不可能に
-                _skipable = false;
-                // 再生可能に
-                _playable = true;
+                // スキップ可能に
+                _skipable = true;
+                // 再生不可能に
+                _playable = false;
             }
             else if (_skipable)
             {
                 // オフセットを増やす
                 _offset++;
-                // スキップ可能に
-                _skipable = true;
-                // 再生不可能に
-                _playable = false;
+                // スキップ不可能に
+                _skipable = false;
+                // 再生可能に
+                _playable = true;
 
                 // ボリュームを下げる
                 _audioSource.volume = _volumeMin;
@@ -91,13 +92,25 @@ namespace _MyAssets.Scripts.Note
         }
 
         /// <summary>
-        /// メロディが再生可能かを設定する
+        /// ノートを再生可能に設定する
         /// </summary>
-        /// <param name="playable">再生可能/不可能</param>
-        public void SetPlayable(bool playable)
+        public void SetPlayable()
         {
-            // 再生可能/不可能を設定
-            _playable = playable;
+            // 再生可能に設定
+            _playable = true;
+            // 再生可能のときスキップ不可能
+            _skipable = false;
+        }
+        
+        /// <summary>
+        /// ノートをスキップ可能に設定する
+        /// </summary>
+        public void SetSkippable()
+        {
+            // 再生不可能に設定
+            _playable = false;
+            // 再生不可能のときスキップ可能
+            _skipable = true;
         }
     }
 }

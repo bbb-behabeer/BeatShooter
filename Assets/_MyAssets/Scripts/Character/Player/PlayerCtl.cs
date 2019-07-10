@@ -136,17 +136,17 @@ namespace _MyAssets.Scripts.Character.Player
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Enemy") || other.CompareTag("Object"))
+            if (other.CompareTag("Enemy") || other.CompareTag("Note"))
             {
-                // 敵キャラクターと接触したとき
-                // オブジェクトと接触したとき
+                // 敵キャラクター、弾丸と接触したとき
+                // ノートと接触したとき
                 
                 // 爆発する
                 var explosion = Instantiate(_explosion);
                 explosion.transform.position = transform.position;
                 
                 // 自身を消去する
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
             }
         }
     }

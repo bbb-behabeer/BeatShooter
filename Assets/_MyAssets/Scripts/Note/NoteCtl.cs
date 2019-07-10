@@ -29,7 +29,7 @@ namespace _MyAssets.Scripts.Character.Note
         private NoteManager _noteManager;
 
         // 削除可能となるY座標
-        [SerializeField] private float _destroyable = 200;
+        [SerializeField] private bool _visible = false;
         
         void Start()
         {
@@ -43,20 +43,35 @@ namespace _MyAssets.Scripts.Character.Note
             {
                 // パートを再生可能に
                 if (_noteManager != null)
-                    _noteManager.SetPlayable(true);
+                    _noteManager.SetPlayable();
                 // 自身をその場に停止 
                 transform.parent = null;
             }
         }
-        
+
+        private void OnWillRenderObject()
+        {
+            if (Camera.current.name != "SceneCamera" && Camera.current.name != "Preview Camera")
+            {
+                // カメラ内に表示されたとき（シーンプレビュー以外）
+                if (_noteManager != null)
+                {
+                    // スキップ可能に設定
+                    // 可視に
+                    _noteManager.SetSkippable();
+                    _visible = true;
+                }
+            }
+        }
+
         /// <summary>
         /// 削除できるか
         /// </summary>
         /// <returns></returns>
         public bool CanDestroy()
         {
-            // 削除可能となる座標を超えたとき
-            if (transform.position.y < _destroyable)
+            // 可視のとき
+            if (_visible)
                 return true;
             return false;
         }
