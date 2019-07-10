@@ -50,15 +50,17 @@ namespace _MyAssets.Scripts.Character.Player
             if (state.Equals(MouseButtonState.Press))
             {
                 // マウスを押下中
-                // 射撃する
-                ShotCtl();
+                // 射撃のタイマーをリセット
+                _shotCurrentSec = 0;
                 // 移動
                 MoveCtl(PlayerInput.MouseWorldPoint);
             } else if (state == MouseButtonState.Void)
             {
                 // マウスを操作していないとき
-                // 弾を停止
-                Idle();
+                // 射撃する
+                ShotCtl();
+                // キャッシュ位置をリセット
+                _cacheMousePos = Vector3.zero;
             }
         }
 
@@ -130,18 +132,6 @@ namespace _MyAssets.Scripts.Character.Player
 
             // キャッシュ位置を記憶
             _cacheMousePos = pos;
-        }
-
-        /// <summary>
-        /// 待機する
-        /// </summary>
-        public void Idle()
-        {
-            // タイマーをリセット
-            _shotCurrentSec = 0;
-            
-            // キャッシュ位置をリセット
-            _cacheMousePos = Vector3.zero;
         }
 
         private void OnTriggerEnter2D(Collider2D other)

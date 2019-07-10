@@ -33,9 +33,6 @@ namespace _MyAssets.Scripts.Note
         [SerializeField] 
         private Transform _effectPosition;
 
-        // リリースノートのキャッシュ
-        private GameObject _releaseNoteCache;
-
         // スプライトレンダラー
         private SpriteRenderer _myRenderer;
         // アイコンのスプライトレンダラー
@@ -88,22 +85,21 @@ namespace _MyAssets.Scripts.Note
                 if (PlayerInput.MouseButtonState.Equals(MouseButtonState.Press))
                 {
                     // マウス押下時
-                    
-                    // リリースラインとノートを削除する
-                    ReleaseEffect();
                     // releaseNoteを削除する
-                    Destroy(_releaseNoteCache);
-                    // ノートを削除する
-                    DestroyAllNote();
-                    // キャッシュを消去する
-                    _releaseNoteCache = null;
+                    Destroy(other.gameObject);
+                    // リリースする
+                    Release();
+                    
                 }
                 else
                 {
-                    // プレイヤーとの衝突時
-                    _releaseNoteCache = other.gameObject;
-                    // リリースする
-                    Release();
+                    // 無操作時
+                    // リリースラインとノートを削除する
+                    ReleaseEffect();
+                    // releaseNoteを削除する
+                    Destroy(other.gameObject);
+                    // ノートを削除する
+                    DestroyAllNote();
                 }
             }
         }
@@ -113,11 +109,6 @@ namespace _MyAssets.Scripts.Note
         /// </summary>
         private void Release()
         {
-            // リリースノートのキャッシュがないとき処理をしない
-            if (_releaseNoteCache == null) return;
-            
-            // キャッシュがあるとき以下の処理を実行
-            
             // エフェクトを生成
             ReleaseEffect();
                 
@@ -140,14 +131,8 @@ namespace _MyAssets.Scripts.Note
             if (_fillin != null)
                 _fillin.PlayClip();
             
-            // releaseNoteを削除する
-            Destroy(_releaseNoteCache);
-            
             // ノートを削除する
             DestroyAllNote();
-
-            // キャッシュをnullに
-            _releaseNoteCache = null;
         }
 
         /// <summary>

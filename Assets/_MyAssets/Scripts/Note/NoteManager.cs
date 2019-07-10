@@ -17,6 +17,8 @@ namespace _MyAssets.Scripts.Note
 
         // 各パートの再生フラグ
         private bool _playable;
+        // 各パートのスキップフラグ
+        private bool _skipable;
 
         // 各パートのオーディオソース
         private AudioSource _audioSource;
@@ -68,22 +70,24 @@ namespace _MyAssets.Scripts.Note
                 
                 // オフセットを増やす
                 _offset++;
+                
+                // スキップ不可能に
+                _skipable = false;
+                // 再生可能に
+                _playable = true;
             }
+            else if (_skipable)
+            {
+                // オフセットを増やす
+                _offset++;
+                // スキップ可能に
+                _skipable = true;
+                // 再生不可能に
+                _playable = false;
 
-            // 再生不可能にリセット
-            _playable = false;
-        }
-
-        /// <summary>
-        /// 次のオーディオクリップをスキップする
-        /// </summary>
-        [Button("SkipClip")]
-        public void SkipClip()
-        {
-            _offset++;
-            _playable = false;
-
-            _audioSource.volume = _volumeMin;
+                // ボリュームを下げる
+                _audioSource.volume = _volumeMin;
+            }
         }
 
         /// <summary>
