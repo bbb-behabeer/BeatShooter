@@ -49,7 +49,7 @@ namespace _MyAssets.Scripts.Character.Note
             }
         }
 
-        private void OnBecameVisible()
+        private void OnWillRenderObject()
         {
             if (Camera.current.name != "SceneCamera" && Camera.current.name != "Preview Camera")
             {

@@ -23,10 +23,7 @@ namespace _MyAssets.Scripts.Note
 
         // 各パートのオーディオソース
         private AudioSource _audioSource;
-        
-        // ボリュームUI
-        [SerializeField] private Animator _volumeUI;
-        
+
         // ボリューム
         [SerializeField] private float _volumeMax = 1f;
         [SerializeField] private float _volumeMin = 0.5f;
@@ -76,34 +73,16 @@ namespace _MyAssets.Scripts.Note
             {
                 // ノートを再生
                 _audioSource.PlayOneShot(_noteList[_offset]);
-                
-                // 再生可能のとき
-                // ノートを再生する
-                //_audioSource.clip = _noteList[_offset];
-                _volumeUI.Play("VolumePlaying");
-                
-                // オフセットを増やす
-                _offset++;
-                // スキップ可能に
-                _skipable = true;
-                // 再生不可能に
-                _playable = false;
             }
-            else if (_skipable)
-            {
-                // ノートを再生
-                _audioSource.PlayOneShot(_noteList[_offset]);
-                
-                // ボリュームを下げる
-                _audioSource.volume = _volumeMin;
-                
-                // オフセットを増やす
-                _offset++;
-                // スキップ不可能に
-                _skipable = false;
-                // 再生不可能に
-                _playable = false;
-            }
+            
+            
+            // オフセットを増やす
+            _offset++;
+            // フラグの初期化
+            // スキップ不可能に
+            _skipable = false;
+            // 再生不可能に
+            _playable = false;
         }
 
         /// <summary>
