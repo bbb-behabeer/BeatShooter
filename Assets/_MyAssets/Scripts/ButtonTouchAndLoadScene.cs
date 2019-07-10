@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using _MyAssets.Scripts.Common;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace _MyAssets.Scripts
 {
@@ -20,9 +21,6 @@ namespace _MyAssets.Scripts
         // トランジションエフェクト
         private TransitionEffect _transitionEffect;
 
-        
-        private bool _loading = false;
-
         private void Awake()
         {
             // ロード時にゲームオブジェクトを破壊されないように
@@ -32,8 +30,8 @@ namespace _MyAssets.Scripts
         private void Start()
         {
             // フェードオブジェクトを生成して
-            _FadeObject = Instantiate(_FadeObject);
-            _transitionEffect = _FadeObject.GetComponent<TransitionEffect>();
+            //_FadeObject = Instantiate(_FadeObject);
+            //_transitionEffect = _FadeObject.GetComponent<TransitionEffect>();
         }
 
         /// <summary>
@@ -43,12 +41,10 @@ namespace _MyAssets.Scripts
         public async Task FadeScene()
         {
             // ロード中のとき処理をしない
-            if (_loading) return;
-            
-            _loading = true;
-            
-            if (_transitionEffect != null)
-                await _transitionEffect.FadeOut();
+            //if (_transitionEffect.fading) return;
+
+            //if (_transitionEffect != null)
+            //    await _transitionEffect.FadeOut();
             
             SceneManager.LoadScene(_scene);
 

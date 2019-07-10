@@ -19,9 +19,7 @@ namespace _MyAssets.Scripts
 
         // トランジションエフェクト
         private TransitionEffect _transitionEffect;
-
         
-        private bool _loading = false;
 
         private void Awake()
         {
@@ -51,10 +49,8 @@ namespace _MyAssets.Scripts
         private async Task FadeScene()
         {
             // ロード中のとき処理をしない
-            if (_loading) return;
-            
-            _loading = true;
-            
+            if (_transitionEffect.fading) return;
+
             if (_transitionEffect != null)
                 await _transitionEffect.FadeOut();
             

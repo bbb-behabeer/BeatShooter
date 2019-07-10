@@ -24,6 +24,11 @@ namespace _MyAssets.Scripts
         // 期間
         [SerializeField] private float _duration = 4f;
 
+        // フェード中
+        private bool _fading = false;
+
+        public bool fading => _fading;
+
         private void Awake()
         {
             // ロード時にゲームオブジェクトを破壊されないように
@@ -39,6 +44,7 @@ namespace _MyAssets.Scripts
         [Button("FadeIn")]
         public async Task FadeIn()
         {
+            _fading = true;
             _spriteMask.alphaCutoff = _end;
             // 終了値までカットオフを遷移
             while (_spriteMask.alphaCutoff < _start - _offset  || _spriteMask.alphaCutoff > _start + _offset)
@@ -49,13 +55,15 @@ namespace _MyAssets.Scripts
 
             // カットオフを開始値に設定
             _spriteMask.alphaCutoff = _start;
-            
-            //Destroy(gameObject);
+
+            _fading = false;
         }
 
         [Button("FadeOut")]
         public async Task FadeOut()
         {
+            _fading = true;
+            
             _spriteMask.alphaCutoff = _start;
             // 終了値までカットオフを遷移
             while (_spriteMask.alphaCutoff < _end - _offset  || _spriteMask.alphaCutoff > _end + _offset)
@@ -66,8 +74,8 @@ namespace _MyAssets.Scripts
             
             // カットオフを終了値に設定
             _spriteMask.alphaCutoff = _end;
-            
-            //Destroy(gameObject);
+
+            _fading = false;
         }
     }
 }

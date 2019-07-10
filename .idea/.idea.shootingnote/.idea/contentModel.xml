@@ -214,19 +214,6 @@
             <e p="Readme.txt" t="Include" />
           </e>
         </e>
-        <e p="Samples" t="Include">
-          <e p="Unity Recorder" t="Include">
-            <e p="2.0.1-preview.1" t="Include">
-              <e p="Recorder Editor Sample" t="Include">
-                <e p="RecorderEditorExample.cs" t="Include" />
-                <e p="Unity.Recorder.Samples.Editor.asmdef" t="Include" />
-              </e>
-              <e p="Screenshot Capture Sample" t="Include">
-                <e p="CaptureScreenShotExample.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-        </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
             <e p="Fonts" t="Include">
@@ -304,7 +291,6 @@
       <e p="Sirenix.OdinInspector.CompatibilityLayer.csproj" t="IncludeRecursive" />
       <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
-      <e p="Unity.Recorder.Samples.Editor.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>
