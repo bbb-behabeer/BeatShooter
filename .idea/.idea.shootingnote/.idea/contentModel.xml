@@ -41,13 +41,14 @@
               <e p="ScreenShot.cs" t="Include" />
               <e p="Scroll.cs" t="Include" />
             </e>
+            <e p="Manager" t="Include">
+              <e p="GameManager.cs" t="Include" />
+              <e p="ScoreManager.cs" t="Include" />
+            </e>
             <e p="Note" t="Include">
               <e p="NoteCtl.cs" t="Include" />
               <e p="NoteManager.cs" t="Include" />
               <e p="ReleaseLine.cs" t="Include" />
-            </e>
-            <e p="Score" t="Include">
-              <e p="ScoreManager.cs" t="Include" />
             </e>
             <e p="TouchAndLoadScene.cs" t="Include" />
             <e p="TransitionEffect.cs" t="Include" />

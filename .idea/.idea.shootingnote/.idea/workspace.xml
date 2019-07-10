@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dca47db-bf3f-4a3b-8e48-e2427e579a45" name="Default Changelist" comment="敵配置を修正">
-      <change afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Score.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Score/ScoreManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/GameManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/JF-Dot-MPlusS10B SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Fonts/JF-Dot-MPlusS10B SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Score.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Score/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Score/ScoreManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ScoreManager.cs.meta" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,37 +81,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="148" column="18" selection-start-line="148" selection-start-column="18" selection-end-line="148" selection-end-column="18" />
+            <state relative-caret-position="260">
+              <caret line="147" column="23" lean-forward="true" selection-start-line="147" selection-start-column="23" selection-end-line="147" selection-end-column="23" />
               <folding>
-                <marker date="1562731372898" expanded="true" signature="6:104" ph="..." />
-                <marker date="1562731372898" expanded="true" signature="150:4151" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="157:208" ph="/// プレイヤーを制御する ... " />
-                <marker date="1562731372898" expanded="true" signature="295:4149" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="646:714" ph="/* [SerializeField] private NoteManager _noteManager; ... */" />
-                <marker date="1562731372898" expanded="true" signature="1000:1063" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="1086:1723" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="1281:1481" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="1312:1354" ph="/* マウスを押下中 ... */" />
-                <marker date="1562731372898" expanded="true" signature="1522:1713" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="1553:1593" ph="/* マウスを操作していないとき ... */" />
-                <marker date="1562731372898" expanded="true" signature="1733:1786" ph="/// 射撃する ... " />
-                <marker date="1562731372898" expanded="true" signature="1813:2019" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="1856:2009" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="2029:2104" ph="/// 射撃を制御する ... " />
-                <marker date="1562731372898" expanded="true" signature="2134:2519" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="2183:2270" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="2444:2509" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="2538:2659" ph="/// posの位置にから、プレイヤーの移動を制御する ... " />
-                <marker date="1562731372898" expanded="true" signature="2700:3647" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="2910:3576" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="3704:4143" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="3785:4133" ph="{...}" />
-                <marker date="1562731372898" expanded="true" signature="3816:3907" ph="/* 敵キャラクター、弾丸と接触したとき ... */" />
-                <marker date="1562731372898" expanded="true" signature="4065:4119" ph="/* 自身を消去する ... */" />
+                <marker date="1562748565174" expanded="true" signature="6:137" ph="..." />
+                <marker date="1562748565174" expanded="true" signature="183:4431" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="190:241" ph="/// プレイヤーを制御する ... " />
+                <marker date="1562748565174" expanded="true" signature="328:4429" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="679:747" ph="/* [SerializeField] private NoteManager _noteManager; ... */" />
+                <marker date="1562748565174" expanded="true" signature="1114:1177" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="1200:1837" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="1395:1595" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="1426:1468" ph="/* マウスを押下中 ... */" />
+                <marker date="1562748565174" expanded="true" signature="1636:1827" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="1667:1707" ph="/* マウスを操作していないとき ... */" />
+                <marker date="1562748565174" expanded="true" signature="1847:1900" ph="/// 射撃する ... " />
+                <marker date="1562748565174" expanded="true" signature="1927:2133" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="1970:2123" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="2143:2218" ph="/// 射撃を制御する ... " />
+                <marker date="1562748565174" expanded="true" signature="2248:2633" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="2297:2384" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="2558:2623" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="2652:2773" ph="/// posの位置にから、プレイヤーの移動を制御する ... " />
+                <marker date="1562748565174" expanded="true" signature="2814:3761" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="3024:3690" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="3818:4423" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="3934:4413" ph="{...}" />
+                <marker date="1562748565174" expanded="true" signature="3965:4056" ph="/* 敵キャラクター、弾丸と接触したとき ... */" />
               </folding>
             </state>
           </provider>
@@ -158,25 +162,68 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Score/ScoreManager.cs">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ScoreManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
-              <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
               <folding>
-                <marker date="1562741736027" expanded="true" signature="6:116" ph="..." />
-                <marker date="1562741736027" expanded="true" signature="151:1829" ph="{...}" />
-                <marker date="1562741736027" expanded="true" signature="158:205" ph="/// スコアを管理 ... " />
-                <marker date="1562741736027" expanded="true" signature="250:1827" ph="{...}" />
-                <marker date="1562741736027" expanded="true" signature="673:974" ph="{...}" />
-                <marker date="1562741736027" expanded="true" signature="765:803" ph="/* 初期オブジェクトの数を記憶 ... */" />
-                <marker date="1562741736027" expanded="true" signature="848:964" ph="{...}" />
-                <marker date="1562741736027" expanded="true" signature="984:1051" ph="/// オブジェクトの残りの数のリストを更新 ... " />
-                <marker date="1562741736027" expanded="true" signature="1122:1342" ph="{...}" />
-                <marker date="1562741736027" expanded="true" signature="1211:1332" ph="{...}" />
-                <marker date="1562741736027" expanded="true" signature="1352:1409" ph="/// スコアを表示する ... " />
-                <marker date="1562741736027" expanded="true" signature="1472:1821" ph="{...}" />
-                <marker date="1562741736027" expanded="true" signature="1601:1775" ph="{...}" />
+                <marker date="1562746657868" expanded="true" signature="6:127" ph="..." />
+                <marker date="1562746657868" expanded="true" signature="164:2091" ph="{...}" />
+                <marker date="1562746657868" expanded="true" signature="171:218" ph="/// スコアを管理 ... " />
+                <marker date="1562746657868" expanded="true" signature="263:2089" ph="{...}" />
+                <marker date="1562746657868" expanded="true" signature="753:1126" ph="{...}" />
+                <marker date="1562746657868" expanded="true" signature="845:883" ph="/* 初期オブジェクトの数を記憶 ... */" />
+                <marker date="1562746657868" expanded="true" signature="928:1044" ph="{...}" />
+                <marker date="1562746657868" expanded="true" signature="1136:1203" ph="/// オブジェクトの残りの数のリストを更新 ... " />
+                <marker date="1562746657868" expanded="true" signature="1281:1501" ph="{...}" />
+                <marker date="1562746657868" expanded="true" signature="1370:1491" ph="{...}" />
+                <marker date="1562746657868" expanded="true" signature="1511:1568" ph="/// スコアを表示する ... " />
+                <marker date="1562746657868" expanded="true" signature="1638:2074" ph="{...}" />
+                <marker date="1562746657868" expanded="true" signature="1854:2028" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/GameManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <marker date="1562747496838" expanded="true" signature="6:50" ph="..." />
+                <marker date="1562747496838" expanded="true" signature="87:962" ph="{...}" />
+                <marker date="1562747496838" expanded="true" signature="133:960" ph="{...}" />
+                <marker date="1562747496838" expanded="true" signature="381:681" ph="{...}" />
+                <marker date="1562747496838" expanded="true" signature="582:671" ph="{...}" />
+                <marker date="1562747496838" expanded="true" signature="715:954" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+              <folding>
+                <marker date="1562746940608" expanded="true" signature="6:123" ph="..." />
+                <marker date="1562746940608" expanded="true" signature="159:2382" ph="{...}" />
+                <marker date="1562746940608" expanded="true" signature="210:327" ph="{...}" />
+                <marker date="1562746940608" expanded="true" signature="337:387" ph="/// 入力操作スクリプト ... " />
+                <marker date="1562746940608" expanded="true" signature="432:2380" ph="{...}" />
+                <marker date="1562746940608" expanded="true" signature="550:653" ph="{...}" />
+                <marker date="1562746940608" expanded="true" signature="1169:1223" ph="{...}" />
+                <marker date="1562746940608" expanded="true" signature="1262:1309" ph="{...}" />
+                <marker date="1562746940608" expanded="true" signature="1319:1375" ph="/// 押下状態を保存 ... " />
+                <marker date="1562746940608" expanded="true" signature="1417:2374" ph="{...}" />
+                <marker date="1562746940608" expanded="true" signature="1511:1547" ph="/* 制御可能のとき ... */" />
+                <marker date="1562746940608" expanded="true" signature="1787:1874" ph="{...}" />
+                <marker date="1562746940608" expanded="true" signature="1943:2055" ph="{...}" />
+                <marker date="1562746940608" expanded="true" signature="2118:2234" ph="{...}" />
+                <marker date="1562746940608" expanded="true" signature="2251:2362" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -198,10 +245,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerBulletCtl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/CameraCtl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Score/ScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EnemyBulletCtl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/PixelObjectBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EnemyCtl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/ScreenShot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteCtl.cs" root0="FORCE_HIGHLIGHTING" />
@@ -226,8 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/QuarterRest/QuarterRestIdleState.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/QuarterRest/QuarterRestApproachState.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/QuarterRest/QuarterRestCtl.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/WholeRest/EighthRestStateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/WholeRest/WholeRestExitState.cs" />
@@ -267,16 +313,18 @@
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Others/ReleaseLine.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerBulletCtl.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EightShotState.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EnemyCtl.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/TransitionEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/TouchAndLoadScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/ReleaseLine.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteCtl.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/HitSound.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Score/ScoreManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ScoreManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs" />
       </list>
     </option>
   </component>
@@ -310,6 +358,35 @@
               <item name="Assets" type="8711f2a6:AssetsRoot" />
               <item name="_MyAssets" type="1045f7f1:UnityExplorerNode" />
               <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="_MyAssets" type="1045f7f1:UnityExplorerNode" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+              <item name="Character" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="_MyAssets" type="1045f7f1:UnityExplorerNode" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+              <item name="Character" type="1045f7f1:UnityExplorerNode" />
+              <item name="Player" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="_MyAssets" type="1045f7f1:UnityExplorerNode" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+              <item name="Common" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="_MyAssets" type="1045f7f1:UnityExplorerNode" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+              <item name="Manager" type="1045f7f1:UnityExplorerNode" />
             </path>
             <path>
               <item name="" type="e068e287:UnityExplorerRootNode" />
@@ -380,7 +457,7 @@
       <workItem from="1562386271691" duration="38613000" />
       <workItem from="1562507116410" duration="10332000" />
       <workItem from="1562567660541" duration="41322000" />
-      <workItem from="1562733881096" duration="6145000" />
+      <workItem from="1562733881096" duration="9286000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1562331841533</created>
@@ -442,7 +519,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140157000" />
+    <option name="totallyTimeSpent" value="143298000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,7 +589,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/HalfRest/HalfRestStateMachine.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/ExplosionCtl.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -818,29 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
-          <folding>
-            <marker date="1562679945578" expanded="true" signature="6:123" ph="..." />
-            <marker date="1562679945578" expanded="true" signature="159:2272" ph="{...}" />
-            <marker date="1562679945578" expanded="true" signature="210:327" ph="{...}" />
-            <marker date="1562679945578" expanded="true" signature="337:387" ph="/// 入力操作スクリプト ... " />
-            <marker date="1562679945578" expanded="true" signature="432:2270" ph="{...}" />
-            <marker date="1562679945578" expanded="true" signature="1085:1132" ph="{...}" />
-            <marker date="1562679945578" expanded="true" signature="1142:1198" ph="/// 押下状態を保存 ... " />
-            <marker date="1562679945578" expanded="true" signature="1240:2264" ph="{...}" />
-            <marker date="1562679945578" expanded="true" signature="1334:1370" ph="/* 制御可能のとき ... */" />
-            <marker date="1562679945578" expanded="true" signature="1610:1764" ph="{...}" />
-            <marker date="1562679945578" expanded="true" signature="1641:1714" ph="/* 押下時 ... */" />
-            <marker date="1562679945578" expanded="true" signature="1833:1945" ph="{...}" />
-            <marker date="1562679945578" expanded="true" signature="2008:2124" ph="{...}" />
-            <marker date="1562679945578" expanded="true" signature="2141:2252" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/Scroll.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -941,23 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/HitSound.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-          <folding>
-            <marker date="1562739575194" expanded="true" signature="6:32" ph="..." />
-            <marker date="1562739575194" expanded="true" signature="68:938" ph="{...}" />
-            <marker date="1562739575194" expanded="true" signature="75:148" ph="/// 所定のタグオブジェクトとあたったとき ... " />
-            <marker date="1562739575194" expanded="true" signature="189:936" ph="{...}" />
-            <marker date="1562739575194" expanded="true" signature="432:643" ph="{...}" />
-            <marker date="1562739575194" expanded="true" signature="700:930" ph="{...}" />
-            <marker date="1562739575194" expanded="true" signature="750:920" ph="{...}" />
-            <marker date="1562739575194" expanded="true" signature="781:818" ph="/* タグとあたったとき ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteCtl.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -1009,58 +1045,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/HitSound.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="148" column="18" selection-start-line="148" selection-start-column="18" selection-end-line="148" selection-end-column="18" />
+        <state relative-caret-position="260">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
           <folding>
-            <marker date="1562731372898" expanded="true" signature="6:104" ph="..." />
-            <marker date="1562731372898" expanded="true" signature="150:4151" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="157:208" ph="/// プレイヤーを制御する ... " />
-            <marker date="1562731372898" expanded="true" signature="295:4149" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="646:714" ph="/* [SerializeField] private NoteManager _noteManager; ... */" />
-            <marker date="1562731372898" expanded="true" signature="1000:1063" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="1086:1723" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="1281:1481" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="1312:1354" ph="/* マウスを押下中 ... */" />
-            <marker date="1562731372898" expanded="true" signature="1522:1713" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="1553:1593" ph="/* マウスを操作していないとき ... */" />
-            <marker date="1562731372898" expanded="true" signature="1733:1786" ph="/// 射撃する ... " />
-            <marker date="1562731372898" expanded="true" signature="1813:2019" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="1856:2009" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="2029:2104" ph="/// 射撃を制御する ... " />
-            <marker date="1562731372898" expanded="true" signature="2134:2519" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="2183:2270" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="2444:2509" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="2538:2659" ph="/// posの位置にから、プレイヤーの移動を制御する ... " />
-            <marker date="1562731372898" expanded="true" signature="2700:3647" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="2910:3576" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="3704:4143" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="3785:4133" ph="{...}" />
-            <marker date="1562731372898" expanded="true" signature="3816:3907" ph="/* 敵キャラクター、弾丸と接触したとき ... */" />
-            <marker date="1562731372898" expanded="true" signature="4065:4119" ph="/* 自身を消去する ... */" />
+            <marker date="1562739575194" expanded="true" signature="6:32" ph="..." />
+            <marker date="1562739575194" expanded="true" signature="68:938" ph="{...}" />
+            <marker date="1562739575194" expanded="true" signature="75:148" ph="/// 所定のタグオブジェクトとあたったとき ... " />
+            <marker date="1562739575194" expanded="true" signature="189:936" ph="{...}" />
+            <marker date="1562739575194" expanded="true" signature="432:643" ph="{...}" />
+            <marker date="1562739575194" expanded="true" signature="700:930" ph="{...}" />
+            <marker date="1562739575194" expanded="true" signature="750:920" ph="{...}" />
+            <marker date="1562739575194" expanded="true" signature="781:818" ph="/* タグとあたったとき ... */" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Score/ScoreManager.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ScoreManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
-          <caret line="14" column="64" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
           <folding>
-            <marker date="1562741736027" expanded="true" signature="6:116" ph="..." />
-            <marker date="1562741736027" expanded="true" signature="151:1829" ph="{...}" />
-            <marker date="1562741736027" expanded="true" signature="158:205" ph="/// スコアを管理 ... " />
-            <marker date="1562741736027" expanded="true" signature="250:1827" ph="{...}" />
-            <marker date="1562741736027" expanded="true" signature="673:974" ph="{...}" />
-            <marker date="1562741736027" expanded="true" signature="765:803" ph="/* 初期オブジェクトの数を記憶 ... */" />
-            <marker date="1562741736027" expanded="true" signature="848:964" ph="{...}" />
-            <marker date="1562741736027" expanded="true" signature="984:1051" ph="/// オブジェクトの残りの数のリストを更新 ... " />
-            <marker date="1562741736027" expanded="true" signature="1122:1342" ph="{...}" />
-            <marker date="1562741736027" expanded="true" signature="1211:1332" ph="{...}" />
-            <marker date="1562741736027" expanded="true" signature="1352:1409" ph="/// スコアを表示する ... " />
-            <marker date="1562741736027" expanded="true" signature="1472:1821" ph="{...}" />
-            <marker date="1562741736027" expanded="true" signature="1601:1775" ph="{...}" />
+            <marker date="1562746657868" expanded="true" signature="6:127" ph="..." />
+            <marker date="1562746657868" expanded="true" signature="164:2091" ph="{...}" />
+            <marker date="1562746657868" expanded="true" signature="171:218" ph="/// スコアを管理 ... " />
+            <marker date="1562746657868" expanded="true" signature="263:2089" ph="{...}" />
+            <marker date="1562746657868" expanded="true" signature="753:1126" ph="{...}" />
+            <marker date="1562746657868" expanded="true" signature="845:883" ph="/* 初期オブジェクトの数を記憶 ... */" />
+            <marker date="1562746657868" expanded="true" signature="928:1044" ph="{...}" />
+            <marker date="1562746657868" expanded="true" signature="1136:1203" ph="/// オブジェクトの残りの数のリストを更新 ... " />
+            <marker date="1562746657868" expanded="true" signature="1281:1501" ph="{...}" />
+            <marker date="1562746657868" expanded="true" signature="1370:1491" ph="{...}" />
+            <marker date="1562746657868" expanded="true" signature="1511:1568" ph="/// スコアを表示する ... " />
+            <marker date="1562746657868" expanded="true" signature="1638:2074" ph="{...}" />
+            <marker date="1562746657868" expanded="true" signature="1854:2028" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+          <folding>
+            <marker date="1562746940608" expanded="true" signature="6:123" ph="..." />
+            <marker date="1562746940608" expanded="true" signature="159:2382" ph="{...}" />
+            <marker date="1562746940608" expanded="true" signature="210:327" ph="{...}" />
+            <marker date="1562746940608" expanded="true" signature="337:387" ph="/// 入力操作スクリプト ... " />
+            <marker date="1562746940608" expanded="true" signature="432:2380" ph="{...}" />
+            <marker date="1562746940608" expanded="true" signature="550:653" ph="{...}" />
+            <marker date="1562746940608" expanded="true" signature="1169:1223" ph="{...}" />
+            <marker date="1562746940608" expanded="true" signature="1262:1309" ph="{...}" />
+            <marker date="1562746940608" expanded="true" signature="1319:1375" ph="/// 押下状態を保存 ... " />
+            <marker date="1562746940608" expanded="true" signature="1417:2374" ph="{...}" />
+            <marker date="1562746940608" expanded="true" signature="1511:1547" ph="/* 制御可能のとき ... */" />
+            <marker date="1562746940608" expanded="true" signature="1787:1874" ph="{...}" />
+            <marker date="1562746940608" expanded="true" signature="1943:2055" ph="{...}" />
+            <marker date="1562746940608" expanded="true" signature="2118:2234" ph="{...}" />
+            <marker date="1562746940608" expanded="true" signature="2251:2362" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/GameManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <marker date="1562747496838" expanded="true" signature="6:50" ph="..." />
+            <marker date="1562747496838" expanded="true" signature="87:962" ph="{...}" />
+            <marker date="1562747496838" expanded="true" signature="133:960" ph="{...}" />
+            <marker date="1562747496838" expanded="true" signature="381:681" ph="{...}" />
+            <marker date="1562747496838" expanded="true" signature="582:671" ph="{...}" />
+            <marker date="1562747496838" expanded="true" signature="715:954" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/PlayerCtl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="147" column="23" lean-forward="true" selection-start-line="147" selection-start-column="23" selection-end-line="147" selection-end-column="23" />
+          <folding>
+            <marker date="1562748565174" expanded="true" signature="6:137" ph="..." />
+            <marker date="1562748565174" expanded="true" signature="183:4431" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="190:241" ph="/// プレイヤーを制御する ... " />
+            <marker date="1562748565174" expanded="true" signature="328:4429" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="679:747" ph="/* [SerializeField] private NoteManager _noteManager; ... */" />
+            <marker date="1562748565174" expanded="true" signature="1114:1177" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="1200:1837" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="1395:1595" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="1426:1468" ph="/* マウスを押下中 ... */" />
+            <marker date="1562748565174" expanded="true" signature="1636:1827" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="1667:1707" ph="/* マウスを操作していないとき ... */" />
+            <marker date="1562748565174" expanded="true" signature="1847:1900" ph="/// 射撃する ... " />
+            <marker date="1562748565174" expanded="true" signature="1927:2133" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="1970:2123" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="2143:2218" ph="/// 射撃を制御する ... " />
+            <marker date="1562748565174" expanded="true" signature="2248:2633" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="2297:2384" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="2558:2623" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="2652:2773" ph="/// posの位置にから、プレイヤーの移動を制御する ... " />
+            <marker date="1562748565174" expanded="true" signature="2814:3761" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="3024:3690" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="3818:4423" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="3934:4413" ph="{...}" />
+            <marker date="1562748565174" expanded="true" signature="3965:4056" ph="/* 敵キャラクター、弾丸と接触したとき ... */" />
           </folding>
         </state>
       </provider>

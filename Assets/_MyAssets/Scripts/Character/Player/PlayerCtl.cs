@@ -1,6 +1,7 @@
 using System;
 using _MyAssets.Scripts.Character.Note;
 using _MyAssets.Scripts.Common;
+using _MyAssets.Scripts.Manager;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Character.Player
@@ -35,6 +36,9 @@ namespace _MyAssets.Scripts.Character.Player
 
         // 爆発エフェクト
         [SerializeField] private GameObject _explosion;
+
+        // ゲームマネージャー
+        [SerializeField] private GameManager _gameManager;
 
         void Start()
         {
@@ -136,7 +140,7 @@ namespace _MyAssets.Scripts.Character.Player
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Enemy") || other.CompareTag("Note"))
+            if (other.CompareTag("Enemy") || other.CompareTag("Note") || other.CompareTag("ReleaseNote"))
             {
                 // 敵キャラクター、弾丸と接触したとき
                 // ノートと接触したとき
@@ -146,7 +150,11 @@ namespace _MyAssets.Scripts.Character.Player
                 explosion.transform.position = transform.position;
                 
                 // 自身を消去する
-                //Destroy(this.gameObject);
+                Destroy(this.gameObject);
+                
+                // ゲームオーバー
+                if (_gameManager != null)
+                    _gameManager.ShowResult();
             }
         }
     }

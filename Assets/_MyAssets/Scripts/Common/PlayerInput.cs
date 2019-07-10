@@ -23,7 +23,11 @@ namespace _MyAssets.Scripts.Common
         // 操作可能かどうか
         private static bool _controllable = true;
 
-        private static bool Controllable => _controllable;
+        public static bool Controllable 
+        {
+            get => _controllable;
+            set => _controllable = Controllable;
+        }
 
         // マウスのワールド座標
         private static Vector3 _mouseWorldPoint;
@@ -42,6 +46,11 @@ namespace _MyAssets.Scripts.Common
         // 監視するボタン番号
         private static int _mouseLeftButton = 0;
 
+        private void Start()
+        {
+            _controllable = true;
+        }
+        
         private void Update()
         {
             UpdateState();
@@ -68,7 +77,6 @@ namespace _MyAssets.Scripts.Common
             if (Input.GetMouseButtonDown(_mouseLeftButton))
             {
                 // 押下時
-                //_mouseButtonState = MouseButtonState.ButtonDown;
                 _buttonDown = true;
             }
             

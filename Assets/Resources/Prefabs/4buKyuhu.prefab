@@ -236,4 +236,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: PlayerBullet
-  _clip: {fileID: 8300000, guid: 18ddf341fe3160a408b1c1759276de6c, type: 3}
+  _clip: {fileID: 8300000, guid: 70b6d3435a8070044972e09f7b015928, type: 3}

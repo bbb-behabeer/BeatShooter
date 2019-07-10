@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Serialization;
 
-namespace _MyAssets.Scripts.Score
+namespace _MyAssets.Scripts.Manager
 {
     /// <summary>
     /// スコアを管理
@@ -15,7 +15,6 @@ namespace _MyAssets.Scripts.Score
         private static List<int> _FirstNumList = new List<int>();
         // 区間ごとのオブジェクトの数　最後
         private static List<int> _LeftNumList = new List<int>();
-
         
         // 区間のトランスフォーム
         [SerializeField] 
@@ -24,7 +23,10 @@ namespace _MyAssets.Scripts.Score
         // スコアのテキスト
         [SerializeField]
         private TextMeshProUGUI _scoreText;
-        
+
+        // スコアのオブジェクト
+        [SerializeField] private GameObject _result;
+
         void Start()
         {
             _FirstNumList.Clear();
@@ -36,13 +38,15 @@ namespace _MyAssets.Scripts.Score
                 _FirstNumList.Add( t.childCount );
                 _LeftNumList.Add(0);
             }
+            
+            if (_result != null) _result.SetActive(false);
         }
 
         /// <summary>
         /// オブジェクトの残りの数のリストを更新
         /// </summary>
         [Button("UpdateLeftNumList")]
-        void UpdateLeftNumList()
+        public void UpdateLeftNumList()
         {
             // リストを更新
             for (var i=0; i < _distinctList.Length; i++)
@@ -56,8 +60,11 @@ namespace _MyAssets.Scripts.Score
         /// スコアを表示する
         /// </summary>
         [Button("ShowScoreText")]
-        void ShowScoreText()
+        public void ShowScoreText()
         {
+            if (_result != null)
+                _result.SetActive(true);
+            
             var str = "";
             
             // テキストの加工
@@ -70,5 +77,6 @@ namespace _MyAssets.Scripts.Score
 
             _scoreText.text = str;
         }
+        
     }
 }
