@@ -5,25 +5,12 @@ namespace _MyAssets.Scripts.Note
 {
     public class NoteScreen : MonoBehaviour
     {
-        private static int height;
-        private static float halfHeight;
-        private static float k;
 
-        public static int Height => height;
+        public static int Height =>  Screen.height;
 
-        public static float HalfHeight => halfHeight;
+        public static float HalfHeight => (float)Height * .5f;
 
-        public static float K => k;
+        public static float K => (Camera.main.orthographicSize / HalfHeight) * .5f;
 
-        private void Start()
-        {
-            // 縦幅を取得
-            height = Screen.height;
-            halfHeight = height / 2f;
-
-            k = Camera.main.orthographicSize / halfHeight;
-        }
-
-        
     }
 }

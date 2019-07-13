@@ -10,6 +10,7 @@ namespace _MyAssets.Scripts.Note
     /// <summary>
     /// ノートの管理
     /// </summary>
+    [RequireComponent(typeof(AudioSource))]
     public class NoteManager: MonoBehaviour
     {
         private static NoteManager _instance = null;
@@ -23,19 +24,35 @@ namespace _MyAssets.Scripts.Note
         // 一小節の長さ
         [SerializeField] private float _duration = 1f;
         public float Duration => _duration;
-        [SerializeField] private int _beat = 8;
+        
+        [SerializeField] private int _beat = 4;
         public int Beat => _beat;
 
+        [SerializeField] private int _bbeat = 8;
+        public int BBeat => _bbeat;
+        
         // 一拍の時間
-        private float _durationPerBeat;
+        public float DurationPerBeat
+        {
+            get {            
+                return _duration / (float)_beat;
+            }
+        }
+        
+        public float BBeatPerBeat
+        {
+            get { return (float)_bbeat / (float)_beat; }
+        }
 
-        public float DurationPerBeat => _durationPerBeat;
+        // オーディオソース
+        private AudioSource _audioSource;
 
         private void Awake()
         {
             if (_instance == null)
             {
                 _instance = this;
+                DontDestroyOnLoad(gameObject);
             }
             else
             {
@@ -45,7 +62,13 @@ namespace _MyAssets.Scripts.Note
 
         private void Start()
         {
-            _durationPerBeat = _duration / (float)_beat;
+            _audioSource = GetComponent<AudioSource>();
+            
+        }
+
+        public void PlaySE(AudioClip clip)
+        {
+            //_audioSource.PlayOneShot(clip);
         }
     }
 }
