@@ -27,24 +27,12 @@ namespace _MyAssets.Scripts
             DontDestroyOnLoad(this.gameObject);
         }
         
-        private void Start()
-        {
-            // フェードオブジェクトを生成して
-            //_FadeObject = Instantiate(_FadeObject);
-            //_transitionEffect = _FadeObject.GetComponent<TransitionEffect>();
-        }
-
         /// <summary>
         /// 次のシーンへフェード
         /// </summary>
         /// <returns></returns>
         public async Task FadeScene()
         {
-            // ロード中のとき処理をしない
-            //if (_transitionEffect.fading) return;
-
-            //if (_transitionEffect != null)
-            //    await _transitionEffect.FadeOut();
             
             SceneManager.LoadScene(_scene);
 
