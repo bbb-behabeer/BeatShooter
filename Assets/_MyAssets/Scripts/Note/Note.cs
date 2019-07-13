@@ -77,14 +77,22 @@ namespace _MyAssets.Scripts.Note
                 // 入力があればエイムする
                 if (!_isAimed && Input.GetButtonDown("Jump"))
                 {
-                    //_isAimed = true;
+                    _isAimed = true;
                     
                     // エイム処理
                     //noteManager.PlaySE(_se)
                     _aim.SetActive(true);
-                    Instantiate(_effect).transform.position = transform.position;
                 }
             }
+
+            // 最終ラインで入力
+            var end = noteManager.Duration * noteManager.BBeatPerBeat;
+            if (_time > end - noteManager.Range * 2)
+                if (_isAimed && Input.GetButtonDown("Jump"))
+                {
+                    // 消去
+                    DestroyThis();
+                }
         }
         
         /// <summary>

@@ -19,10 +19,14 @@ namespace _MyAssets.Scripts.Note
             var h = NoteScreen.Height;
             var hh = NoteScreen.HalfHeight;
             var k = NoteScreen.K;
-            
-            var ny = h * (Time.timeSinceLevelLoad / noteManager.Duration) % (h * noteManager.BBeatPerBeat);
-            ny *= k;
-            
+
+            var current = Time.timeSinceLevelLoad;
+            var dur = noteManager.Duration;
+            var bdur = noteManager.Duration * noteManager.BBeatPerBeat;
+            var c = current % bdur;
+            var t = c / dur;
+            var ny = h * t * k;
+
             transform.position = new Vector3(_cache.x, ny, _cache.z);
         }
     }

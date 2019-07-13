@@ -49,6 +49,7 @@
             </e>
             <e p="Note" t="Include">
               <e p="AimLine.cs" t="Include" />
+              <e p="EndLine.cs" t="Include" />
               <e p="Note.cs" t="Include" />
               <e p="NoteManager.cs" t="Include" />
               <e p="NoteScreen.cs" t="Include" />

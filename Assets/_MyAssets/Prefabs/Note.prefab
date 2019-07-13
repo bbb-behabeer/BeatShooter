@@ -172,6 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414351b9863d4d43bf943fd13dc9c7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _effect: {fileID: 6178847348995951011, guid: d56eef5bd8769c7458fffac1fbeb672d, type: 3}
+  _effect: {fileID: 2501792985075724444, guid: c1fbbc6bccaa4c544accafa657b677ab, type: 3}
   _moment: 6
   _se: {fileID: 8300000, guid: 18ddf341fe3160a408b1c1759276de6c, type: 3}
