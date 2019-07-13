@@ -1,20 +1,14 @@
-using System;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Character
+namespace _MyAssets.Scripts.Character.Player
 {
     /// <summary>
     /// 弾丸を制御する
     /// </summary>
-    [RequireComponent(typeof(Rigidbody2D))]
-    public class PlayerBulletCtl : MonoBehaviour
+    public class PlayerBullet : MonoBehaviour
     {
-        // 弾丸の速度
-        [SerializeField] private Vector3 velocity;
-
+        // 画面外に出ないように上限を設ける
         [SerializeField] private float _upperBound = 200f;
-
-        private Rigidbody2D _rb;
 
         private Vector3 _cache;
 
@@ -24,10 +18,6 @@ namespace _MyAssets.Scripts.Character
         
         void Start()
         {
-            // 速度を設定
-            _rb = GetComponent<Rigidbody2D>();
-            _rb.velocity = velocity;
-            
             // 生成位置をキャッシュ
             _cache = transform.position;
         }
@@ -52,17 +42,6 @@ namespace _MyAssets.Scripts.Character
                 // ゲームオブジェクトを削除
                 Destroy(gameObject);
             }
-        }
-
-        /// <summary>
-        /// 弾速を設定する
-        /// </summary>
-        /// <param name="v">弾速</param>
-        public void SetVelocity(Vector3 v)
-        {
-            velocity = v;
-            if (_rb = null)
-                _rb.velocity = velocity;
         }
     }
 }

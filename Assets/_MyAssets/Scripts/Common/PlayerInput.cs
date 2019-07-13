@@ -10,7 +10,7 @@ namespace _MyAssets.Scripts.Common
         Press, // ボタン押下継続
         ButtonUp // ボタンリリース時
     }
-    
+
     /// <summary>
     /// 入力操作スクリプト
     /// </summary>

@@ -3,6 +3,7 @@ using _MyAssets.Scripts.Character.Note;
 using _MyAssets.Scripts.Common;
 using _MyAssets.Scripts.Manager;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _MyAssets.Scripts.Character.Player
 {
@@ -10,7 +11,7 @@ namespace _MyAssets.Scripts.Character.Player
     /// プレイヤーを制御する
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
-    public class PlayerCtl : MonoBehaviour
+    public class Player : MonoBehaviour
     {
         // 弾
         [SerializeField]

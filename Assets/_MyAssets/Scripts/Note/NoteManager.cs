@@ -56,7 +56,7 @@ namespace _MyAssets.Scripts.Note
             if (_offset >= _noteList.Count) return;
 
             // ボリュームを変更
-            if (PlayerInput.MouseButtonState.Equals(MouseButtonState.Press))
+            if (PlayerInput.Shot)
             {
                 // ボタン押下時
                 // ボリュームを最大に
@@ -71,6 +71,7 @@ namespace _MyAssets.Scripts.Note
             
             if (_playable)
             {
+                // 再生可能なとき
                 // ノートを再生
                 _audioSource.PlayOneShot(_noteList[_offset]);
             }
