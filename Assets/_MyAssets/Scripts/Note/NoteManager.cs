@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using _MyAssets.Scripts.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -10,67 +12,40 @@ namespace _MyAssets.Scripts.Note
     /// </summary>
     public class NoteManager: MonoBehaviour
     {
-        // 各パートの再生フラグ
-        private bool _playable = false;
-        // 各パートのスキップフラグ
-        private bool _skipable = false;
+        private static NoteManager _instance = null;
 
-        // 各パートのオーディオソース
-        private AudioSource _audioSource;
-
-        // ボリューム
-        [SerializeField] private float _volume = .8f;
+        public static NoteManager Instance => _instance;
         
-        // ノート配列のオフセット
-        private int _offset;
+        // 入力の許容範囲
+        [SerializeField] private float _range;
+        public float Range => _range;
 
-        [Button("Start")]
+        // 一小節の長さ
+        [SerializeField] private float _duration = 1f;
+        public float Duration => _duration;
+        [SerializeField] private int _beat = 8;
+        public int Beat => _beat;
+
+        // 一拍の時間
+        private float _durationPerBeat;
+
+        public float DurationPerBeat => _durationPerBeat;
+
+        private void Awake()
+        {
+            if (_instance == null)
+            {
+                _instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
         private void Start()
         {
-            // オフセットを初期化する
-            _offset = 0;
-            
-            // オーディオソースを設定
-            _audioSource = gameObject.AddComponent<AudioSource>();
-            _audioSource.playOnAwake = false;
-            _audioSource.loop = false;
-            _audioSource.volume = _volume;
-        }
-
-        /// <summary>
-        /// オーディオクリップを再生する
-        /// </summary>
-        [Button("PlayClip")]
-        public void PlayClip()
-        {
-            // オフセットを増やす
-            _offset++;
-            // フラグの初期化
-            // スキップ不可能に
-            _skipable = false;
-            // 再生不可能に
-            _playable = false;
-        }
-
-        /// <summary>
-        /// ノートを再生可能に設定する
-        /// </summary>
-        public void SetPlayable()
-        {
-            // 再生可能に設定
-            _playable = true;
-            // 再生可能のときスキップ不可能
-            _skipable = false;
-        }
-        
-        /// <summary>
-        /// ノートをスキップ可能に設定する
-        /// </summary>
-        public void SetSkippable()
-        {
-            _playable = false;
-            // 再生不可能のときスキップ可能
-            _skipable = true;
+            _durationPerBeat = _duration / (float)_beat;
         }
     }
 }
