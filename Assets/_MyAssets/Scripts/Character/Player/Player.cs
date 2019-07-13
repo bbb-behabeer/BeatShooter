@@ -1,5 +1,4 @@
 using System;
-using _MyAssets.Scripts.Character.Note;
 using _MyAssets.Scripts.Common;
 using _MyAssets.Scripts.Manager;
 using UnityEngine;

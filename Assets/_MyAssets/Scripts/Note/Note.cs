@@ -1,55 +1,65 @@
 using System;
-using _MyAssets.Scripts.Note;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Character.Note
+namespace _MyAssets.Scripts.Note
 {
-    // パート情報
-    public enum Part
-    {
-        Melody,
-        UraMelody,
-        Percussion,
-        Bass,
-        FillIn,
-        Effect
-    }
-    
     /// <summary>
     /// ノートの制御
     /// </summary>
-    public class NoteCtl: MonoBehaviour
+    public class Note: MonoBehaviour
     {
-        // 担当するパート
-        [SerializeField] private Part _part;
         // ノート再生時のエフェクト
         [SerializeField] private GameObject _effect;
         
-        // ノート管理オブジェクト
-        private NoteManager _noteManager;
+        // ノートを配置するタイミング
+        // 1--8
+        [SerializeField] private int _moment;
 
-        // 削除可能となるY座標
-        [SerializeField] private bool _visible = false;
+        // 入力の許容範囲
+        [SerializeField] private int _range;
 
+        // 一小節の長さ
+        [SerializeField] private float _duration = 1f;
+        [SerializeField] private int _beat = 8;
+        
+        // 経過時間
+        private float _time;
+        
+        // 入力した
+        private bool _isAimed; 
+        
         void Start()
         {
             // NoteManagerをシーンから取得
-            _noteManager = GameObject.Find(_part.ToString() + "Part").GetComponent<NoteManager>();
+        //    _noteManager = GameObject.Find("NoteManager").GetComponent<NoteManager>();
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void FixedUpdate()
         {
-            if (other.CompareTag("PlayerBullet"))
+            _time += Time.deltaTime;
+
+            // タイミングを計算
+            var timePerBeat = _duration / (float)_beat;
+            var just = timePerBeat * _moment;
+            var min = just - _range;
+            var max = just + _range;
+
+            // 範囲内であればエイム可能
+            if (_time > min && _time < max)
             {
-                // パートを再生可能に
-                if (_noteManager != null)
-                    _noteManager.SetPlayable();
-                // 自身をその場に停止 
-                transform.parent = null;
+                // エイムしておらず
+                // 入力があればエイムする
+                if (!_isAimed && Input.GetButtonDown("Shot"))
+                {
+                    _isAimed = true;
+                    
+                    // エイム処理
+                    Debug.Log(gameObject);
+                }
             }
         }
-
-        private void OnWillRenderObject()
+        
+        /*private void OnWillRenderObject()
         {
             if (Camera.current.name != "SceneCamera" && Camera.current.name != "Preview Camera")
             {
@@ -65,19 +75,19 @@ namespace _MyAssets.Scripts.Character.Note
                     _visible = true;
                 }
             }
-        }
+        }*/
 
         /// <summary>
         /// 削除できるか
         /// </summary>
         /// <returns></returns>
-        public bool CanDestroy()
+        /*public bool CanDestroy()
         {
             // 可視のとき
             if (_visible)
                 return true;
             return false;
-        }
+        }*/
 
         /// <summary>
         /// 削除する
