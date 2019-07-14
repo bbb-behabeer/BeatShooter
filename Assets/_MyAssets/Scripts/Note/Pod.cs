@@ -21,8 +21,6 @@ namespace _MyAssets.Scripts.Note
         
         private void Start()
         {
-            //_laser = GetComponentInChildren<Laser>();
-            //_sight = GetComponentInChildren<Sight>();
             _time = 0;
         }
 
@@ -50,6 +48,9 @@ namespace _MyAssets.Scripts.Note
         /// </summary>
         public void Shot()
         {
+            // Shot内で
+            // レーザーを生成する
+            //Instantiate(_laser).transform.position = transform.position;
             _laser.Shot();
         }
 
@@ -60,6 +61,8 @@ namespace _MyAssets.Scripts.Note
         //public void AimAt(Transform t)
         public void AimAt(Note t)
         {
+            // SetTarget内で
+            // 照準を生成する
             _sight.SetTarget(t);
             _laser.SetTarget(t);
             //_aimed = true;

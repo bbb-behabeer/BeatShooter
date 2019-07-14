@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Security.Cryptography;
 using _MyAssets.Scripts.Base;
 using _MyAssets.Scripts.Common;
@@ -32,26 +33,36 @@ namespace _MyAssets.Scripts.Note
         // オーディオソース
         private AudioSource _audioSource;
 
-        public float CurrentTime => Time.timeSinceLevelLoad % (Duration * 2);
+        public float CurrentTime => Time.timeSinceLevelLoad % Duration;
 
-        public float StartMoment => _beat / 2f;
-        public float EndMoment => _beat + StartMoment;
+        public float EndMoment => _beat;
+
+        // シーンから
+        [SerializeField] private Pod _pod;
+        
+        [SerializeField]
+        private List<Note> _cacheNotes;
 
         private void Start()
         {
             _audioSource = GetComponent<AudioSource>();
         }
 
-        public void PlaySE(AudioClip clip)
+        private void Update()
         {
+            foreach (var note in _cacheNotes)
+            {
+                if (note.CanAim())
+                {
+                    _pod.AimAt(note);
+                }
+            }
         }
-
-        
 
         public float GetTiming(float moment)
         {
             // タイミングを取得
-            return DurationPerBeat * (moment + StartMoment);
+            return DurationPerBeat * moment;
         }
 
         public bool CanHit(float moment)

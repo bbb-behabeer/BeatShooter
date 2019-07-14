@@ -19,7 +19,7 @@ namespace _MyAssets.Scripts.Note
             var k = noteScreen.K;
             
             // 位置を計算
-            var m = noteManager.StartMoment + moment;
+            var m =  moment;
             var ny = GetYPosWithTime(m * noteManager.DurationPerBeat);
 
             return ny;

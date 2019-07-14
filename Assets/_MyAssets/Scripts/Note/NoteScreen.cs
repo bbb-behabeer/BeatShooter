@@ -10,7 +10,7 @@ namespace _MyAssets.Scripts.Note
 
         float HalfHeight => (float)Height * .5f;
 
-        public float K => (Camera.main.orthographicSize / HalfHeight) * .5f;
+        public float K => (Camera.main.orthographicSize / HalfHeight);
 
     }
 }

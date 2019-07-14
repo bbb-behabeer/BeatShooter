@@ -15,7 +15,6 @@
               <e p="SingletonMonoBehaviour.cs" t="Include" />
               <e p="StateBase.cs" t="Include" />
             </e>
-            <e p="ButtonTouchAndLoadScene.cs" t="Include" />
             <e p="Character" t="Include">
               <e p="Enemy" t="Include">
                 <e p="ApproachState.cs" t="Include" />
@@ -59,8 +58,6 @@
               <e p="Pod.cs" t="Include" />
               <e p="Sight.cs" t="Include" />
             </e>
-            <e p="TouchAndLoadScene.cs" t="Include" />
-            <e p="TransitionEffect.cs" t="Include" />
           </e>
         </e>
         <e p="ConsolePro" t="Include">

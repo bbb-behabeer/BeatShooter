@@ -17,7 +17,7 @@ namespace _MyAssets.Scripts.Note
         [SerializeField] private int _moment = 0;
 
         // 入力した
-        private bool _isAimed;
+        private bool _isAimed = false;
         
         // オーディオクリップ
         [SerializeField] private AudioClip _se;
@@ -42,12 +42,21 @@ namespace _MyAssets.Scripts.Note
             var cache = transform.position;
             cache.y = NoteSetter.Instance.GetYPosWithMoment(_moment);
             transform.position = cache;
+            _isAimed = false;
         }
 
         public bool CanAim()
         {
             var noteManager = NoteManager.Instance;
-            return noteManager.CanHit(_moment);
+            if (!_isAimed)
+            {
+                if (noteManager.CanHit(_moment))
+                {
+                    _isAimed = true;
+                }
+            }
+
+            return _isAimed;
         }
         
         /// <summary>
