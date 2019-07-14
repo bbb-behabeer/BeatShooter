@@ -60,10 +60,11 @@ namespace _MyAssets.Scripts.Note
         /// エイムする
         /// </summary>
         /// <param name="t">ターゲット</param>
-        public void AimAt(Transform t)
+        //public void AimAt(Transform t)
+        public void AimAt(Note t)
         {
-            _sight.AimAt(t);
-            _laser.AimAt(t);
+            _sight.SetTarget(t);
+            _laser.SetTarget(t);
             _aimed = true;
         }
     }

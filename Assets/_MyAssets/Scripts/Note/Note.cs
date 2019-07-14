@@ -28,6 +28,8 @@ namespace _MyAssets.Scripts.Note
 
         public Transform Transform => transform;
 
+        public Vector3 Position => transform.position;
+
         public void Start()
         {
             Initialize(_moment);
@@ -69,15 +71,6 @@ namespace _MyAssets.Scripts.Note
             // 時間経過
             _time += Time.deltaTime;
             _time %= noteManager.Duration * noteManager.BBeatPerBeat;
-
-            // 最終ラインで入力
-            var end = noteManager.Duration * noteManager.BBeatPerBeat;
-            if (_time > end - noteManager.Range * 2)
-                if (_isAimed && Input.GetButtonDown("Jump"))
-                {
-                    // 消去
-                    DestroyThis();
-                }
         }
 
         public bool CanAim()
@@ -95,7 +88,7 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// 削除する
         /// </summary>
-        public void DestroyThis()
+        public void Explode()
         {
             // エフェクトを生成
             var effect = Instantiate(_effect);

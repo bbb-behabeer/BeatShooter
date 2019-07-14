@@ -32,7 +32,7 @@ namespace _MyAssets.Scripts.Manager
             {
                 if (note.CanAim())
                 {
-                    _podList[_offset].AimAt(note.Transform);
+                    _podList[_offset].AimAt(note);
                 }
 
                 _offset++;

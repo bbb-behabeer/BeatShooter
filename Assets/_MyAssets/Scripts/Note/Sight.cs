@@ -8,21 +8,16 @@ namespace _MyAssets.Scripts.Note
     /// </summary>
     public class Sight : MonoBehaviour
     {
-        private Transform _target;
+        //private Transform _target;
+        private Note _target;
         
-        public void AimAt(Transform t)
+        //public void AimAt(Transform t)
+        public void SetTarget(Note t)
         {
             _target = t;
             gameObject.SetActive(true);
-        }
-
-        public void FixedUpdate()
-        {
-            if (_target != null)
-            {
-                transform.position = _target.position;
-                transform.rotation = Quaternion.identity;
-            }
+            transform.position = _target.Position;
+            transform.rotation = Quaternion.identity;
         }
     }
 }

@@ -8,8 +8,9 @@ namespace _MyAssets.Scripts.Note
         // 初期位置
         private Vector3 _initialPos;
         // ターゲット
-        [SerializeField] private Transform _target;
-
+        //[SerializeField] private Transform _target;
+        private Note _target;
+        
         // 時間
         private float _current;
         [SerializeField] private float _period;
@@ -29,12 +30,15 @@ namespace _MyAssets.Scripts.Note
 
         private void FixedUpdate()
         {
+            if (_target == null) return;
+            
             // 0 -> 1に
             var t = Mathf.Min(_current / _ratio, 1f);
             
             // ターゲットまでのベクトルを計算
             var q = Quaternion.Lerp(transform.rotation, Quaternion.identity, t);
-            var pos = Vector2.Lerp(_initialPos, q * _target.position, t);
+            var pos = Vector2.Lerp(_initialPos, q * _target.Position, t);
+            //var pos = Vector2.Lerp(_initialPos, q * _target.position, t);
          
             // 位置を更新する
             transform.position = pos;
@@ -68,7 +72,8 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// ターゲットを設定
         /// </summary>
-        public void AimAt(Transform t)
+        //public void AimAt(Transform t)
+        public void SetTarget(Note t)
         {
             _target = t;
         }
