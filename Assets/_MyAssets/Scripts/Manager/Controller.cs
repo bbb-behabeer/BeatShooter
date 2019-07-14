@@ -15,8 +15,8 @@ namespace _MyAssets.Scripts.Manager
 
         private void FixedUpdate()
         {
-            var h = Input.GetAxis("Horizontal");
-            var v = Input.GetAxis("Vertical");
+            var h = Input.GetAxisRaw("Horizontal");
+            var v = Input.GetAxisRaw("Vertical");
             
             var dir = new Vector2(h, v);
             
