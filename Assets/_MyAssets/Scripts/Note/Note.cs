@@ -40,7 +40,7 @@ namespace _MyAssets.Scripts.Note
         public void Initialize()
         {
             var cache = transform.position;
-            cache.y = NoteManager.Instance.GetPosWithMoment(_moment);
+            cache.y = NoteSetter.Instance.GetYPosWithMoment(_moment);
             transform.position = cache;
         }
 

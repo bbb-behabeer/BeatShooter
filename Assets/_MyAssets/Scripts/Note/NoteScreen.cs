@@ -1,16 +1,16 @@
 using System;
+using _MyAssets.Scripts.Base;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Note
 {
-    public class NoteScreen : MonoBehaviour
+    public class NoteScreen :SingletonMonoBehaviour<NoteScreen>
     {
+        public float Height =>  Screen.height;
 
-        public static int Height =>  Screen.height;
+        float HalfHeight => (float)Height * .5f;
 
-        public static float HalfHeight => (float)Height * .5f;
-
-        public static float K => (Camera.main.orthographicSize / HalfHeight) * .5f;
+        public float K => (Camera.main.orthographicSize / HalfHeight) * .5f;
 
     }
 }

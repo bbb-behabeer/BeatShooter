@@ -16,7 +16,7 @@ namespace _MyAssets.Scripts.Note
         {
             var noteManager = NoteManager.Instance;
 
-            var ny = noteManager.GetPos();
+            var ny = NoteSetter.Instance.GetYPos();
 
             transform.position = new Vector3(_cache.x, ny, _cache.z);
         }
