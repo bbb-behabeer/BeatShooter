@@ -32,17 +32,13 @@ namespace _MyAssets.Scripts.Note
         public int BBeat => _bbeat;
         
         // 一拍の時間
-        public float DurationPerBeat
-        {
-            get {            
-                return _duration / (float)_beat;
-            }
-        }
-        
-        public float BBeatPerBeat
-        {
-            get { return (float)_bbeat / (float)_beat; }
-        }
+        public float DurationPerBeat => _duration / (float)_beat;
+
+        // ビート
+        public float BBeatPerBeat => (float)_bbeat / (float)_beat;
+
+        // モーメントの配列
+        //[SerializeField] private List<int> _momentList;
 
         // オーディオソース
         private AudioSource _audioSource;

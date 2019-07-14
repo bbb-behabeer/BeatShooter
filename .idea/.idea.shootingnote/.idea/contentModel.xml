@@ -48,13 +48,14 @@
               <e p="ScoreManager.cs" t="Include" />
             </e>
             <e p="Note" t="Include">
-              <e p="Aim.cs" t="Include" />
               <e p="AimLine.cs" t="Include" />
               <e p="EndLine.cs" t="Include" />
               <e p="Laser.cs" t="Include" />
               <e p="Note.cs" t="Include" />
               <e p="NoteManager.cs" t="Include" />
               <e p="NoteScreen.cs" t="Include" />
+              <e p="Pod.cs" t="Include" />
+              <e p="Sight.cs" t="Include" />
             </e>
             <e p="TouchAndLoadScene.cs" t="Include" />
             <e p="TransitionEffect.cs" t="Include" />

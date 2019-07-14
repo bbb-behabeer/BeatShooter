@@ -8,21 +8,42 @@ namespace _MyAssets.Scripts.Manager
     public class Controller: MonoBehaviour
     {
         [SerializeField]
-        private List<Laser> _laserList;
+        private List<Pod> _podList;
+
+        [SerializeField] private List<Note.Note> _noteList;
+
+        private int _offset = 0;
+
+        private void Start()
+        {
+        }
 
         private void FixedUpdate()
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                Shot();
+                Fire();
             }
         }
 
-        private void Shot()
+        private void Fire()
         {
-            foreach (var laser in _laserList)
+            foreach (var note in _noteList)
             {
-                laser.ShotTo(null);
+                if (note.CanAim())
+                {
+                    _podList[_offset].AimAt(note.Transform);
+                }
+
+                _offset++;
+                if (_offset >= _podList.Count)
+                    _offset = 0;
+            }
+            
+            foreach (var pod in _podList)
+            {
+                if (pod.CanShot())
+                    pod.Shot();
             }
         }
     }

@@ -26,18 +26,24 @@ namespace _MyAssets.Scripts.Note
         private float _time;
         private float _just;
 
-        // 照準
-        private GameObject _aim;
+        public Transform Transform => transform;
 
-        void Start()
+        public void Start()
+        {
+            Initialize(_moment);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="moment">タイミングを設定する</param>
+        public void Initialize(int moment)
         {
             // NoteManagerをシーンから取得
             var noteManager = NoteManager.Instance;
-            
-            // 子から照準を取得
-            _aim = transform.Find("Aim").gameObject;
-            
+
             // タイミングを取得
+            _moment = moment;
             _just = noteManager.DurationPerBeat * _moment;
             
             // 縦幅を取得
@@ -64,24 +70,6 @@ namespace _MyAssets.Scripts.Note
             _time += Time.deltaTime;
             _time %= noteManager.Duration * noteManager.BBeatPerBeat;
 
-            // タイミングを計算
-            var min = _just - noteManager.Range;
-            var max = _just + noteManager.Range;
-
-            // 範囲内であればエイム可能
-            if (_time > min && _time < max)
-            {
-                // エイムしておらず
-                // 入力があればエイムする
-                if (!_isAimed && Input.GetButtonDown("Jump"))
-                {
-                    _isAimed = true;
-                    
-                    // エイム処理
-                    _aim.SetActive(true);
-                }
-            }
-
             // 最終ラインで入力
             var end = noteManager.Duration * noteManager.BBeatPerBeat;
             if (_time > end - noteManager.Range * 2)
@@ -90,6 +78,18 @@ namespace _MyAssets.Scripts.Note
                     // 消去
                     DestroyThis();
                 }
+        }
+
+        public bool CanAim()
+        {
+            var noteManager = NoteManager.Instance;
+            
+            // タイミングを計算
+            var min = _just - noteManager.Range;
+            var max = _just + noteManager.Range;
+            
+            // 範囲内であればエイム可能
+            return (_time > min && _time < max);
         }
         
         /// <summary>

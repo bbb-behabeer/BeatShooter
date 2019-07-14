@@ -44,7 +44,6 @@ namespace _MyAssets.Scripts.Note
             if (_current > _period + _trailRenderer.time)
             {
                 gameObject.SetActive(false);
-                _trailRenderer.enabled = false;
                 transform.position = _initialPos;
             }
         }
@@ -56,16 +55,22 @@ namespace _MyAssets.Scripts.Note
         {
             _current = 0;
             gameObject.SetActive(true);
-            _trailRenderer.enabled = true;
         }
 
         /// <summary>
         /// レーザーを撃つ
         /// </summary>
-        public void ShotTo(Transform target)
+        public void Shot()
         {
-            //_target = target;
             Initialize();
+        }
+
+        /// <summary>
+        /// ターゲットを設定
+        /// </summary>
+        public void AimAt(Transform t)
+        {
+            _target = t;
         }
     }
 }
