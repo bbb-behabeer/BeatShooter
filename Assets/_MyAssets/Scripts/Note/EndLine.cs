@@ -15,12 +15,7 @@ namespace _MyAssets.Scripts.Note
         
             var noteManager = NoteManager.Instance;
 
-            var h = NoteScreen.Height;
-            var hh = NoteScreen.HalfHeight;
-            var k = NoteScreen.K;
-            
-            var ny = ((float)_moment / (float)noteManager.Beat) * h;
-            ny *= k;
+            var ny = noteManager.GetPosWithMoment(_moment);
             
             transform.position = new Vector3(_cache.x, ny, _cache.z);
         }

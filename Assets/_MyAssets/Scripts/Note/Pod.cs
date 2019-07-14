@@ -28,7 +28,7 @@ namespace _MyAssets.Scripts.Note
             
             // 時間経過
             _time += Time.deltaTime;
-            _time %= noteManager.Duration * noteManager.BBeatPerBeat;
+            _time %= noteManager.Duration;
         }
 
         /// <summary>
@@ -38,14 +38,7 @@ namespace _MyAssets.Scripts.Note
         public bool CanShot()
         {
             var noteManager = NoteManager.Instance;
-            // 最終ラインで入力
-            var just = noteManager.Duration * noteManager.BBeatPerBeat;
-
-            // 範囲
-            var start = just - noteManager.Range * 2;
-            var end = just + noteManager.Range * 2;
-            
-            return (_time > start && _time < end);
+            return noteManager.CanHit(noteManager.Beat);
         }
 
         /// <summary>

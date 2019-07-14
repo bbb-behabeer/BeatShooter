@@ -30,20 +30,30 @@ namespace _MyAssets.Scripts.Note
 
         private void FixedUpdate()
         {
-            if (_target == null) return;
-            
             // 0 -> 1に
             var t = Mathf.Min(_current / _ratio, 1f);
             
             // ターゲットまでのベクトルを計算
-            var q = Quaternion.Lerp(transform.rotation, Quaternion.identity, t);
-            var pos = Vector2.Lerp(_initialPos, q * _target.Position, t);
-            //var pos = Vector2.Lerp(_initialPos, q * _target.position, t);
-         
-            // 位置を更新する
-            transform.position = pos;
-            
+            if (_target != null)
+            {
+                var q = Quaternion.Lerp(transform.rotation, Quaternion.identity, t);
+                var pos = Vector2.Lerp(_initialPos, q * _target.Position, t);
+                //var pos = Vector2.Lerp(_initialPos, q * _target.position, t);
+
+                // 位置を更新する
+                transform.position = pos;
+            }
+
             _current += Time.deltaTime;
+
+            if (_current > _period)
+            {
+                if (_target != null)
+                {
+                    _target.Explode();
+                    _target = null;
+                }
+            }
 
             if (_current > _period + _trailRenderer.time)
             {

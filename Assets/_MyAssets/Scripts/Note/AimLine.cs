@@ -16,16 +16,7 @@ namespace _MyAssets.Scripts.Note
         {
             var noteManager = NoteManager.Instance;
 
-            var h = NoteScreen.Height;
-            var hh = NoteScreen.HalfHeight;
-            var k = NoteScreen.K;
-
-            var current = Time.timeSinceLevelLoad;
-            var dur = noteManager.Duration;
-            var bdur = noteManager.Duration * noteManager.BBeatPerBeat;
-            var c = current % bdur;
-            var t = c / dur;
-            var ny = h * t * k;
+            var ny = noteManager.GetPos();
 
             transform.position = new Vector3(_cache.x, ny, _cache.z);
         }
