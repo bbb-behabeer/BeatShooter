@@ -48,6 +48,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Note
+  - name: Obj
     uniqueID: 3552523175
     locked: 0

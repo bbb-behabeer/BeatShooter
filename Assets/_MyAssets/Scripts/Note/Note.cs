@@ -42,8 +42,6 @@ namespace _MyAssets.Scripts.Note
             
             // 縦幅を取得
             var h = NoteScreen.Height;
-            var hh = NoteScreen.HalfHeight;
-
             var k = NoteScreen.K;
             
             // 位置を計算
@@ -80,7 +78,6 @@ namespace _MyAssets.Scripts.Note
                     _isAimed = true;
                     
                     // エイム処理
-                    //noteManager.PlaySE(_se)
                     _aim.SetActive(true);
                 }
             }
