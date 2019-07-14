@@ -28,7 +28,7 @@ namespace _MyAssets.Scripts.Manager
 
         private void Fire()
         {
-            foreach (var note in _noteList)
+            foreach (var note in _noteList.ToArray())
             {
                 if (note.CanAim())
                 {

@@ -53,7 +53,7 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// 削除する
         /// </summary>
-        public void Explode()
+        public void Explode() 
         {
             // エフェクトを生成
             var effect = Instantiate(_effect);
