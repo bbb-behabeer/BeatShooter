@@ -55,6 +55,7 @@
               <e p="NoteManager.cs" t="Include" />
               <e p="NoteScreen.cs" t="Include" />
               <e p="NoteSetter.cs" t="Include" />
+              <e p="NoteSpawn.cs" t="Include" />
               <e p="Pod.cs" t="Include" />
               <e p="Sight.cs" t="Include" />
             </e>

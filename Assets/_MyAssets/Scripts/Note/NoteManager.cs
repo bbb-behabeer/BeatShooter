@@ -40,31 +40,48 @@ namespace _MyAssets.Scripts.Note
         // シーンから
         [SerializeField] private Pod _pod;
         
-        [SerializeField]
         private List<Note> _cacheNotes;
+
+        // 楽譜
+        [SerializeField] private List<int> _moments;
 
         private void Start()
         {
             _audioSource = GetComponent<AudioSource>();
+            foreach (var moment in _moments)
+            {
+                // ノートを生成
+                NoteSpawn.Instance.Spawn(moment);
+            }
         }
 
         private void Update()
         {
-            foreach (var note in _cacheNotes)
+            /*foreach (var note in _cacheNotes)
             {
                 if (note.CanAim())
                 {
                     _pod.AimAt(note);
                 }
-            }
+            }*/
         }
 
+        /// <summary>
+        /// 時間を取得する
+        /// </summary>
+        /// <param name="moment">拍</param>
+        /// <returns></returns>
         public float GetTiming(float moment)
         {
             // タイミングを取得
             return DurationPerBeat * moment;
         }
 
+        /// <summary>
+        /// ヒットするか
+        /// </summary>
+        /// <param name="moment">拍</param>
+        /// <returns></returns>
         public bool CanHit(float moment)
         {
             // タイミングを計算

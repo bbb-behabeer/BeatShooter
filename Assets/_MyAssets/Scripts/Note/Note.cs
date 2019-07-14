@@ -14,7 +14,7 @@ namespace _MyAssets.Scripts.Note
         [SerializeField] private GameObject _effect;
         
         // ノートを配置するタイミング
-        [SerializeField] private int _moment = 0;
+        private int _moment = 0;
 
         // 入力した
         private bool _isAimed = false;
@@ -39,9 +39,6 @@ namespace _MyAssets.Scripts.Note
         /// </summary>
         public void Initialize()
         {
-            var cache = transform.position;
-            cache.y = NoteSetter.Instance.GetYPosWithMoment(_moment);
-            transform.position = cache;
             _isAimed = false;
         }
 

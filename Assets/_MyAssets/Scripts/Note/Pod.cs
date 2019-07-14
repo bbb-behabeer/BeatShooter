@@ -50,7 +50,6 @@ namespace _MyAssets.Scripts.Note
         {
             // Shot内で
             // レーザーを生成する
-            //Instantiate(_laser).transform.position = transform.position;
             _laser.Shot();
         }
 
