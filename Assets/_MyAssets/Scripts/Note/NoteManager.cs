@@ -62,7 +62,7 @@ namespace _MyAssets.Scripts.Note
             // 小節
             if (_cacheMeasure != CurrentMeasure)
             {
-                // レーザーを射撃
+                NotesExit();
                 SpawnUnit();
                 NotesEnter();
                 

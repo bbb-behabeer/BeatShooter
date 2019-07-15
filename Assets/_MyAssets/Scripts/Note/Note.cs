@@ -68,8 +68,9 @@ namespace _MyAssets.Scripts.Note
         public void Enter()
         {
             // 移動
-            var y = NoteSetter.Instance.GetYPosWithMoment(_moment);
-            transform.position = new Vector3(0, y, 0);
+            //var pos = transform.position;
+            //pos.y = NoteSetter.Instance.GetYPosWithMoment(_moment);
+            //transform.position = pos;
         }
 
         public void Exit()
