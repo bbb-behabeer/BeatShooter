@@ -949,7 +949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _range: 0.3
   _beat: 16
-  _bpm: 90
+  _bpm: 95
   _unit: {fileID: 1906397909377470540, guid: acb6e3501b9a43543a515364e710cc67, type: 3}
   _shooter: {fileID: 920189823}
 --- !u!4 &2084453025
