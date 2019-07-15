@@ -33,37 +33,95 @@ namespace _MyAssets.Scripts.Note
         // オーディオソース
         private AudioSource _audioSource;
 
+        // 時間
         public float CurrentTime => Time.timeSinceLevelLoad % Duration;
+        // 小節
+        private int CurrentMeasure => Mathf.FloorToInt(Time.timeSinceLevelLoad / Duration);
+        private int _cacheMeasure = -1;
+        // 拍
+        private int CurrentMoment => Mathf.FloorToInt(Time.timeSinceLevelLoad / Duration * DurationPerBeat);
+        private int _cacheMoment = -1;
 
-        public float EndMoment => _beat;
-
-        // シーンから
-        [SerializeField] private Pod _pod;
-        
-        private List<Note> _cacheNotes;
+        private List<Note> _cacheNotes = new List<Note>();
 
         // 楽譜
         [SerializeField] private List<int> _moments;
 
+        [SerializeField] private Shooter _shooter;
+
         private void Start()
         {
             _audioSource = GetComponent<AudioSource>();
-            foreach (var moment in _moments)
-            {
-                // ノートを生成
-                NoteSpawn.Instance.Spawn(moment);
-            }
         }
 
         private void Update()
         {
-            /*foreach (var note in _cacheNotes)
+            if (_cacheMeasure != CurrentMeasure)
             {
-                if (note.CanAim())
+                if (CurrentMeasure % 2 == 0)
                 {
-                    _pod.AimAt(note);
+                    NotesEnter();   
                 }
-            }*/
+                else
+                {
+                    NotesExit();
+                }
+                _cacheMeasure = CurrentMeasure;
+            }
+
+            if (_cacheMoment != CurrentMoment)
+            {
+                if (CurrentMeasure % 2 == 0)
+                {
+                    // ノートに照準
+                    Aim();
+                }
+                
+                
+                _cacheMoment = CurrentMoment;
+            }
+        }
+
+        /// <summary>
+        /// ノートを入場させる
+        /// </summary>
+        private void NotesEnter()
+        {
+            foreach (var moment in _moments)
+            {
+                // ノートを生成
+                var note = NoteSpawn.Instance.Spawn(moment);
+                _cacheNotes.Add(note);
+            }
+        }
+
+        /// <summary>
+        /// ノートを退場させる
+        /// </summary>
+        private void NotesExit()
+        {
+            foreach (var note in _cacheNotes.ToArray())
+            {
+                note.Explode();
+                _cacheNotes.Remove(note);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void Aim()
+        {
+            foreach (var note in _cacheNotes.ToArray())
+            {
+                // ノートのモーメントが現在のものとき
+                if (note.Moment == CurrentMoment)
+                {
+                    // シューターに命令
+                    // ノートに照準をあわせるように
+                    _shooter.AimAt(note);
+                }
+            }
         }
 
         /// <summary>

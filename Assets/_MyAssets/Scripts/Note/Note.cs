@@ -15,6 +15,7 @@ namespace _MyAssets.Scripts.Note
         
         // ノートを配置するタイミング
         private int _moment = 0;
+        public int Moment => _moment;
 
         // 入力した
         private bool _isAimed = false;
@@ -29,33 +30,15 @@ namespace _MyAssets.Scripts.Note
 
         public Vector3 Position => transform.position;
 
-        public void Start()
-        {
-            Initialize();
-        }
-
         /// <summary>
         /// 初期化
         /// </summary>
-        public void Initialize()
+        public void Initialize(int moment)
         {
+            _moment = moment;
             _isAimed = false;
         }
 
-        public bool CanAim()
-        {
-            var noteManager = NoteManager.Instance;
-            if (!_isAimed)
-            {
-                if (noteManager.CanHit(_moment))
-                {
-                    _isAimed = true;
-                }
-            }
-
-            return _isAimed;
-        }
-        
         /// <summary>
         /// 削除する
         /// </summary>

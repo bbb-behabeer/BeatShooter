@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace _MyAssets.Scripts.Note
 {
-    public class Pod: MonoBehaviour
+    public class Shooter: MonoBehaviour
     {
         [SerializeField]
         private Laser _laser;
