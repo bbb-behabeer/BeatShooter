@@ -22,15 +22,17 @@ namespace _MyAssets.Scripts.Note
         public float Range => _range;
 
         // 一小節の長さ
-        [SerializeField] private float _duration = 1f;
-        public float Duration => _duration;
+        //[SerializeField] private float _duration = 1f;
+        public float Duration => _bpm / 60f * 4f;
 
         [SerializeField]
         private int _beat = 4;
         public float Beat => _beat;
 
+        [SerializeField] private int _bpm = 120;
+
         // 一拍の時間
-        public float DurationPerBeat => _duration / _beat;
+        public float DurationPerBeat => Duration / _beat;
 
         // オーディオソース
         private AudioSource _audioSource;
@@ -44,12 +46,11 @@ namespace _MyAssets.Scripts.Note
         private int CurrentMoment => Mathf.FloorToInt(Time.timeSinceLevelLoad / DurationPerBeat) % _beat;
         private int _cacheMoment = -1;
 
+        // キャッシュ
         private List<Note> _cacheNotes = new List<Note>();
 
         // 楽譜
-        //[SerializeField] private List<int> _moments;
         [SerializeField] private NoteUnit _unit;
-
         [SerializeField] private Shooter _shooter;
 
         private void Start()
@@ -204,7 +205,7 @@ namespace _MyAssets.Scripts.Note
             if (moment == _beat)
             {
                 var start = 0;
-                var end = _duration;
+                var end = Duration;
                 return (CurrentTime < start + Range || CurrentTime > end - Range);
             }
             
@@ -215,6 +216,16 @@ namespace _MyAssets.Scripts.Note
             
             // 範囲内であればエイム可能
             return (CurrentTime > min && CurrentTime < max);
+        }
+
+        /// <summary>
+        /// ショットできる
+        /// </summary>
+        /// <returns>ショットする/しない</returns>
+        public bool CanShot()
+        {
+            var m = _unit.ReleaseMoment;
+            return CanHit(m);
         }
     }
 }

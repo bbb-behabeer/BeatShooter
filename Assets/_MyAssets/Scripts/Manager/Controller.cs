@@ -34,7 +34,7 @@ namespace _MyAssets.Scripts.Manager
 
         private void Shot()
         {
-            if (NoteManager.Instance.CanHit(NoteManager.Instance.Beat))
+            if (NoteManager.Instance.CanShot())
                  NoteManager.Instance.Shot();
         }
     }
