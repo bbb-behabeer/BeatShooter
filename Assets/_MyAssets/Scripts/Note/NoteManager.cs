@@ -22,8 +22,7 @@ namespace _MyAssets.Scripts.Note
         public float Range => _range;
 
         // 一小節の長さ
-        //[SerializeField] private float _duration = 1f;
-        public float Duration => _bpm / 60f * 4f;
+        public float Duration => _bpm / 60f;
 
         [SerializeField]
         private int _beat = 4;
@@ -40,10 +39,10 @@ namespace _MyAssets.Scripts.Note
         // 時間
         public float CurrentTime => Time.timeSinceLevelLoad % Duration;
         // 小節
-        private int CurrentMeasure => Mathf.FloorToInt(Time.timeSinceLevelLoad / Duration);
+        private int CurrentMeasure => Mathf.FloorToInt(CurrentTime / Duration);
         private int _cacheMeasure = -1;
         // 拍
-        private int CurrentMoment => Mathf.FloorToInt(Time.timeSinceLevelLoad / DurationPerBeat) % _beat;
+        private int CurrentMoment => Mathf.FloorToInt(CurrentTime / Duration * _beat);
         private int _cacheMoment = -1;
 
         // キャッシュ
@@ -61,23 +60,27 @@ namespace _MyAssets.Scripts.Note
         private void Update()
         {
             // 小節
-            if (_cacheMeasure != CurrentMeasure)
+            /*if (_cacheMeasure != CurrentMeasure)
             {
-                NotesExit();
-                SpawnUnit();
-                NotesEnter();
-                
                 _cacheMeasure = CurrentMeasure;
-            }
+            }*/
 
             // 拍
             if (_cacheMoment != CurrentMoment)
             {
+                if (CurrentMoment == 0)
+                {
+                    NotesExit();
+                    SpawnUnit();
+                    NotesEnter();
+                }
+                
                 // 照準
                 AimCurrent();
-                
                 _cacheMoment = CurrentMoment;
             }
+            
+            Debug.Log(CurrentMoment);
         }
 
         /// <summary>
