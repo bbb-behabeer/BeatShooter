@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using _MyAssets.Scripts.Base;
 using UnityEngine;
 
@@ -24,6 +25,19 @@ namespace _MyAssets.Scripts.Note
             note.Initialize(moment);
             
             return note;
+        }
+        
+        /// <summary>
+        /// ノートユニットを生成する
+        /// </summary>
+        /// <param name="unit">生成するユニット</param>
+        public Note[] SpawnUnit(NoteUnit unit)
+        {
+            var obj = Instantiate(unit);
+            var notes = obj.GetComponentsInChildren<Note>();
+            //note.Initialize();
+            
+            return notes;
         }
     }
 }

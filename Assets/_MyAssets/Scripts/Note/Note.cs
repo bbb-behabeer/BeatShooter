@@ -14,12 +14,11 @@ namespace _MyAssets.Scripts.Note
         [SerializeField] private GameObject _effect;
         
         // ノートを配置するタイミング
-        private int _moment = 0;
+        [SerializeField] private int _moment = 0;
         public int Moment => _moment;
 
         // 照準をあわせられた
-        private bool _aimed = false;
-        public bool Aimed => _aimed;
+        public bool Aimed => _sight != null;
 
         // オーディオクリップ
         [SerializeField] private AudioClip _se;
@@ -44,9 +43,8 @@ namespace _MyAssets.Scripts.Note
         public void Initialize(int moment)
         {
             _moment = moment;
-            _aimed = false;
         }
-
+        
         /// <summary>
         /// 削除する
         /// </summary>
@@ -61,7 +59,7 @@ namespace _MyAssets.Scripts.Note
             effect.transform.position = transform.position;
             
             // 自身を削除
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
 
         /// <summary>
@@ -76,7 +74,13 @@ namespace _MyAssets.Scripts.Note
 
         public void Exit()
         {
-            gameObject.SetActive(false);
+            // 照準を削除
+            if (_sight != null)
+                Destroy(_sight.gameObject);
+            
+            // 移動
+            if (!Aimed)
+                Destroy(this.gameObject);
         }
     }
 }

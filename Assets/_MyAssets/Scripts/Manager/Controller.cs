@@ -12,16 +12,17 @@ namespace _MyAssets.Scripts.Manager
 
         private void FixedUpdate()
         {
-            var h = Input.GetAxisRaw("Horizontal");
-            var v = Input.GetAxisRaw("Vertical");
+            //var h = Input.GetAxisRaw("Horizontal");
+            //var v = Input.GetAxisRaw("Vertical");
             
-            var dir = new Vector2(h, v);
+            //var dir = new Vector2(h, v);
             
-            _player.Move(dir);
+            //_player.Move(dir);
             
             if (Input.GetButtonDown("Fire1"))
             {
-                Aim();
+                //Aim();
+                Shot();
             }
         }
 
@@ -29,6 +30,12 @@ namespace _MyAssets.Scripts.Manager
         {
             // 照準をあわせる
             NoteManager.Instance.Aim();  
+        }
+
+        private void Shot()
+        {
+            if (NoteManager.Instance.CanHit(NoteManager.Instance.Beat))
+                 NoteManager.Instance.Shot();
         }
     }
 }

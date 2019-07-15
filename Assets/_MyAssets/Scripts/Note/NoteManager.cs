@@ -47,7 +47,8 @@ namespace _MyAssets.Scripts.Note
         private List<Note> _cacheNotes = new List<Note>();
 
         // 楽譜
-        [SerializeField] private List<int> _moments;
+        //[SerializeField] private List<int> _moments;
+        [SerializeField] private NoteUnit _unit;
 
         [SerializeField] private Shooter _shooter;
 
@@ -61,16 +62,9 @@ namespace _MyAssets.Scripts.Note
             // 小節
             if (_cacheMeasure != CurrentMeasure)
             {
-                if (CurrentMeasure % 3 == 0)
-                {
-                    NotesExit();
-                    SpawnNotes();
-                }
-                else if (CurrentMeasure % 3 == 2)
-                {
-                    // ノートに照準
-                    Shot();
-                }
+                // レーザーを射撃
+                SpawnUnit();
+                NotesEnter();
                 
                 _cacheMeasure = CurrentMeasure;
             }
@@ -78,16 +72,8 @@ namespace _MyAssets.Scripts.Note
             // 拍
             if (_cacheMoment != CurrentMoment)
             {
-                if (CurrentMeasure % 3 == 0)
-                {
-                    // ノートを生成
-                    NotesEnter();
-                }
-                else if (CurrentMeasure % 3 == 1)
-                {
-                    // ノートに照準
-                    //AimCurrent();
-                }
+                // 照準
+                AimCurrent();
                 
                 _cacheMoment = CurrentMoment;
             }
@@ -96,17 +82,26 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// ノートを入場させる
         /// </summary>
-        private void SpawnNotes()
+        private void SpawnUnit()
         {
-            foreach (var moment in _moments)
-            {
-                // ノートを生成
-                var note = NoteSpawn.Instance.Spawn(moment);
-                _cacheNotes.Add(note);
-            }
+            // ノートユニットを生成
+            var notes = NoteSpawn.Instance.SpawnUnit(_unit);
+            _cacheNotes.AddRange(notes);
         }
 
         private void NotesEnter()
+        {
+            foreach (var note in _cacheNotes.ToArray())
+            {
+                // ノートを入場させる
+                note.Enter();
+            }
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        private void NotesEnterCurrent()
         {
             foreach (var note in _cacheNotes.ToArray())
             {
@@ -166,9 +161,9 @@ namespace _MyAssets.Scripts.Note
         }
         
         /// <summary>
-        /// 現在のモーメントをもつノートにレーザーを撃つ
+        /// 照準をもつノートにレーザーを撃つ
         /// </summary>
-        private void Shot()
+        public void Shot()
         {
             foreach (var note in _cacheNotes.ToArray())
             {
@@ -206,6 +201,13 @@ namespace _MyAssets.Scripts.Note
         /// <returns></returns>
         public bool CanHit(float moment)
         {
+            if (moment == _beat)
+            {
+                var start = 0;
+                var end = _duration;
+                return (CurrentTime < start + Range || CurrentTime > end - Range);
+            }
+            
             // タイミングを計算
             var just = GetTiming(moment);
             var min = just - Range;
