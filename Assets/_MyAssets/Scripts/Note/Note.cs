@@ -17,8 +17,10 @@ namespace _MyAssets.Scripts.Note
         private int _moment = 0;
         public int Moment => _moment;
 
-        // 入力した
-        private bool _isAimed = false;
+        // 照準をあわせられた
+        private bool _aimed = false;
+        public bool Aimed => _aimed;
+        
         
         // オーディオクリップ
         [SerializeField] private AudioClip _se;
@@ -36,7 +38,7 @@ namespace _MyAssets.Scripts.Note
         public void Initialize(int moment)
         {
             _moment = moment;
-            _isAimed = false;
+            _aimed = false;
         }
 
         /// <summary>

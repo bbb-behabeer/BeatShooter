@@ -108,7 +108,7 @@ namespace _MyAssets.Scripts.Note
         }
 
         /// <summary>
-        /// 
+        /// 現在のモーメントをもつノートに照準を合わせる
         /// </summary>
         private void Aim()
         {
@@ -120,6 +120,24 @@ namespace _MyAssets.Scripts.Note
                     // シューターに命令
                     // ノートに照準をあわせるように
                     _shooter.AimAt(note);
+                }
+            }
+        }
+        
+        /// <summary>
+        /// 現在のモーメントをもつノートにレーザーを撃つ
+        /// </summary>
+        private void Shot()
+        {
+            foreach (var note in _cacheNotes.ToArray())
+            {
+                // ノートのモーメントが現在のものとき
+                if (note.Moment == CurrentMoment)
+                {
+                    // シューターに命令
+                    // ノートを射撃するように
+                    // ノートにエイムにしているとき
+                    _shooter.ShotAt(note);
                 }
             }
         }

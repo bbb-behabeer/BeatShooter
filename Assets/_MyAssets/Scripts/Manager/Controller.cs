@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using _MyAssets.Scripts.Character.Player;
 using _MyAssets.Scripts.Note;
 using UnityEngine;
@@ -9,7 +7,6 @@ namespace _MyAssets.Scripts.Manager
     public class Controller: MonoBehaviour
     {
         [SerializeField] private Player _player;
-        [SerializeField] private Pod _pod;
 
         private int _offset = 0;
 
@@ -30,7 +27,8 @@ namespace _MyAssets.Scripts.Manager
 
         private void Fire()
         {
-            _pod.Shot();  
+            //レーザーを撃つ
+            //NoteManager.Instance.Shot();  
         }
     }
 }

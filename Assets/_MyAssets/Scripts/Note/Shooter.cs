@@ -14,8 +14,6 @@ namespace _MyAssets.Scripts.Note
 
         private Note _target;
 
-        public Note Target => _target;
-
         // 時間
         private float _time;
         
@@ -46,7 +44,7 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// ショットする
         /// </summary>
-        public void Shot()
+        public void ShotAt(Note t)
         {
             // Shot内で
             // レーザーを生成する
@@ -63,9 +61,6 @@ namespace _MyAssets.Scripts.Note
             // SetTarget内で
             // 照準を生成する
             _sight.SetTarget(t);
-            _laser.SetTarget(t);
-            //_aimed = true;
-            _target = t;
         }
     }
 }
