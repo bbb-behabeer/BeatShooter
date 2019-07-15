@@ -50,8 +50,8 @@ namespace _MyAssets.Scripts.Note
             {
                 if (_target != null)
                 {
-                    _target.Explode();
-                    _target = null;
+                    //_target.Explode();
+                    //_target = null;
                 }
             }
 

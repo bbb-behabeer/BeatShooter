@@ -20,8 +20,7 @@ namespace _MyAssets.Scripts.Note
         // 照準をあわせられた
         private bool _aimed = false;
         public bool Aimed => _aimed;
-        
-        
+
         // オーディオクリップ
         [SerializeField] private AudioClip _se;
         
@@ -31,6 +30,13 @@ namespace _MyAssets.Scripts.Note
         public Transform Transform => transform;
 
         public Vector3 Position => transform.position;
+
+        private Sight _sight;
+
+        public Sight Sight
+        {
+            set => _sight = value;
+        }
 
         /// <summary>
         /// 初期化
@@ -46,6 +52,10 @@ namespace _MyAssets.Scripts.Note
         /// </summary>
         public void Explode() 
         {
+            // 照準を削除
+            if (_sight != null)
+                Destroy(_sight.gameObject);
+            
             // エフェクトを生成
             var effect = Instantiate(_effect);
             effect.transform.position = transform.position;

@@ -197,7 +197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 320, z: -10}
+  m_LocalPosition: {x: 0, y: 200, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -294,7 +294,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692091212
 GameObject:
@@ -326,7 +326,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 920189821}
-  _pod: {fileID: 920189823}
 --- !u!4 &692091214
 Transform:
   m_ObjectHideFlags: 0
@@ -570,7 +569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &941381254
 GameObject:
@@ -602,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3b7c04b9154faab8dae124ccc5c2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moment: 8
+  _moment: 16
 --- !u!212 &941381256
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -664,7 +663,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1059848598
 GameObject:
@@ -742,10 +741,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2084453025}
   - component: {fileID: 2084453026}
-  - component: {fileID: 2084453024}
   - component: {fileID: 2084453023}
   - component: {fileID: 2084453027}
   - component: {fileID: 2084453028}
+  - component: {fileID: 2084453024}
   m_Layer: 0
   m_Name: Note Manager
   m_TagString: Untagged
@@ -779,9 +778,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _range: 0.15
   _duration: 2
-  _beat: 8
-  _pod: {fileID: 920189823}
-  _moments: 01000000020000000300000004000000
+  _beat: 16
+  _moments: 02000000060000000a0000000e000000
+  _shooter: {fileID: 920189823}
 --- !u!4 &2084453025
 Transform:
   m_ObjectHideFlags: 0
@@ -794,7 +793,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2084453026
 AudioSource:

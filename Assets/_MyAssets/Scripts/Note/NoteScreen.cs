@@ -7,10 +7,12 @@ namespace _MyAssets.Scripts.Note
     public class NoteScreen :SingletonMonoBehaviour<NoteScreen>
     {
         public float Height =>  Screen.height;
+        //[SerializeField] private float height = 640;
+        //public float Height => height;
 
-        float HalfHeight => (float)Height * .5f;
+        float HalfHeight => Height * .5f;
 
-        public float K => (Camera.main.orthographicSize / HalfHeight);
+        public float K => (Camera.main.orthographicSize / (HalfHeight + 100));
 
     }
 }

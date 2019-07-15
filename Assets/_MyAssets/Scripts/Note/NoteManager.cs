@@ -56,13 +56,14 @@ namespace _MyAssets.Scripts.Note
 
         private void Update()
         {
+            // 小節
             if (_cacheMeasure != CurrentMeasure)
             {
-                if (CurrentMeasure % 2 == 0)
+                if (CurrentMeasure % 3 == 0)
                 {
                     NotesEnter();   
                 }
-                else
+                else if (CurrentMeasure % 3 == 2)
                 {
                     NotesExit();
                 }
@@ -70,18 +71,22 @@ namespace _MyAssets.Scripts.Note
                 _cacheMeasure = CurrentMeasure;
             }
 
+            // 拍
             if (_cacheMoment != CurrentMoment)
             {
-                if (CurrentMeasure % 2 == 0)
+                if (CurrentMeasure % 3 == 0)
                 {
-                    // ノートに照準
+                    // ノートに照準をあわせる
                     Aim();
+                }
+                else
+                {
+                    // ノートにレーザーを撃つ
+                    Shot();
                 }
                 
                 _cacheMoment = CurrentMoment;
             }
-            
-            Debug.Log(CurrentMoment);
         }
 
         /// <summary>

@@ -48,7 +48,7 @@ namespace _MyAssets.Scripts.Note
         {
             // Shot内で
             // レーザーを生成する
-            var l = Instantiate(_laser.gameObject).GetComponent<Laser>();
+            var l = Instantiate(_laser).GetComponent<Laser>();
             l.SetTarget(t);
             l.Shot();
         }
