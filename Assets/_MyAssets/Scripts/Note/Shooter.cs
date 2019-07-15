@@ -35,7 +35,7 @@ namespace _MyAssets.Scripts.Note
         /// ショットできるか
         /// </summary>
         /// <returns></returns>
-        public bool CanShot()
+        public bool CanShotAt(Note t)
         {
             var noteManager = NoteManager.Instance;
             return noteManager.CanHit(noteManager.Beat);
@@ -44,13 +44,13 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// ショットする
         /// </summary>
-        public void ShotAt(Note t)
+        public float ShotAt(Note t)
         {
             // Shot内で
             // レーザーを生成する
             var l = Instantiate(_laser).GetComponent<Laser>();
             l.SetTarget(t);
-            l.Shot();
+            return l.Period;
         }
 
         /// <summary>

@@ -63,5 +63,20 @@ namespace _MyAssets.Scripts.Note
             // 自身を削除
             Destroy(this.gameObject);
         }
+
+        /// <summary>
+        /// 入場する
+        /// </summary>
+        public void Enter()
+        {
+            // 移動
+            var y = NoteSetter.Instance.GetYPosWithMoment(_moment);
+            transform.position = new Vector3(0, y, 0);
+        }
+
+        public void Exit()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

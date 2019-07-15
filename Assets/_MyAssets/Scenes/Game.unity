@@ -571,6 +571,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &940439657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 940439659}
+  - component: {fileID: 940439658}
+  m_Layer: 0
+  m_Name: NoteSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &940439658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940439657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44945d372e24662bb4234ea40e63a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _notePrefab: {fileID: 6783333544406282442, guid: 8c8500582db73a64588884866f349615,
+    type: 3}
+--- !u!4 &940439659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940439657}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 600, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &941381254
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +788,6 @@ GameObject:
   - component: {fileID: 2084453026}
   - component: {fileID: 2084453023}
   - component: {fileID: 2084453027}
-  - component: {fileID: 2084453028}
   - component: {fileID: 2084453024}
   m_Layer: 0
   m_Name: Note Manager
@@ -903,17 +947,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b297a024f08a43eb840bf6f870355fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2084453028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084453022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c44945d372e24662bb4234ea40e63a6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _notePrefab: {fileID: 6783333544406282442, guid: 8c8500582db73a64588884866f349615,
-    type: 3}

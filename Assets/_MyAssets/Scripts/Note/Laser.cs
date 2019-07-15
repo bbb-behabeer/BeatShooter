@@ -14,9 +14,10 @@ namespace _MyAssets.Scripts.Note
         // 時間
         private float _current;
         [SerializeField] private float _period;
+        public float Period => _period;
 
         // バネ係数
-        [SerializeField] private float _ratio;
+//        [SerializeField] private float _ratio;
         
         // トレイルレンダラー
         private TrailRenderer _trailRenderer;
@@ -31,7 +32,7 @@ namespace _MyAssets.Scripts.Note
         private void FixedUpdate()
         {
             // 0 -> 1に
-            var t = Mathf.Min(_current / _ratio, 1f);
+            var t = Mathf.Min(_current / _period, 1f);
             
             // ターゲットまでのベクトルを計算
             if (_target != null)
@@ -46,19 +47,15 @@ namespace _MyAssets.Scripts.Note
 
             _current += Time.deltaTime;
 
-            if (_current > _period)
+            /*if (_target != null && _current > _period)
             {
-                if (_target != null)
-                {
-                    //_target.Explode();
-                    //_target = null;
-                }
-            }
-
+                _target.Explode();
+                _target = null;
+            }*/
+            
             if (_current > _period + _trailRenderer.time)
             {
-                gameObject.SetActive(false);
-                transform.position = _initialPos;
+                Destroy(gameObject);
             }
         }
         
@@ -74,10 +71,10 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// レーザーを撃つ
         /// </summary>
-        public void Shot()
+        /*public void Shot()
         {
             Initialize();
-        }
+        }*/
 
         /// <summary>
         /// ターゲットを設定

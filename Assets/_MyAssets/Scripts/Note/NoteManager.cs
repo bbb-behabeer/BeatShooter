@@ -5,6 +5,8 @@ using System.Security.Cryptography;
 using _MyAssets.Scripts.Base;
 using _MyAssets.Scripts.Common;
 using Sirenix.OdinInspector;
+using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Note
@@ -61,11 +63,13 @@ namespace _MyAssets.Scripts.Note
             {
                 if (CurrentMeasure % 3 == 0)
                 {
-                    NotesEnter();   
+                    NotesExit();
+                    SpawnNotes();
                 }
                 else if (CurrentMeasure % 3 == 2)
                 {
-                    NotesExit();
+                    // ノートに照準
+                    Shot();
                 }
                 
                 _cacheMeasure = CurrentMeasure;
@@ -76,13 +80,13 @@ namespace _MyAssets.Scripts.Note
             {
                 if (CurrentMeasure % 3 == 0)
                 {
-                    // ノートに照準をあわせる
-                    Aim();
+                    // ノートを生成
+                    NotesEnter();
                 }
-                else
+                else if (CurrentMeasure % 3 == 1)
                 {
-                    // ノートにレーザーを撃つ
-                    Shot();
+                    // ノートに照準
+                    AimCurrent();
                 }
                 
                 _cacheMoment = CurrentMoment;
@@ -92,13 +96,26 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// ノートを入場させる
         /// </summary>
-        private void NotesEnter()
+        private void SpawnNotes()
         {
             foreach (var moment in _moments)
             {
                 // ノートを生成
                 var note = NoteSpawn.Instance.Spawn(moment);
                 _cacheNotes.Add(note);
+            }
+        }
+
+        private void NotesEnter()
+        {
+            foreach (var note in _cacheNotes.ToArray())
+            {
+                // ノートのモーメントが現在のものとき
+                if (note.Moment == CurrentMoment)
+                {
+                    // ノートを入場させる
+                    note.Enter();
+                }
             }
         }
 
@@ -109,7 +126,7 @@ namespace _MyAssets.Scripts.Note
         {
             foreach (var note in _cacheNotes.ToArray())
             {
-                note.Explode();
+                note.Exit();
                 _cacheNotes.Remove(note);
             }
         }
@@ -117,7 +134,7 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// 現在のモーメントをもつノートに照準を合わせる
         /// </summary>
-        private void Aim()
+        private void AimCurrent()
         {
             foreach (var note in _cacheNotes.ToArray())
             {
@@ -138,15 +155,18 @@ namespace _MyAssets.Scripts.Note
         {
             foreach (var note in _cacheNotes.ToArray())
             {
-                // ノートのモーメントが現在のものとき
-                if (note.Moment == CurrentMoment)
-                {
-                    // シューターに命令
-                    // ノートを射撃するように
-                    // ノートにエイムにしているとき
-                    _shooter.ShotAt(note);
-                }
+                // シューターに命令
+                // ノートを射撃するように
+                // ノートにエイムにしているとき
+                var period = _shooter.ShotAt(note);
+                Observable.Timer(TimeSpan.FromSeconds(period))
+                    .Subscribe(_ =>
+                    {
+                        note.Explode();
+                        _cacheNotes.Remove(note);
+                    });
             }
+            
         }
 
         /// <summary>
