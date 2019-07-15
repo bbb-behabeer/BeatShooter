@@ -24,7 +24,7 @@ namespace _MyAssets.Scripts.Note
         public float Duration => _duration;
 
         [SerializeField]
-        private float _beat = 4;
+        private int _beat = 4;
         public float Beat => _beat;
 
         // 一拍の時間
@@ -39,7 +39,7 @@ namespace _MyAssets.Scripts.Note
         private int CurrentMeasure => Mathf.FloorToInt(Time.timeSinceLevelLoad / Duration);
         private int _cacheMeasure = -1;
         // 拍
-        private int CurrentMoment => Mathf.FloorToInt(Time.timeSinceLevelLoad / Duration * DurationPerBeat);
+        private int CurrentMoment => Mathf.FloorToInt(Time.timeSinceLevelLoad / DurationPerBeat) % _beat;
         private int _cacheMoment = -1;
 
         private List<Note> _cacheNotes = new List<Note>();
@@ -66,6 +66,7 @@ namespace _MyAssets.Scripts.Note
                 {
                     NotesExit();
                 }
+                
                 _cacheMeasure = CurrentMeasure;
             }
 
@@ -77,9 +78,10 @@ namespace _MyAssets.Scripts.Note
                     Aim();
                 }
                 
-                
                 _cacheMoment = CurrentMoment;
             }
+            
+            Debug.Log(CurrentMoment);
         }
 
         /// <summary>
