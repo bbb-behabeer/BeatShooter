@@ -86,7 +86,7 @@ namespace _MyAssets.Scripts.Note
                 else if (CurrentMeasure % 3 == 1)
                 {
                     // ノートに照準
-                    AimCurrent();
+                    //AimCurrent();
                 }
                 
                 _cacheMoment = CurrentMoment;
@@ -149,6 +149,23 @@ namespace _MyAssets.Scripts.Note
         }
         
         /// <summary>
+        /// 現在のモーメントをもつノートに照準を合わせる
+        /// </summary>
+        public void Aim()
+        {
+            foreach (var note in _cacheNotes.ToArray())
+            {
+                // ノートのモーメントが現在のものとき
+                if (CanHit(note.Moment))
+                {
+                    // シューターに命令
+                    // ノートに照準をあわせるように
+                    _shooter.AimAt(note);
+                }
+            }
+        }
+        
+        /// <summary>
         /// 現在のモーメントをもつノートにレーザーを撃つ
         /// </summary>
         private void Shot()
@@ -158,15 +175,17 @@ namespace _MyAssets.Scripts.Note
                 // シューターに命令
                 // ノートを射撃するように
                 // ノートにエイムにしているとき
-                var period = _shooter.ShotAt(note);
-                Observable.Timer(TimeSpan.FromSeconds(period))
-                    .Subscribe(_ =>
-                    {
-                        note.Explode();
-                        _cacheNotes.Remove(note);
-                    });
+                if (note.Aimed)
+                {
+                    var period = _shooter.ShotAt(note);
+                    Observable.Timer(TimeSpan.FromSeconds(period))
+                        .Subscribe(_ =>
+                        {
+                            note.Explode();
+                            _cacheNotes.Remove(note);
+                        });
+                }
             }
-            
         }
 
         /// <summary>

@@ -21,14 +21,14 @@ namespace _MyAssets.Scripts.Manager
             
             if (Input.GetButtonDown("Fire1"))
             {
-                Fire();
+                Aim();
             }
         }
 
-        private void Fire()
+        private void Aim()
         {
-            //レーザーを撃つ
-            //NoteManager.Instance.Shot();  
+            // 照準をあわせる
+            NoteManager.Instance.Aim();  
         }
     }
 }
