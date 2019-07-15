@@ -32,7 +32,7 @@ namespace _MyAssets.Scripts.Note
             var t = time / noteManager.Duration;
             
             // 位置を計算
-            var ny = h * t * k;
+            var ny = h * t * k - noteScreen.Offset;
 
             return ny;
         }

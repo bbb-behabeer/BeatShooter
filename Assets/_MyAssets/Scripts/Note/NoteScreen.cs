@@ -10,9 +10,9 @@ namespace _MyAssets.Scripts.Note
         //[SerializeField] private float height = 640;
         //public float Height => height;
 
-        float HalfHeight => Height * .5f;
+        public float Offset =>  Height * .25f;
 
-        public float K => (Camera.main.orthographicSize / (HalfHeight + 100));
+        public float K => Camera.main.orthographicSize / Height;
 
     }
 }

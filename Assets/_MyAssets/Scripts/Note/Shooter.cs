@@ -46,9 +46,9 @@ namespace _MyAssets.Scripts.Note
         /// </summary>
         public float ShotAt(Note t)
         {
-            // Shot内で
             // レーザーを生成する
             var l = Instantiate(_laser).GetComponent<Laser>();
+            l.Initialize(transform.position);
             l.SetTarget(t);
             return l.Period;
         }

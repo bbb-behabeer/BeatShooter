@@ -25,8 +25,8 @@ namespace _MyAssets.Scripts.Note
         private void Start()
         {
             _trailRenderer = GetComponent<TrailRenderer>();
-            _initialPos = transform.position;
-            Initialize();
+            //_initialPos = transform.position;
+            //Initialize();
         }
 
         private void FixedUpdate()
@@ -47,12 +47,6 @@ namespace _MyAssets.Scripts.Note
 
             _current += Time.deltaTime;
 
-            /*if (_target != null && _current > _period)
-            {
-                _target.Explode();
-                _target = null;
-            }*/
-            
             if (_current > _period + _trailRenderer.time)
             {
                 Destroy(gameObject);
@@ -62,10 +56,10 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// 初期化
         /// </summary>
-        private void Initialize()
+        public void Initialize(Vector3 pos)
         {
+            _initialPos = pos;
             _current = 0;
-            gameObject.SetActive(true);
         }
 
         /// <summary>
