@@ -48,7 +48,9 @@ namespace _MyAssets.Scripts.Note
         {
             // Shot内で
             // レーザーを生成する
-            _laser.Shot();
+            var l = Instantiate(_laser);
+            l.SetTarget(t);
+            l.Shot();
         }
 
         /// <summary>
@@ -60,7 +62,8 @@ namespace _MyAssets.Scripts.Note
         {
             // SetTarget内で
             // 照準を生成する
-            _sight.SetTarget(t);
+            var s = Instantiate(_sight);
+            s.SetTarget(t);
         }
     }
 }

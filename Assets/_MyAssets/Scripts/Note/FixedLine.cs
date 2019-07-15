@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace _MyAssets.Scripts.Note
 {
-    public class EndLine: MonoBehaviour
+    public class FixedLine: MonoBehaviour
     {
         // 位置Zのキャッシュ
         //private Vector3 _cache;
