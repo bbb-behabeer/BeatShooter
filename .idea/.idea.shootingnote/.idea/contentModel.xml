@@ -56,6 +56,7 @@
             </e>
             <e p="Note" t="Include">
               <e p="AimLine.cs" t="Include" />
+              <e p="ControllerUi.cs" t="Include" />
               <e p="FixedLine.cs" t="Include" />
               <e p="Laser.cs" t="Include" />
               <e p="Note.cs" t="Include" />
@@ -2045,9 +2046,6 @@
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
-        </e>
-        <e p="Ultimate Game Music Collection" t="Include">
-          <e p="_readme.txt" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

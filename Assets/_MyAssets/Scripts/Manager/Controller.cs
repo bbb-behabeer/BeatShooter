@@ -7,21 +7,21 @@ namespace _MyAssets.Scripts.Manager
     public class Controller: MonoBehaviour
     {
         [SerializeField] private Player _player;
+        [SerializeField] private Shooter _shooter;
 
         private int _offset = 0;
 
         private void FixedUpdate()
         {
-            //var h = Input.GetAxisRaw("Horizontal");
-            //var v = Input.GetAxisRaw("Vertical");
+            var h = Input.GetAxisRaw("Horizontal");
+            var v = Input.GetAxisRaw("Vertical");
             
-            //var dir = new Vector2(h, v);
+            var dir = new Vector2(h, v);
             
-            //_player.Move(dir);
+            _player.Move(dir);
             
             if (Input.GetButtonDown("Fire1"))
             {
-                //Aim();
                 Shot();
             }
         }
@@ -35,7 +35,7 @@ namespace _MyAssets.Scripts.Manager
         private void Shot()
         {
             if (NoteManager.Instance.CanShot())
-                 NoteManager.Instance.Shot();
+                _shooter.Shot();
         }
     }
 }

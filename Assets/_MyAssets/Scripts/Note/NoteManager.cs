@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using _MyAssets.Scripts.Base;
 using _MyAssets.Scripts.Common;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
@@ -19,8 +20,7 @@ namespace _MyAssets.Scripts.Note
     {
         // 入力の許容範囲
         [SerializeField] private float _range;
-        public float Range => _range;
-
+        
         // 一小節の長さ
         public float Duration => _bpm / 60f;
 
@@ -49,7 +49,11 @@ namespace _MyAssets.Scripts.Note
         private List<Note> _cacheNotes = new List<Note>();
 
         // 楽譜
-        [SerializeField] private NoteUnit _unit;
+        [SerializeField]
+        private List<NoteUnit> _units;
+        private NoteUnit _cacheUnit;
+        
+        // シューター
         [SerializeField] private Shooter _shooter;
 
         private void Start()
@@ -59,28 +63,26 @@ namespace _MyAssets.Scripts.Note
 
         private void Update()
         {
-            // 小節
-            /*if (_cacheMeasure != CurrentMeasure)
-            {
-                _cacheMeasure = CurrentMeasure;
-            }*/
-
             // 拍
             if (_cacheMoment != CurrentMoment)
             {
                 if (CurrentMoment == 0)
                 {
-                    NotesExit();
                     SpawnUnit();
-                    NotesEnter();
+                }
+                
+                if (_cacheUnit != null)
+                {
+                    if (_cacheUnit.ExitMoment == CurrentMoment)
+                        NotesExit();
+                    if (_cacheUnit.EnterMoment == CurrentMoment)
+                        NotesEnter();
                 }
                 
                 // 照準
-                AimCurrent();
+                //AimCurrent();
                 _cacheMoment = CurrentMoment;
             }
-            
-            Debug.Log(CurrentMoment);
         }
 
         /// <summary>
@@ -88,9 +90,15 @@ namespace _MyAssets.Scripts.Note
         /// </summary>
         private void SpawnUnit()
         {
-            // ノートユニットを生成
-            var notes = NoteSpawn.Instance.SpawnUnit(_unit);
-            _cacheNotes.AddRange(notes);
+            if (_units.Count > 0)
+            {
+                var u = _units[0];
+                // ノートユニットを生成
+                var notes = NoteSpawn.Instance.SpawnUnit(u);
+                _units.RemoveAt(0);
+                _cacheNotes.AddRange(notes);
+                _cacheUnit = u;
+            }
         }
 
         private void NotesEnter()
@@ -167,7 +175,7 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// 照準をもつノートにレーザーを撃つ
         /// </summary>
-        public void Shot()
+        public void Laser()
         {
             foreach (var note in _cacheNotes.ToArray())
             {
@@ -176,7 +184,7 @@ namespace _MyAssets.Scripts.Note
                 // ノートにエイムにしているとき
                 if (note.Aimed)
                 {
-                    var period = _shooter.ShotAt(note);
+                    var period = _shooter.LaserAt(note);
                     Observable.Timer(TimeSpan.FromSeconds(period))
                         .Subscribe(_ =>
                         {
@@ -184,6 +192,20 @@ namespace _MyAssets.Scripts.Note
                             _cacheNotes.Remove(note);
                         });
                 }
+            }
+        }
+        
+        /// <summary>
+        /// 前方のノートを撃つ
+        /// </summary>
+        public void Shot()
+        {
+            foreach (var note in _cacheNotes.ToArray())
+            {
+                // シューターに命令
+                // ノートを射撃するように
+               _shooter.ShotAt(note);
+               _cacheNotes.Remove(note);
             }
         }
 
@@ -203,19 +225,19 @@ namespace _MyAssets.Scripts.Note
         /// </summary>
         /// <param name="moment">拍</param>
         /// <returns></returns>
-        public bool CanHit(float moment)
+        public bool CanHit(int moment)
         {
             if (moment == _beat)
             {
                 var start = 0;
                 var end = Duration;
-                return (CurrentTime < start + Range || CurrentTime > end - Range);
+                return (CurrentTime < start + _range || CurrentTime > end -_range);
             }
             
             // タイミングを計算
             var just = GetTiming(moment);
-            var min = just - Range;
-            var max = just + Range;
+            var min = just - _range;
+            var max = just + _range;
             
             // 範囲内であればエイム可能
             return (CurrentTime > min && CurrentTime < max);
@@ -227,8 +249,22 @@ namespace _MyAssets.Scripts.Note
         /// <returns>ショットする/しない</returns>
         public bool CanShot()
         {
-            var m = _unit.ReleaseMoment;
-            return CanHit(m);
+            if (_cacheUnit == null) return false;
+            
+            var a = CurrentMoment % 2;
+            return a == 0 && CanHit(CurrentMoment);
+        }
+        
+        /// <summary>
+        /// レーザーをショットできる
+        /// </summary>
+        /// <returns>ショットする/しない</returns>
+        public bool CanLaser()
+        {
+            if (_cacheUnit == null) return false;
+
+            var a = CurrentMoment % 2;
+            return a == 1 && CanHit(CurrentMoment);
         }
     }
 }

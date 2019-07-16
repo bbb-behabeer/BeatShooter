@@ -1,4 +1,5 @@
 using System;
+using Arbor;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Note
@@ -35,16 +36,39 @@ namespace _MyAssets.Scripts.Note
         /// ショットできるか
         /// </summary>
         /// <returns></returns>
-        public bool CanShotAt(Note t)
+        /*public bool CanShotAt(Note t)
         {
             var noteManager = NoteManager.Instance;
-            return noteManager.CanHit(noteManager.Beat);
+            return noteManager.CanHit(t.Moment);
+        }*/
+
+        public void Shot()
+        {
+            // レイキャストで手前のノートを取得
+            var hit = Physics2D.Raycast(transform.position, Vector2.up, LayerMask.GetMask("Note"));
+            if (hit.collider != null)
+            {
+                var note = hit.collider.gameObject.GetComponent<Note>();
+                ShotAt(note);
+            }
         }
 
         /// <summary>
         /// ショットする
         /// </summary>
-        public float ShotAt(Note t)
+        public void ShotAt(Note note)
+        {
+            // レーザーを生成する
+            //var l = Instantiate(_laser).GetComponent<Laser>();
+            //l.Initialize(transform.position);
+            //l.SetTarget(t);
+            note.Explode();
+        }
+        
+        /// <summary>
+        /// ショットする
+        /// </summary>
+        public float LaserAt(Note t)
         {
             // レーザーを生成する
             var l = Instantiate(_laser).GetComponent<Laser>();

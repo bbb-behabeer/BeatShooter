@@ -80,8 +80,7 @@ namespace _MyAssets.Scripts.Note
                 Destroy(_sight.gameObject);
             
             // 移動
-            if (!Aimed)
-                Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
