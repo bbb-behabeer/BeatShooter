@@ -105,10 +105,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6783333544406282446}
   - component: {fileID: 6783333544406282441}
-  - component: {fileID: 6783333544406282443}
   - component: {fileID: 2220223160224588672}
+  - component: {fileID: 2190347354950798789}
   m_Layer: 8
-  m_Name: Note
+  m_Name: PodNote
   m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,21 +177,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6783333544406282443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6783333544406282442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414351b9863d4d43bf943fd13dc9c7f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _effect: {fileID: 2501792985075724444, guid: c1fbbc6bccaa4c544accafa657b677ab, type: 3}
-  _moment: 0
-  _se: {fileID: 8300000, guid: 18ddf341fe3160a408b1c1759276de6c, type: 3}
 --- !u!61 &2220223160224588672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -218,3 +203,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 48, y: 48}
   m_EdgeRadius: 0
+--- !u!114 &2190347354950798789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783333544406282442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962f7277436546b7a44a69cf209941b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effect: {fileID: 2501792985075724444, guid: c1fbbc6bccaa4c544accafa657b677ab, type: 3}
+  _se: {fileID: 0}
+  _enterPos: {fileID: 0}
+  _exitPos: {fileID: 0}

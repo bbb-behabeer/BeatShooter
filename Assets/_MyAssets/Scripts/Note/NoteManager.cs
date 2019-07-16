@@ -33,9 +33,6 @@ namespace _MyAssets.Scripts.Note
         // 一拍の時間
         public float DurationPerBeat => Duration / _beat;
 
-        // オーディオソース
-        private AudioSource _audioSource;
-
         // 時間
         public float CurrentTime => Time.timeSinceLevelLoad % Duration;
         // 小節
@@ -45,18 +42,8 @@ namespace _MyAssets.Scripts.Note
         public int CurrentMoment => Mathf.FloorToInt(CurrentTime / Duration * _beat);
         private int _cacheMoment = -1;
 
-        // 楽譜
-        //[SerializeField]
-        //private List<NoteUnit> _units;
-        //private NoteUnit _cacheUnit;
-        
         // シューター
         [SerializeField] private Shooter _shooter;
-
-        private void Start()
-        {
-            _audioSource = GetComponent<AudioSource>();
-        }
 
         private void Update()
         {

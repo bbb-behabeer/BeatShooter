@@ -1,32 +1,23 @@
 using System;
 using System.Threading.Tasks;
+using _MyAssets.Scripts.Common;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Note
 {
     public class PodNote: NoteBase
     {
-        [SerializeField] Transform _stayPos;
+        [SerializeField] Transform _enterPos;
+        [SerializeField] Transform _exitPos;
         
-        private void Start()
+        public override async void Enter()
         {
-            
+            Tween.TweenPositionLerp(transform, _enterPos.position, .1f);
         }
-
-        public override void Enter()
+        
+        public override async void Exit()
         {
-            
-            transform.position = _stayPos.position;
-        }
-
-        public async Task TweenPos()
-        {
-            
-        }
-
-        public override void Exit()
-        {
-            throw new System.NotImplementedException();
+            Tween.TweenPositionLerp(transform, _exitPos.position, .1f);
         }
     }
 }
