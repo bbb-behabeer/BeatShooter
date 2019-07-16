@@ -18,7 +18,12 @@ namespace _MyAssets.Scripts.Note
             return ny;
         }
         
-        public float GetYPosWithTime(float time)
+        /// <summary>
+        /// 時間で位置を決める
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
+        private float GetYPosWithTime(float time)
         {
             var noteScreen = NoteScreen.Instance;
             var noteManager = BeatManager.Instance;
@@ -35,6 +40,10 @@ namespace _MyAssets.Scripts.Note
             return ny;
         }
 
+        /// <summary>
+        /// 時間で位置を決める
+        /// </summary>
+        /// <returns></returns>
         public float GetYPos()
         {
             var noteManager = BeatManager.Instance;

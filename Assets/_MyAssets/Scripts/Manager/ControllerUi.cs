@@ -10,6 +10,7 @@ namespace _MyAssets.Scripts.Manager
     {
         [SerializeField] private GameObject _canShotSprite;
         [SerializeField] private GameObject _canAimSprite;
+        [SerializeField] private GameObject _defaultSprite;
         private Shooter _shooter;
         
         private SpriteRenderer _renderer;
@@ -26,16 +27,19 @@ namespace _MyAssets.Scripts.Manager
             {
                 _canShotSprite.SetActive(true);
                 _canAimSprite.SetActive(false);
+                _defaultSprite.SetActive(false);
             }
             else if (_shooter.CanAim())
             {
                 _canShotSprite.SetActive(false);
                 _canAimSprite.SetActive(true);
+                _defaultSprite.SetActive(false);
             }
             else
             {
                 _canShotSprite.SetActive(false);
                 _canAimSprite.SetActive(false);
+                _defaultSprite.SetActive(true);
             }
         }
     }

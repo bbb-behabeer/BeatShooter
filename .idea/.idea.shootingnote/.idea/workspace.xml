@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1dca47db-bf3f-4a3b-8e48-e2427e579a45" name="Default Changelist" comment="敵配置を修正">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.shootingnote/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/NoteBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/NoteBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ApproachState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/ApproachState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ApproachState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/ApproachState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/DestroyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/DestroyState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/DestroyState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/DestroyState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EightShotState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/EightShotState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EightShotState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/EightShotState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EnemyBulletCtl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/EnemyBulletCtl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EnemyBulletCtl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/EnemyBulletCtl.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EnemyCtl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/EnemyCtl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/EnemyCtl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/EnemyCtl.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ExitState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/ExitState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/ExitState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/ExitState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/IdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/IdleState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/IdleState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/LookAtState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/LookAtState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/LookAtState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/LookAtState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/SerialStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/SerialStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/SerialStateMachine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/SerialStateMachine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/SingleShotState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/SingleShotState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/SingleShotState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/SingleShotState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/TimeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/TimeState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Enemy/TimeState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/State/TimeState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/CameraCtl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/CameraCtl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/PlayerInput.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/ScreenShot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Common/ScreenShot.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/ControllerUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ControllerUi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/ControllerUi.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ControllerUi.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/Laser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/Laser.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/Laser.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/BeatManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/Shooter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/Shooter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/Sight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/Sight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/Sight.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/Sight.cs.meta" afterDir="false" />
-    </list>
+    <list default="true" id="1dca47db-bf3f-4a3b-8e48-e2427e579a45" name="Default Changelist" comment="敵配置を修正" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +14,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/BeatManager.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+              <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
               <folding>
                 <marker date="1563285745500" expanded="false" signature="6:275" ph="..." />
                 <marker date="1563285745500" expanded="true" signature="309:2195" ph="{...}" />
@@ -70,6 +27,21 @@
                 <marker date="1563285745500" expanded="true" signature="1514:1644" ph="/// ヒットするか ... " />
                 <marker date="1563285745500" expanded="true" signature="1683:2187" ph="{...}" />
                 <marker date="1563285745500" expanded="true" signature="1706:1922" ph="/* if (moment == _beat) ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteUnit.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+              <folding>
+                <marker date="1563260578487" expanded="false" signature="6:65" ph="..." />
+                <marker date="1563260578487" expanded="true" signature="99:217" ph="{...}" />
+                <marker date="1563260578487" expanded="true" signature="106:152" ph="/// ノートの組 ... " />
+                <marker date="1563260578487" expanded="true" signature="194:215" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -189,38 +161,40 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteSetter.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            <state relative-caret-position="690">
+              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
               <folding>
-                <marker date="1563285736880" expanded="true" signature="63:1145" ph="{...}" />
-                <marker date="1563285736880" expanded="true" signature="129:1143" ph="{...}" />
-                <marker date="1563285736880" expanded="true" signature="144:273" ph="/// 位置を決める ... " />
-                <marker date="1563285736880" expanded="true" signature="326:500" ph="{...}" />
-                <marker date="1563285736880" expanded="true" signature="558:959" ph="{...}" />
-                <marker date="1563285736880" expanded="true" signature="991:1137" ph="{...}" />
+                <marker date="1563285913082" expanded="true" signature="63:1384" ph="{...}" />
+                <marker date="1563285913082" expanded="true" signature="129:1382" ph="{...}" />
+                <marker date="1563285913082" expanded="true" signature="144:273" ph="/// 位置を決める ... " />
+                <marker date="1563285913082" expanded="true" signature="326:500" ph="{...}" />
+                <marker date="1563285913082" expanded="true" signature="518:648" ph="/// 時間で位置を決める ... " />
+                <marker date="1563285913082" expanded="true" signature="698:1099" ph="{...}" />
+                <marker date="1563285913082" expanded="true" signature="1109:1199" ph="/// 時間で位置を決める ... " />
+                <marker date="1563285913082" expanded="true" signature="1230:1376" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ControllerUi.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+            <state relative-caret-position="615">
+              <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
               <folding>
-                <marker date="1563285527807" expanded="true" signature="6:60" ph="..." />
-                <marker date="1563285527807" expanded="true" signature="97:1122" ph="{...}" />
-                <marker date="1563285527807" expanded="true" signature="104:155" ph="/// コントローラーのUI ... " />
-                <marker date="1563285527807" expanded="true" signature="201:1120" ph="{...}" />
-                <marker date="1563285527807" expanded="true" signature="441:592" ph="{...}" />
-                <marker date="1563285527807" expanded="true" signature="628:1114" ph="{...}" />
-                <marker date="1563285527807" expanded="true" signature="674:798" ph="{...}" />
-                <marker date="1563285527807" expanded="true" signature="838:962" ph="{...}" />
-                <marker date="1563285527807" expanded="true" signature="979:1104" ph="{...}" />
+                <marker date="1563289548194" expanded="true" signature="6:60" ph="..." />
+                <marker date="1563289548194" expanded="true" signature="97:1328" ph="{...}" />
+                <marker date="1563289548194" expanded="true" signature="104:155" ph="/// コントローラーのUI ... " />
+                <marker date="1563289548194" expanded="true" signature="201:1326" ph="{...}" />
+                <marker date="1563289548194" expanded="true" signature="501:652" ph="{...}" />
+                <marker date="1563289548194" expanded="true" signature="688:1320" ph="{...}" />
+                <marker date="1563289548194" expanded="true" signature="734:907" ph="{...}" />
+                <marker date="1563289548194" expanded="true" signature="947:1120" ph="{...}" />
+                <marker date="1563289548194" expanded="true" signature="1137:1310" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -340,13 +314,13 @@
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/Shooter.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/Laser.cs" />
-        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ControllerUi.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/Sight.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/Shooter.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/AimLine.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/FixedLine.cs" />
         <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteSetter.cs" />
+        <option value="$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ControllerUi.cs" />
       </list>
     </option>
   </component>
@@ -513,7 +487,7 @@
       <workItem from="1562902413425" duration="600000" />
       <workItem from="1562997742227" duration="58141000" />
       <workItem from="1563151773647" duration="26102000" />
-      <workItem from="1563227574417" duration="31082000" />
+      <workItem from="1563227574417" duration="32783000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1562331841533</created>
@@ -575,7 +549,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265931000" />
+    <option name="totallyTimeSpent" value="267632000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -588,6 +562,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.23081024" />
@@ -961,19 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteUnit.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding>
-            <marker date="1563260578487" expanded="false" signature="6:65" ph="..." />
-            <marker date="1563260578487" expanded="true" signature="99:217" ph="{...}" />
-            <marker date="1563260578487" expanded="true" signature="106:152" ph="/// ノートの組 ... " />
-            <marker date="1563260578487" expanded="true" signature="194:215" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Base/NoteBase.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1209,24 +1171,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ControllerUi.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-          <folding>
-            <marker date="1563285527807" expanded="true" signature="6:60" ph="..." />
-            <marker date="1563285527807" expanded="true" signature="97:1122" ph="{...}" />
-            <marker date="1563285527807" expanded="true" signature="104:155" ph="/// コントローラーのUI ... " />
-            <marker date="1563285527807" expanded="true" signature="201:1120" ph="{...}" />
-            <marker date="1563285527807" expanded="true" signature="441:592" ph="{...}" />
-            <marker date="1563285527807" expanded="true" signature="628:1114" ph="{...}" />
-            <marker date="1563285527807" expanded="true" signature="674:798" ph="{...}" />
-            <marker date="1563285527807" expanded="true" signature="838:962" ph="{...}" />
-            <marker date="1563285527807" expanded="true" signature="979:1104" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Character/Player/Sight.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1245,7 +1189,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/BeatManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
           <folding>
             <marker date="1563285745500" expanded="false" signature="6:275" ph="..." />
             <marker date="1563285745500" expanded="true" signature="309:2195" ph="{...}" />
@@ -1328,15 +1272,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteSetter.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        <state relative-caret-position="690">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
-            <marker date="1563285736880" expanded="true" signature="63:1145" ph="{...}" />
-            <marker date="1563285736880" expanded="true" signature="129:1143" ph="{...}" />
-            <marker date="1563285736880" expanded="true" signature="144:273" ph="/// 位置を決める ... " />
-            <marker date="1563285736880" expanded="true" signature="326:500" ph="{...}" />
-            <marker date="1563285736880" expanded="true" signature="558:959" ph="{...}" />
-            <marker date="1563285736880" expanded="true" signature="991:1137" ph="{...}" />
+            <marker date="1563285913082" expanded="true" signature="63:1384" ph="{...}" />
+            <marker date="1563285913082" expanded="true" signature="129:1382" ph="{...}" />
+            <marker date="1563285913082" expanded="true" signature="144:273" ph="/// 位置を決める ... " />
+            <marker date="1563285913082" expanded="true" signature="326:500" ph="{...}" />
+            <marker date="1563285913082" expanded="true" signature="518:648" ph="/// 時間で位置を決める ... " />
+            <marker date="1563285913082" expanded="true" signature="698:1099" ph="{...}" />
+            <marker date="1563285913082" expanded="true" signature="1109:1199" ph="/// 時間で位置を決める ... " />
+            <marker date="1563285913082" expanded="true" signature="1230:1376" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Note/NoteUnit.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding>
+            <marker date="1563260578487" expanded="false" signature="6:65" ph="..." />
+            <marker date="1563260578487" expanded="true" signature="99:217" ph="{...}" />
+            <marker date="1563260578487" expanded="true" signature="106:152" ph="/// ノートの組 ... " />
+            <marker date="1563260578487" expanded="true" signature="194:215" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_MyAssets/Scripts/Manager/ControllerUi.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+          <folding>
+            <marker date="1563289548194" expanded="true" signature="6:60" ph="..." />
+            <marker date="1563289548194" expanded="true" signature="97:1328" ph="{...}" />
+            <marker date="1563289548194" expanded="true" signature="104:155" ph="/// コントローラーのUI ... " />
+            <marker date="1563289548194" expanded="true" signature="201:1326" ph="{...}" />
+            <marker date="1563289548194" expanded="true" signature="501:652" ph="{...}" />
+            <marker date="1563289548194" expanded="true" signature="688:1320" ph="{...}" />
+            <marker date="1563289548194" expanded="true" signature="734:907" ph="{...}" />
+            <marker date="1563289548194" expanded="true" signature="947:1120" ph="{...}" />
+            <marker date="1563289548194" expanded="true" signature="1137:1310" ph="{...}" />
           </folding>
         </state>
       </provider>
