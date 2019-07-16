@@ -43,7 +43,6 @@ namespace _MyAssets.Scripts.Note
             // 拍
             if (_cacheMoment != CurrentMoment)
             {
-                Debug.Log(CurrentMoment);
                 // 照準
                 _cacheMoment = CurrentMoment;
             }

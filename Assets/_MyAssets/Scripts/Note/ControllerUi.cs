@@ -9,8 +9,8 @@ namespace _MyAssets.Scripts.Note
     /// </summary>
     public class ControllerUi : MonoBehaviour
     {
-        [SerializeField] private Sprite _canShotSprite;
-        [SerializeField] private Sprite _canAimSprite;
+        [SerializeField] private GameObject _canShotSprite;
+        [SerializeField] private GameObject _canAimSprite;
         private Shooter _shooter;
         
         private SpriteRenderer _renderer;
@@ -25,22 +25,19 @@ namespace _MyAssets.Scripts.Note
         {
             if (_shooter.CanShot())
             {
-                if (_renderer.sprite != _canShotSprite)
-                {
-                    _renderer.sprite = null;
-                    _renderer.sprite = _canShotSprite;
-                }
+                _canShotSprite.SetActive(true);
+                _canAimSprite.SetActive(false);
             }
             else if (_shooter.CanAim())
             {
-                if (_renderer.sprite != _canAimSprite)
-                {
-                    _renderer.sprite = null;
-                    _renderer.sprite = _canAimSprite;
-                }
+                _canShotSprite.SetActive(false);
+                _canAimSprite.SetActive(true);
             }
             else
-                _renderer.sprite = null;
+            {
+                _canShotSprite.SetActive(false);
+                _canAimSprite.SetActive(false);
+            }
         }
     }
 }

@@ -133,6 +133,7 @@ namespace _MyAssets.Scripts.Note
         {
             var a = NoteManager.Instance.CurrentMoment;
             return (a % 2 == 0) && NoteManager.Instance.CanHit(a);
+            //return a % 2 == 0;
         }
         
         /// <summary>
@@ -143,6 +144,7 @@ namespace _MyAssets.Scripts.Note
         {
             var a = NoteManager.Instance.CurrentMoment;
             return (a % 2 == 1) && NoteManager.Instance.CanHit(a);
+            //return a % 2 == 1;
         }
         
         /// <summary>
