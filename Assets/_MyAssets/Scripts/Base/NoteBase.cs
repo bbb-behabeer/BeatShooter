@@ -9,7 +9,7 @@ namespace _MyAssets.Scripts.Note
     /// ノートの制御
     /// </summary>
     [RequireComponent(typeof(AudioClip))]
-    public class Note: MonoBehaviour
+    public abstract class NoteBase: MonoBehaviour
     {
         // ノート再生時のエフェクト
         [SerializeField] private GameObject _effect;
@@ -34,6 +34,10 @@ namespace _MyAssets.Scripts.Note
             set => _sight = value;
         }
 
+        public abstract void Enter();
+
+        public abstract void Exit();
+        
         /// <summary>
         /// 削除する
         /// </summary>
@@ -50,27 +54,5 @@ namespace _MyAssets.Scripts.Note
             // 自身を削除
             Destroy(gameObject);
         }
-
-        /// <summary>
-        /// 入場する
-        /// </summary>
-        /*public void Enter()
-        {
-            // 移動
-            var pos = transform.position;
-            //  pos.y = NoteSetter.Instance.GetYPosWithMoment(_moment);
-            //  transform.position = pos;
-        }
-
-        public void Exit()
-        {
-            // 照準を削除
-            if (_sight != null)
-                Destroy(_sight.gameObject);
-            
-            // 移動
-            //Destroy(this.gameObject);
-            
-        }*/
     }
 }

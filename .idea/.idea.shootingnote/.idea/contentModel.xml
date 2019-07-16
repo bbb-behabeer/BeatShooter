@@ -18,6 +18,7 @@
         <e p="_MyAssets" t="Include">
           <e p="Scripts" t="Include">
             <e p="Base" t="Include">
+              <e p="NoteBase.cs" t="Include" />
               <e p="PixelObjectBase.cs" t="Include" />
               <e p="SingletonMonoBehaviour.cs" t="Include" />
               <e p="StateBase.cs" t="Include" />
@@ -48,6 +49,7 @@
               <e p="PlayerInput.cs" t="Include" />
               <e p="ScreenShot.cs" t="Include" />
               <e p="Scroll.cs" t="Include" />
+              <e p="Tween.cs" t="Include" />
             </e>
             <e p="Manager" t="Include">
               <e p="Controller.cs" t="Include" />
@@ -59,12 +61,12 @@
               <e p="ControllerUi.cs" t="Include" />
               <e p="FixedLine.cs" t="Include" />
               <e p="Laser.cs" t="Include" />
-              <e p="Note.cs" t="Include" />
               <e p="NoteManager.cs" t="Include" />
               <e p="NoteScreen.cs" t="Include" />
               <e p="NoteSetter.cs" t="Include" />
               <e p="NoteSpawn.cs" t="Include" />
               <e p="NoteUnit.cs" t="Include" />
+              <e p="PodNote.cs" t="Include" />
               <e p="Shooter.cs" t="Include" />
               <e p="Sight.cs" t="Include" />
             </e>

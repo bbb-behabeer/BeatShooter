@@ -45,9 +45,6 @@ namespace _MyAssets.Scripts.Note
         public int CurrentMoment => Mathf.FloorToInt(CurrentTime / Duration * _beat);
         private int _cacheMoment = -1;
 
-        // キャッシュ
-        private List<Note> _cacheNotes = new List<Note>();
-
         // 楽譜
         //[SerializeField]
         //private List<NoteUnit> _units;
@@ -72,27 +69,11 @@ namespace _MyAssets.Scripts.Note
         }
 
         /// <summary>
-        /// ノートを入場させる
-        /// </summary>
-        /*private void SpawnUnit()
-        {
-            if (_units.Count > 0)
-            {
-                var u = _units[0];
-                // ノートユニットを生成
-                var notes = NoteSpawn.Instance.SpawnUnit(u);
-                _units.RemoveAt(0);
-                _cacheNotes.AddRange(notes);
-                _cacheUnit = u;
-            }
-        }*/
-
-        /// <summary>
         /// 時間を取得する
         /// </summary>
         /// <param name="moment">拍</param>
         /// <returns></returns>
-        public float GetTiming(float moment)
+        private float GetTiming(float moment)
         {
             // タイミングを取得
             return DurationPerBeat * moment;

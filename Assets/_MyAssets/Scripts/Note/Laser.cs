@@ -9,7 +9,7 @@ namespace _MyAssets.Scripts.Note
         private Vector3 _initialPos;
         // ターゲット
         //[SerializeField] private Transform _target;
-        private Note _target;
+        private NoteBase _target;
         
         // 時間
         private float _current;
@@ -74,7 +74,7 @@ namespace _MyAssets.Scripts.Note
         /// ターゲットを設定
         /// </summary>
         //public void AimAt(Transform t)
-        public void SetTarget(Note t)
+        public void SetTarget(NoteBase t)
         {
             _target = t;
         }

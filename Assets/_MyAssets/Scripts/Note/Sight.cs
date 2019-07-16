@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Note
@@ -8,12 +9,18 @@ namespace _MyAssets.Scripts.Note
     /// </summary>
     public class Sight : MonoBehaviour
     {
-        private Note _target;
+        private NoteBase _target;
         
-        public void SetTarget(Note t)
+        public void SetTarget(NoteBase t)
         {
             _target = t;
-            gameObject.SetActive(true);
+
+            if (_target == null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            
             transform.position = _target.Position;
             transform.rotation = Quaternion.identity;
 

@@ -9,12 +9,13 @@ namespace _MyAssets.Scripts.Note
     /// </summary>
     public class NoteSpawn: SingletonMonoBehaviour<NoteSpawn>
     {
-        [SerializeField] private GameObject _notePrefab;
+        //[SerializeField] private Note _notePrefab;
+        //[SerializeField] private NoteUnit _noteUnis;
 
         /// <summary>
         /// ノートを生成する
         /// </summary>
-        public Note SpawnNote()
+        /*public Note SpawnNote()
         {
             var obj = Instantiate(_notePrefab);
             //var y = NoteSetter.Instance.GetYPosWithMoment(moment);
@@ -35,6 +36,6 @@ namespace _MyAssets.Scripts.Note
             //note.Initialize();
             
             return notes;
-        }
+        }*/
     }
 }

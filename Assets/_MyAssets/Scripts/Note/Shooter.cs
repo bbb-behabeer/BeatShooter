@@ -13,7 +13,7 @@ namespace _MyAssets.Scripts.Note
         [SerializeField]
         private Sight _sight;
 
-        private List<Note> _targets;
+        private List<NoteBase> _targets;
 
         // 時間
         private float _time;
@@ -35,12 +35,12 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// レイキャストで手前のノートを取得
         /// </summary>
-        private Note GetLookingNote()
+        private NoteBase GetLookingNote()
         {
             var hit = Physics2D.Raycast(transform.position, Vector2.up, LayerMask.GetMask("Note"));
             if (hit.collider)
             {
-                return hit.collider.gameObject.GetComponent<Note>();
+                return hit.collider.gameObject.GetComponent<NoteBase>();
             }
 
             return null;
@@ -62,7 +62,7 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// ショットする
         /// </summary>
-        public void ShotAt(Note note)
+        public void ShotAt(NoteBase note)
         {
             // 射撃で爆発
             note.Explode();
@@ -84,7 +84,7 @@ namespace _MyAssets.Scripts.Note
         /// </summary>
         /// <param name="t">ターゲット</param>
         /// <returns></returns>
-        public void LaserAt(Note t)
+        public void LaserAt(NoteBase t)
         {
             // レーザーを生成する
             var l = Instantiate(_laser).GetComponent<Laser>();
@@ -117,7 +117,7 @@ namespace _MyAssets.Scripts.Note
         /// エイムする
         /// </summary>
         /// <param name="t">ターゲット</param>
-        public void AimAt(Note t)
+        public void AimAt(NoteBase t)
         {
             // SetTarget内で
             // 照準を生成する
