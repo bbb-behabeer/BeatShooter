@@ -106,7 +106,11 @@ namespace _MyAssets.Scripts.Note
         /// </summary>
         public void Aim()
         {
-            
+            var note = GetLookingNote();
+            if (note != null)
+            {
+                AimAt(note);
+            }
         }
 
         /// <summary>

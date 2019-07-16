@@ -49,9 +49,9 @@ namespace _MyAssets.Scripts.Note
         private List<Note> _cacheNotes = new List<Note>();
 
         // 楽譜
-        [SerializeField]
-        private List<NoteUnit> _units;
-        private NoteUnit _cacheUnit;
+        //[SerializeField]
+        //private List<NoteUnit> _units;
+        //private NoteUnit _cacheUnit;
         
         // シューター
         [SerializeField] private Shooter _shooter;
@@ -74,7 +74,7 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// ノートを入場させる
         /// </summary>
-        private void SpawnUnit()
+        /*private void SpawnUnit()
         {
             if (_units.Count > 0)
             {
@@ -85,7 +85,7 @@ namespace _MyAssets.Scripts.Note
                 _cacheNotes.AddRange(notes);
                 _cacheUnit = u;
             }
-        }
+        }*/
 
         /// <summary>
         /// 時間を取得する
