@@ -14,10 +14,7 @@ namespace _MyAssets.Scripts.Note
 
         private void FixedUpdate()
         {
-            var noteManager = NoteManager.Instance;
-
             var ny = NoteSetter.Instance.GetYPos();
-
             transform.position = new Vector3(_cache.x, ny, _cache.z);
         }
     }

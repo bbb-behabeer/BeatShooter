@@ -16,7 +16,7 @@ namespace _MyAssets.Scripts.Note
     /// ノートの管理
     /// </summary>
     [RequireComponent(typeof(AudioSource))]
-    public class NoteManager: SingletonMonoBehaviour<NoteManager>
+    public class BeatManager: SingletonMonoBehaviour<BeatManager>
     {
         // 入力の許容範囲
         [SerializeField] private float _range;

@@ -24,51 +24,48 @@
               <e p="StateBase.cs" t="Include" />
             </e>
             <e p="Character" t="Include">
-              <e p="Enemy" t="Include">
-                <e p="ApproachState.cs" t="Include" />
-                <e p="DestroyState.cs" t="Include" />
-                <e p="EightShotState.cs" t="Include" />
-                <e p="EnemyBulletCtl.cs" t="Include" />
-                <e p="EnemyCtl.cs" t="Include" />
-                <e p="ExitState.cs" t="Include" />
-                <e p="IdleState.cs" t="Include" />
-                <e p="LookAtState.cs" t="Include" />
-                <e p="SerialStateMachine.cs" t="Include" />
-                <e p="SingleShotState.cs" t="Include" />
-                <e p="TimeState.cs" t="Include" />
-              </e>
               <e p="Player" t="Include">
+                <e p="Laser.cs" t="Include" />
                 <e p="Player.cs" t="Include" />
                 <e p="PlayerBullet.cs" t="Include" />
+                <e p="Shooter.cs" t="Include" />
+                <e p="Sight.cs" t="Include" />
               </e>
             </e>
             <e p="Common" t="Include">
-              <e p="CameraCtl.cs" t="Include" />
               <e p="ExplosionCtl.cs" t="Include" />
               <e p="HitSound.cs" t="Include" />
-              <e p="PlayerInput.cs" t="Include" />
-              <e p="ScreenShot.cs" t="Include" />
               <e p="Scroll.cs" t="Include" />
               <e p="Tween.cs" t="Include" />
             </e>
             <e p="Manager" t="Include">
               <e p="Controller.cs" t="Include" />
+              <e p="ControllerUi.cs" t="Include" />
               <e p="GameManager.cs" t="Include" />
               <e p="ScoreManager.cs" t="Include" />
             </e>
             <e p="Note" t="Include">
               <e p="AimLine.cs" t="Include" />
-              <e p="ControllerUi.cs" t="Include" />
+              <e p="BeatManager.cs" t="Include" />
               <e p="FixedLine.cs" t="Include" />
-              <e p="Laser.cs" t="Include" />
-              <e p="NoteManager.cs" t="Include" />
               <e p="NoteScreen.cs" t="Include" />
               <e p="NoteSetter.cs" t="Include" />
               <e p="NoteSpawn.cs" t="Include" />
               <e p="NoteUnit.cs" t="Include" />
               <e p="PodNote.cs" t="Include" />
-              <e p="Shooter.cs" t="Include" />
-              <e p="Sight.cs" t="Include" />
+            </e>
+            <e p="State" t="Include">
+              <e p="ApproachState.cs" t="Include" />
+              <e p="DestroyState.cs" t="Include" />
+              <e p="EightShotState.cs" t="Include" />
+              <e p="EnemyBulletCtl.cs" t="Include" />
+              <e p="EnemyCtl.cs" t="Include" />
+              <e p="ExitState.cs" t="Include" />
+              <e p="IdleState.cs" t="Include" />
+              <e p="LookAtState.cs" t="Include" />
+              <e p="SerialStateMachine.cs" t="Include" />
+              <e p="SingleShotState.cs" t="Include" />
+              <e p="TimeState.cs" t="Include" />
             </e>
           </e>
         </e>

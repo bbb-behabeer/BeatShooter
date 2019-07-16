@@ -12,8 +12,6 @@ namespace _MyAssets.Scripts.Note
         void Start()
         {
             var _cache = transform.position;
-        
-            var noteManager = NoteManager.Instance;
 
             var ny = NoteSetter.Instance.GetYPosWithMoment(_moment);
             

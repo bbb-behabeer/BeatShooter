@@ -1,8 +1,7 @@
-using System;
-using UnityEditor.Experimental.GraphView;
+using _MyAssets.Scripts.Character.Player;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Note
+namespace _MyAssets.Scripts.Manager
 {
     /// <summary>
     /// コントローラーのUI

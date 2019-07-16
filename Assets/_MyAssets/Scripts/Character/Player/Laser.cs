@@ -1,7 +1,7 @@
-using System;
+using _MyAssets.Scripts.Note;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Note
+namespace _MyAssets.Scripts.Character.Player
 {
     public class Laser: MonoBehaviour
     {

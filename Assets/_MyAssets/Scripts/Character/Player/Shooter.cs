@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Arbor;
+using _MyAssets.Scripts.Note;
 using UniRx;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Note
+namespace _MyAssets.Scripts.Character.Player
 {
     public class Shooter: MonoBehaviour
     {
@@ -14,23 +14,6 @@ namespace _MyAssets.Scripts.Note
         private Sight _sight;
 
         private List<NoteBase> _targets;
-
-        // 時間
-        private float _time;
-        
-        private void Start()
-        {
-            _time = 0;
-        }
-
-        private void Update()
-        {
-            var noteManager = NoteManager.Instance;
-            
-            // 時間経過
-            _time += Time.deltaTime;
-            _time %= noteManager.Duration;
-        }
 
         /// <summary>
         /// レイキャストで手前のノートを取得
@@ -131,8 +114,8 @@ namespace _MyAssets.Scripts.Note
         /// <returns>ショットする/しない</returns>
         public bool CanShot()
         {
-            var a = NoteManager.Instance.CurrentMoment;
-            return (a % 2 == 0) && NoteManager.Instance.CanHit(a);
+            var a = BeatManager.Instance.CurrentMoment;
+            return (a % 2 == 0) && BeatManager.Instance.CanHit(a);
             //return a % 2 == 0;
         }
         
@@ -142,8 +125,8 @@ namespace _MyAssets.Scripts.Note
         /// <returns>あわせられる/あわせられない</returns>
         public bool CanAim()
         {
-            var a = NoteManager.Instance.CurrentMoment;
-            return (a % 2 == 1) && NoteManager.Instance.CanHit(a);
+            var a = BeatManager.Instance.CurrentMoment;
+            return (a % 2 == 1) && BeatManager.Instance.CanHit(a);
             //return a % 2 == 1;
         }
         
@@ -155,8 +138,8 @@ namespace _MyAssets.Scripts.Note
         {
             if (_targets == null) return false;
             
-            var a = NoteManager.Instance.CurrentMoment % 2;
-            return a == 1 && NoteManager.Instance.CanHit(a);
+            var a = BeatManager.Instance.CurrentMoment % 2;
+            return a == 1 && BeatManager.Instance.CanHit(a);
         }
     }
 }

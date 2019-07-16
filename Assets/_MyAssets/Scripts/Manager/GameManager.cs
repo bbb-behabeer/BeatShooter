@@ -31,9 +31,7 @@ namespace _MyAssets.Scripts.Manager
             // 一度だけスコアを表示
             _scoreManager.UpdateLeftNumList();
             _scoreManager.ShowScoreText();
-
-            // 操作不能に
-            PlayerInput.Controllable = false;
+            
             _resultShowing = true;
         }
     }

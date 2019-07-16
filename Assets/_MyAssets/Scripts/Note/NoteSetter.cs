@@ -11,11 +11,9 @@ namespace _MyAssets.Scripts.Note
         /// <returns></returns>
         public float GetYPosWithMoment(float moment)
         {
-            var noteManager = NoteManager.Instance;
-
             // 位置を計算
             var m =  moment;
-            var ny = GetYPosWithTime(m * noteManager.DurationPerBeat);
+            var ny = GetYPosWithTime(m * BeatManager.Instance.DurationPerBeat);
 
             return ny;
         }
@@ -23,7 +21,7 @@ namespace _MyAssets.Scripts.Note
         public float GetYPosWithTime(float time)
         {
             var noteScreen = NoteScreen.Instance;
-            var noteManager = NoteManager.Instance;
+            var noteManager = BeatManager.Instance;
             
             // 縦幅を取得
             var h = noteScreen.Height;
@@ -39,7 +37,7 @@ namespace _MyAssets.Scripts.Note
 
         public float GetYPos()
         {
-            var noteManager = NoteManager.Instance;
+            var noteManager = BeatManager.Instance;
             
             return GetYPosWithTime(noteManager.CurrentTime);
         }
