@@ -117,7 +117,7 @@ namespace _MyAssets.Scripts.Note
         /// エイムする
         /// </summary>
         /// <param name="t">ターゲット</param>
-        public void AimAt(NoteBase t)
+        private void AimAt(NoteBase t)
         {
             // SetTarget内で
             // 照準を生成する

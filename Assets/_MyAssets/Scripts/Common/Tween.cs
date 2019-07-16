@@ -47,7 +47,7 @@ namespace _MyAssets.Scripts.Common
                     _ =>
                     {
                         var from = transform.position;
-                        var pos = Vector3.Lerp(from, to, Time.deltaTime);
+                        var pos = Vector3.Lerp(from, to, Time.deltaTime * 5f);
                         transform.position = pos;
                     },
                     () => { transform.position = to; })

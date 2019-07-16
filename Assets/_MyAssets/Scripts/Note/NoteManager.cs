@@ -22,11 +22,9 @@ namespace _MyAssets.Scripts.Note
         [SerializeField] private float _range;
         
         // 一小節の長さ
-        public float Duration => _bpm / 60f;
+        public float Duration => _bpm / 60f / _beat;
 
-        [SerializeField]
         private int _beat = 4;
-        public float Beat => _beat;
 
         [SerializeField] private int _bpm = 120;
 
