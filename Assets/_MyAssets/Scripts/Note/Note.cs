@@ -1,6 +1,7 @@
 using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _MyAssets.Scripts.Note
 {
@@ -12,10 +13,6 @@ namespace _MyAssets.Scripts.Note
     {
         // ノート再生時のエフェクト
         [SerializeField] private GameObject _effect;
-        
-        // ノートを配置するタイミング
-        [SerializeField] private int _moment = 0;
-        public int Moment => _moment;
 
         // 照準をあわせられた
         public bool Aimed => _sight != null;
@@ -26,10 +23,10 @@ namespace _MyAssets.Scripts.Note
         // 経過時間
         private float _time;
 
-        public Transform Transform => transform;
-
+        // 位置を伝える
         public Vector3 Position => transform.position;
 
+        // 照準
         private Sight _sight;
 
         public Sight Sight
@@ -37,14 +34,6 @@ namespace _MyAssets.Scripts.Note
             set => _sight = value;
         }
 
-        /// <summary>
-        /// 初期化
-        /// </summary>
-        public void Initialize(int moment)
-        {
-            _moment = moment;
-        }
-        
         /// <summary>
         /// 削除する
         /// </summary>
@@ -65,12 +54,12 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// 入場する
         /// </summary>
-        public void Enter()
+        /*public void Enter()
         {
             // 移動
-            //var pos = transform.position;
-            //pos.y = NoteSetter.Instance.GetYPosWithMoment(_moment);
-            //transform.position = pos;
+            var pos = transform.position;
+            //  pos.y = NoteSetter.Instance.GetYPosWithMoment(_moment);
+            //  transform.position = pos;
         }
 
         public void Exit()
@@ -80,7 +69,8 @@ namespace _MyAssets.Scripts.Note
                 Destroy(_sight.gameObject);
             
             // 移動
-            Destroy(this.gameObject);
-        }
+            //Destroy(this.gameObject);
+            
+        }*/
     }
 }

@@ -22,19 +22,22 @@ namespace _MyAssets.Scripts.Manager
             
             if (Input.GetButtonDown("Fire1"))
             {
-                Shot();
+                if (_shooter.CanShot())
+                    Shot();
+                else if (_shooter.CanAim())
+                    Aim();
             }
         }
 
         private void Aim()
         {
             // 照準をあわせる
-            NoteManager.Instance.Aim();  
+            _shooter.Aim();
         }
 
         private void Shot()
         {
-            if (NoteManager.Instance.CanShot())
+            if (_shooter.CanShot())
                 _shooter.Shot();
         }
     }

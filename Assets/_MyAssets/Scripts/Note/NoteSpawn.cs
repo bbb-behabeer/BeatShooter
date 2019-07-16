@@ -14,16 +14,13 @@ namespace _MyAssets.Scripts.Note
         /// <summary>
         /// ノートを生成する
         /// </summary>
-        /// <param name="moment">生成するタイミング</param>
-        public Note Spawn(int moment)
+        public Note SpawnNote()
         {
             var obj = Instantiate(_notePrefab);
             //var y = NoteSetter.Instance.GetYPosWithMoment(moment);
             obj.transform.position = transform.position;
 
             var note = obj.GetComponent<Note>();
-            note.Initialize(moment);
-            
             return note;
         }
         

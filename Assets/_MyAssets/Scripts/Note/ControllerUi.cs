@@ -11,19 +11,21 @@ namespace _MyAssets.Scripts.Note
     {
         [SerializeField] private Sprite _canShotSprite;
         [SerializeField] private Sprite _canLaserSprite;
-
+        private Shooter _shooter;
+        
         private SpriteRenderer _renderer;
 
         private void Start()
         {
+            _shooter = GameObject.Find("Shooter").GetComponent<Shooter>();
             _renderer = GetComponent<SpriteRenderer>();
         }
 
         private void FixedUpdate()
         {
-            if (NoteManager.Instance.CanShot())
+            if (_shooter.CanShot())
                 _renderer.sprite = _canShotSprite;
-            else if (NoteManager.Instance.CanLaser())
+            else if (_shooter.CanLaser())
                 _renderer.sprite = _canLaserSprite;
             else
                 _renderer.sprite = null;
