@@ -131,8 +131,8 @@ namespace _MyAssets.Scripts.Note
         /// <returns>ショットする/しない</returns>
         public bool CanShot()
         {
-            var a = NoteManager.Instance.CurrentMoment % 2;
-            return a == 0 && NoteManager.Instance.CanHit(a);
+            var a = NoteManager.Instance.CurrentMoment;
+            return (a % 2 == 0) && NoteManager.Instance.CanHit(a);
         }
         
         /// <summary>
@@ -141,10 +141,8 @@ namespace _MyAssets.Scripts.Note
         /// <returns>あわせられる/あわせられない</returns>
         public bool CanAim()
         {
-            if (_targets == null) return false;
-            
-            var a = NoteManager.Instance.CurrentMoment % 2;
-            return a == 1 && NoteManager.Instance.CanHit(a);
+            var a = NoteManager.Instance.CurrentMoment;
+            return (a % 2 == 1) && NoteManager.Instance.CanHit(a);
         }
         
         /// <summary>

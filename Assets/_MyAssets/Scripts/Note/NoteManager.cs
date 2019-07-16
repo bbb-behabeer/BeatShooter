@@ -22,7 +22,7 @@ namespace _MyAssets.Scripts.Note
         [SerializeField] private float _range;
         
         // 一小節の長さ
-        public float Duration => _bpm / 60f / _beat;
+        public float Duration => 60f / _bpm * _beat;
 
         private int _beat = 4;
 
@@ -33,21 +33,17 @@ namespace _MyAssets.Scripts.Note
 
         // 時間
         public float CurrentTime => Time.timeSinceLevelLoad % Duration;
-        // 小節
-        private int CurrentMeasure => Mathf.FloorToInt(CurrentTime / Duration);
-        private int _cacheMeasure = -1;
+        
         // 拍
         public int CurrentMoment => Mathf.FloorToInt(CurrentTime / Duration * _beat);
         private int _cacheMoment = -1;
-
-        // シューター
-        [SerializeField] private Shooter _shooter;
 
         private void Update()
         {
             // 拍
             if (_cacheMoment != CurrentMoment)
             {
+                Debug.Log(CurrentMoment);
                 // 照準
                 _cacheMoment = CurrentMoment;
             }
@@ -71,12 +67,13 @@ namespace _MyAssets.Scripts.Note
         /// <returns></returns>
         public bool CanHit(int moment)
         {
+            /*
             if (moment == _beat)
             {
                 var start = 0;
                 var end = Duration;
                 return (CurrentTime < start + _range || CurrentTime > end -_range);
-            }
+            }*/
             
             // タイミングを計算
             var just = GetTiming(moment);

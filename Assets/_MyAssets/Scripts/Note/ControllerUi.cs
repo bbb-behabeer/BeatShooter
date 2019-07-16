@@ -10,7 +10,7 @@ namespace _MyAssets.Scripts.Note
     public class ControllerUi : MonoBehaviour
     {
         [SerializeField] private Sprite _canShotSprite;
-        [SerializeField] private Sprite _canLaserSprite;
+        [SerializeField] private Sprite _canAimSprite;
         private Shooter _shooter;
         
         private SpriteRenderer _renderer;
@@ -24,9 +24,21 @@ namespace _MyAssets.Scripts.Note
         private void FixedUpdate()
         {
             if (_shooter.CanShot())
-                _renderer.sprite = _canShotSprite;
-            else if (_shooter.CanLaser())
-                _renderer.sprite = _canLaserSprite;
+            {
+                if (_renderer.sprite != _canShotSprite)
+                {
+                    _renderer.sprite = null;
+                    _renderer.sprite = _canShotSprite;
+                }
+            }
+            else if (_shooter.CanAim())
+            {
+                if (_renderer.sprite != _canAimSprite)
+                {
+                    _renderer.sprite = null;
+                    _renderer.sprite = _canAimSprite;
+                }
+            }
             else
                 _renderer.sprite = null;
         }
