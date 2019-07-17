@@ -1,4 +1,5 @@
 using _MyAssets.Scripts.Manager;
+using _MyAssets.Scripts.Note;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Player
@@ -45,7 +46,13 @@ namespace _MyAssets.Scripts.Player
         /// <param name="pos">マウスのワールド座標</param>
         public void Move(Vector2 dir)
         {
-            _rigidbody.velocity = dir * _velocity;
+            var x = NoteScreen.Instance.Width * .3f * dir.x;
+            var pos = transform.position;
+            var vx = Mathf.Lerp(pos.x, x, Time.deltaTime * 10f);
+            transform.position = new Vector2(vx, pos.y);
+            
+            //dir.x = 0;
+            //_rigidbody.velocity = dir * _velocity;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
