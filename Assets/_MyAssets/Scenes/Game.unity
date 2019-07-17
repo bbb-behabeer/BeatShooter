@@ -754,11 +754,11 @@ GameObject:
   - component: {fileID: 940439658}
   - component: {fileID: 940439662}
   - component: {fileID: 940439661}
-  - component: {fileID: 940439660}
   - component: {fileID: 940439664}
-  - component: {fileID: 940439663}
   - component: {fileID: 940439666}
   - component: {fileID: 940439665}
+  - component: {fileID: 940439663}
+  - component: {fileID: 940439660}
   m_Layer: 0
   m_Name: NoteSpawn
   m_TagString: Untagged
@@ -801,39 +801,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 940439657}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19d59d3d603bc340aa5df4b130e7c78, type: 3}
+  m_Script: {fileID: 11500000, guid: 28aa1d56b35558240a2f7c785f25e399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _NodeGraph: {fileID: 940439662}
-  _NodeID: 1559595546
+  _NodeID: 1655911537
   _DataSlotFieldLinks: []
   expanded: 1
   _BehaviourEnabled: 1
-  _TimeType: 0
-  _Seconds:
-    _Type: 0
-    _Value: 8
-    _Parameter:
-      _Type: 0
-      _Container: {fileID: 0}
-      _Slot:
-        nodeGraph: {fileID: 0}
-        branchID: 0
-      id: 0
-      name: 
-    _MinRange: 0
-    _MaxRange: 0
-    _Slot:
-      nodeGraph: {fileID: 0}
-      branchID: 0
+  _measure: 6
+  _moment: 0
   _NextState:
     name: 
-    stateID: 534011718
+    stateID: 0
     transitionTiming: 2
     lineColorChanged: 0
     lineColor: {r: 1, g: 1, b: 1, a: 1}
-  _SerializeVersion: 1
-  _OldSeconds: 0
 --- !u!114 &940439661
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -961,13 +944,13 @@ MonoBehaviour:
       x: -84
       y: -216
       width: 300
-      height: 264
+      height: 282
     showComment: 0
     nodeComment: 
     _Resident: 0
     _Behaviours:
     - {fileID: 940439661}
-    - {fileID: 940439660}
+    - {fileID: 940439665}
     _BreakPoint: 0
     name: Start
   - _NodeGraph: {fileID: 940439662}
@@ -977,7 +960,7 @@ MonoBehaviour:
       x: -84
       y: 84
       width: 300
-      height: 264
+      height: 282
     showComment: 0
     nodeComment: 
     _Resident: 0
@@ -993,13 +976,13 @@ MonoBehaviour:
       x: -84
       y: 372
       width: 300
-      height: 264
+      height: 282
     showComment: 0
     nodeComment: 
     _Resident: 0
     _Behaviours:
     - {fileID: 940439666}
-    - {fileID: 940439665}
+    - {fileID: 940439660}
     _BreakPoint: 0
     name: Start
   _StateLinkRerouteNodes:
@@ -1013,7 +996,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 940439657}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19d59d3d603bc340aa5df4b130e7c78, type: 3}
+  m_Script: {fileID: 11500000, guid: 28aa1d56b35558240a2f7c785f25e399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _NodeGraph: {fileID: 940439662}
@@ -1021,31 +1004,14 @@ MonoBehaviour:
   _DataSlotFieldLinks: []
   expanded: 1
   _BehaviourEnabled: 1
-  _TimeType: 0
-  _Seconds:
-    _Type: 0
-    _Value: 8
-    _Parameter:
-      _Type: 0
-      _Container: {fileID: 0}
-      _Slot:
-        nodeGraph: {fileID: 0}
-        branchID: 0
-      id: 0
-      name: 
-    _MinRange: 0
-    _MaxRange: 0
-    _Slot:
-      nodeGraph: {fileID: 0}
-      branchID: 0
+  _measure: 4
+  _moment: 0
   _NextState:
     name: 
     stateID: 1655911537
     transitionTiming: 2
     lineColorChanged: 0
     lineColor: {r: 1, g: 1, b: 1, a: 1}
-  _SerializeVersion: 1
-  _OldSeconds: 0
 --- !u!114 &940439664
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1143,39 +1109,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 940439657}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19d59d3d603bc340aa5df4b130e7c78, type: 3}
+  m_Script: {fileID: 11500000, guid: 28aa1d56b35558240a2f7c785f25e399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _NodeGraph: {fileID: 940439662}
-  _NodeID: 1655911537
+  _NodeID: 1559595546
   _DataSlotFieldLinks: []
   expanded: 1
   _BehaviourEnabled: 1
-  _TimeType: 0
-  _Seconds:
-    _Type: 0
-    _Value: 8
-    _Parameter:
-      _Type: 0
-      _Container: {fileID: 0}
-      _Slot:
-        nodeGraph: {fileID: 0}
-        branchID: 0
-      id: 0
-      name: 
-    _MinRange: 0
-    _MaxRange: 0
-    _Slot:
-      nodeGraph: {fileID: 0}
-      branchID: 0
+  _measure: 2
+  _moment: 0
   _NextState:
     name: 
-    stateID: 1559595546
+    stateID: 534011718
     transitionTiming: 2
     lineColorChanged: 0
     lineColor: {r: 1, g: 1, b: 1, a: 1}
-  _SerializeVersion: 1
-  _OldSeconds: 0
 --- !u!114 &940439666
 MonoBehaviour:
   m_ObjectHideFlags: 3

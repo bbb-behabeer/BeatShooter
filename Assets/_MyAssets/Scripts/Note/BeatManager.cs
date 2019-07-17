@@ -32,10 +32,13 @@ namespace _MyAssets.Scripts.Note
         public float DurationPerBeat => Duration / _beat;
 
         // 時間
-        public float CurrentTime => _audioSource.time % Duration;//Time.timeSinceLevelLoad % Duration;
+        public float CurrentTime => _audioSource.time;//Time.timeSinceLevelLoad % Duration;
+        public float CurrentTimePerDuration => CurrentTime % Duration;
+        
+        public int CurrentMeasure => Mathf.FloorToInt(CurrentTime / Duration);
         
         // 拍
-        public int CurrentMoment => Mathf.FloorToInt(CurrentTime / Duration * _beat);
+        public int CurrentMoment => Mathf.FloorToInt(CurrentTimePerDuration / Duration * _beat);
         private int _cacheMoment = -1;
 
         private AudioSource _audioSource;
@@ -73,13 +76,12 @@ namespace _MyAssets.Scripts.Note
         /// <returns></returns>
         public bool CanHit(int moment)
         {
-            /*
-            if (moment == _beat)
+            if (moment == 0)
             {
                 var start = 0;
                 var end = Duration;
-                return (CurrentTime < start + _range || CurrentTime > end -_range);
-            }*/
+                return (CurrentTimePerDuration < start + _range || CurrentTimePerDuration > end -_range);
+            }
             
             // タイミングを計算
             var just = GetTiming(moment);
@@ -87,7 +89,7 @@ namespace _MyAssets.Scripts.Note
             var max = just + _range;
             
             // 範囲内であればエイム可能
-            return (CurrentTime > min && CurrentTime < max);
+            return (CurrentTimePerDuration > min && CurrentTimePerDuration < max);
         }
     }
 }
