@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Character.Player
+namespace _MyAssets.Scripts.Player
 {
     /// <summary>
     /// 弾丸を制御する

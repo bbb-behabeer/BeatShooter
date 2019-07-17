@@ -1,9 +1,10 @@
-using _MyAssets.Scripts.Character.Player;
-using _MyAssets.Scripts.Note;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Manager
+namespace _MyAssets.Scripts.Player
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Controller: MonoBehaviour
     {
         [SerializeField] private Player _player;

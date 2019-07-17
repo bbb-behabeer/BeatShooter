@@ -9,7 +9,6 @@ namespace _MyAssets.Scripts.Note
     {
         [SerializeField] Transform _enterPos;
         [SerializeField] Transform _exitPos;
-        [SerializeField] private float _pDuration;
         [SerializeField] private float _duration;
         
         public void Enter()
@@ -18,7 +17,6 @@ namespace _MyAssets.Scripts.Note
                 transform,
                 _exitPos.position,
                 _enterPos.position,
-                _pDuration,
                 _duration);
         }
         

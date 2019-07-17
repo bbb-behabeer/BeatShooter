@@ -4,7 +4,7 @@ using _MyAssets.Scripts.Note;
 using UniRx;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Character.Player
+namespace _MyAssets.Scripts.Player
 {
     public class Shooter: MonoBehaviour
     {
@@ -139,7 +139,7 @@ namespace _MyAssets.Scripts.Character.Player
             if (_targets == null) return false;
             
             var a = BeatManager.Instance.CurrentMoment % 2;
-            return a == 1 && BeatManager.Instance.CanHit(a);
+            return a == 3 && BeatManager.Instance.CanHit(a);
         }
     }
 }

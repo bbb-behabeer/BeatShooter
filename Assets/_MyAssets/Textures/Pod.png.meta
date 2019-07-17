@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: 7335811095725731582
     second: Pod_2
+  - first:
+      213: -8140666651064130473
+    second: Pod_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -118,7 +121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af94da2d0698384428956e66d74675b7
+      spriteID: 7f539866869e875489f080c87efbd1dc
       internalID: -4791276333387681927
       vertices: []
       indices: 
@@ -139,7 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31f7d3e5718221f4b99dcda07c60c03e
+      spriteID: 1b9866d56dd53824a9fce7cc0ccb5624
       internalID: 9220936050041384835
       vertices: []
       indices: 
@@ -160,8 +163,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92abe3b26df55e04e87d0d968c773379
+      spriteID: 9d53f5c88c1a1204cb684bfda8dc77e7
       internalID: 7335811095725731582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pod_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bccbb1b5dbd7a0245926808f102ff60c
+      internalID: -8140666651064130473
       vertices: []
       indices: 
       edges: []

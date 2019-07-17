@@ -1,7 +1,7 @@
 using _MyAssets.Scripts.Note;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Character.Player
+namespace _MyAssets.Scripts.Player
 {
     /// <summary>
     /// 照準

@@ -32,11 +32,18 @@ namespace _MyAssets.Scripts.Note
         public float DurationPerBeat => Duration / _beat;
 
         // 時間
-        public float CurrentTime => Time.timeSinceLevelLoad % Duration;
+        public float CurrentTime => _audioSource.time % Duration;//Time.timeSinceLevelLoad % Duration;
         
         // 拍
         public int CurrentMoment => Mathf.FloorToInt(CurrentTime / Duration * _beat);
         private int _cacheMoment = -1;
+
+        private AudioSource _audioSource;
+
+        private void Start()
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
 
         private void Update()
         {

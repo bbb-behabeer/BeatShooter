@@ -60,20 +60,14 @@ namespace _MyAssets.Scripts.Common
         /// <param name="transform"></param>
         /// <param name="to"></param>
         /// <param name="pTarget"></param>
-        /// <param name="pDuration"></param>
         /// <param name="duration"></param>
-        public static void TweenPositionCurve(Transform transform, Vector3 to, Vector3 pTarget, float pDuration, float duration)
+        public static void TweenPositionCurve(Transform transform, Vector3 to, Vector3 pStart, float duration)
         {
             var current = 0f;
 
             // 対象のスタート地点
             var start = transform.position;
-            
-            // 補完のスタート地点を計算
-            var ratio = duration / pDuration;
-            var pDiff = pTarget - to;
-            var pStart = to + pDiff * ratio;
-            
+
             transform.FixedUpdateAsObservable()
                 .TakeWhile(_ => current < duration)
                 .Subscribe(

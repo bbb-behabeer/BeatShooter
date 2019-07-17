@@ -1,5 +1,5 @@
 using System;
-using _MyAssets.Scripts.Character.Player;
+using _MyAssets.Scripts.Player;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;

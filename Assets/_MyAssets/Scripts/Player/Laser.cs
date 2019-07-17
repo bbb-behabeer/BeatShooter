@@ -1,8 +1,11 @@
 using _MyAssets.Scripts.Note;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Character.Player
+namespace _MyAssets.Scripts.Player
 {
+    /// <summary>
+    /// レーザー
+    /// </summary>
     public class Laser: MonoBehaviour
     {
         // 初期位置

@@ -1,10 +1,7 @@
-using System;
-using _MyAssets.Scripts.Common;
 using _MyAssets.Scripts.Manager;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace _MyAssets.Scripts.Character.Player
+namespace _MyAssets.Scripts.Player
 {
     /// <summary>
     /// プレイヤーを制御する

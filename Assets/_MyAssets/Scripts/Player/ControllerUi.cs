@@ -1,7 +1,7 @@
-using _MyAssets.Scripts.Character.Player;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-namespace _MyAssets.Scripts.Manager
+namespace _MyAssets.Scripts.Player
 {
     /// <summary>
     /// コントローラーのUI
@@ -15,30 +15,34 @@ namespace _MyAssets.Scripts.Manager
         
         private SpriteRenderer _renderer;
 
+        public bool CanShot => _canShotSprite != null;
+        public bool CanAim => _canAimSprite != null;
+        
         private void Start()
         {
             _shooter = GameObject.Find("Shooter").GetComponent<Shooter>();
-            _renderer = GetComponent<SpriteRenderer>();
         }
 
         private void FixedUpdate()
         {
-            if (_shooter.CanShot())
-            {
-                _canShotSprite.SetActive(true);
-                _canAimSprite.SetActive(false);
-                _defaultSprite.SetActive(false);
-            }
-            else if (_shooter.CanAim())
-            {
+            
+            if (_canShotSprite != null)
                 _canShotSprite.SetActive(false);
+            if (_canAimSprite != null)
+                _canAimSprite.SetActive(false);
+            if (_defaultSprite != null)
+                _defaultSprite.SetActive(false);
+            
+            if (_shooter.CanShot() && _canShotSprite != null)
+            {
+                _canShotSprite.SetActive(true);;
+            }
+            else if (_shooter.CanAim() && _canAimSprite != null)
+            {
                 _canAimSprite.SetActive(true);
-                _defaultSprite.SetActive(false);
             }
-            else
+            else if (_defaultSprite != null)
             {
-                _canShotSprite.SetActive(false);
-                _canAimSprite.SetActive(false);
                 _defaultSprite.SetActive(true);
             }
         }
