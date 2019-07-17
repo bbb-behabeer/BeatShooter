@@ -1,21 +1,35 @@
+using System;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Note
 {
+    [RequireComponent(typeof(LineRenderer))]
+    
     public class AimLine: MonoBehaviour
     {
-        // 位置Zのキャッシュ
-        private Vector3 _cache;
+        private LineRenderer _lineRenderer;
 
-        void Start()
+        private void Start()
         {
-            _cache = transform.position;
+            _lineRenderer = gameObject.GetComponent<LineRenderer>();
         }
 
         private void FixedUpdate()
         {
-            var ny = NoteSetter.Instance.GetYPos();
-            transform.position = new Vector3(_cache.x, ny, _cache.z);
+            var mask = LayerMask.GetMask("Note");
+            var hit = Physics2D.Raycast(transform.position, Vector2.up, mask);
+            if (hit.collider != null)
+            {
+                // 線を引く
+                var from = transform.position;
+                var to = hit.point;
+                
+                var vs = new Vector3[2];
+                vs[0] = from;
+                vs[1] = to;
+                
+                _lineRenderer.SetPositions(vs);
+            }
         }
     }
 }
