@@ -47,12 +47,13 @@
             <e p="Note" t="Include">
               <e p="AimLine.cs" t="Include" />
               <e p="BeatManager.cs" t="Include" />
+              <e p="CurveNote.cs" t="Include" />
               <e p="FixedLine.cs" t="Include" />
+              <e p="LerpNote.cs" t="Include" />
               <e p="NoteScreen.cs" t="Include" />
               <e p="NoteSetter.cs" t="Include" />
               <e p="NoteSpawn.cs" t="Include" />
               <e p="NoteUnit.cs" t="Include" />
-              <e p="PodNote.cs" t="Include" />
             </e>
             <e p="State" t="Include">
               <e p="ApproachState.cs" t="Include" />

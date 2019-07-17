@@ -5,19 +5,20 @@ using UnityEngine;
 
 namespace _MyAssets.Scripts.Note
 {
-    public class PodNote: NoteBase
+    public class LerpNote: MonoBehaviour
     {
         [SerializeField] Transform _enterPos;
         [SerializeField] Transform _exitPos;
+        [SerializeField] private float _k = .1f;
         
-        public override async void Enter()
+        public void Enter()
         {
-            Tween.TweenPositionLerp(transform, _enterPos.position, .1f);
+            Tween.TweenPositionLerp(transform, _enterPos.position, _k);
         }
         
-        public override async void Exit()
+        public void Exit()
         {
-            Tween.TweenPositionLerp(transform, _exitPos.position, .1f);
+            Tween.TweenPositionLerp(transform, _exitPos.position, _k);
         }
     }
 }

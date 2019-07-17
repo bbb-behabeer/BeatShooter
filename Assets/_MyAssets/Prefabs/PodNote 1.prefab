@@ -250,11 +250,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6783333544406282446}
   - component: {fileID: 2220223160224588672}
-  - component: {fileID: 2190347354950798789}
   - component: {fileID: 8601204463085529455}
-  - component: {fileID: 1590659446762670919}
+  - component: {fileID: -1274261734924850844}
+  - component: {fileID: 2062699164401529837}
   m_Layer: 8
-  m_Name: PodNote
+  m_Name: PodNote 1
   m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,21 +303,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 48, y: 48}
   m_EdgeRadius: 0
---- !u!114 &2190347354950798789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6783333544406282442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 962f7277436546b7a44a69cf209941b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enterPos: {fileID: 0}
-  _exitPos: {fileID: 0}
-  _k: 0.1
 --- !u!114 &8601204463085529455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +318,7 @@ MonoBehaviour:
   _canShotSprite: {fileID: 3567697421412921863}
   _canAimSprite: {fileID: 3387533282658794466}
   _defaultSprite: {fileID: 39910697741332224}
---- !u!114 &1590659446762670919
+--- !u!114 &-1274261734924850844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -347,3 +332,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _effect: {fileID: 2501792985075724444, guid: c1fbbc6bccaa4c544accafa657b677ab, type: 3}
   _se: {fileID: 0}
+--- !u!114 &2062699164401529837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783333544406282442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d494da88d6b41a2b9f07375084cc347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enterPos: {fileID: 0}
+  _exitPos: {fileID: 0}
+  _pDuration: 1
+  _duration: 4

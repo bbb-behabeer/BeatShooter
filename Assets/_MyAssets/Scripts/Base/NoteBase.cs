@@ -10,7 +10,7 @@ namespace _MyAssets.Scripts.Note
     /// ノートの制御
     /// </summary>
     [RequireComponent(typeof(AudioClip))]
-    public abstract class NoteBase: MonoBehaviour
+    public class NoteBase: MonoBehaviour
     {
         // ノート再生時のエフェクト
         [SerializeField] private GameObject _effect;
@@ -35,10 +35,6 @@ namespace _MyAssets.Scripts.Note
             set => _sight = value;
         }
 
-        public abstract void Enter();
-
-        public abstract void Exit();
-        
         /// <summary>
         /// 削除する
         /// </summary>

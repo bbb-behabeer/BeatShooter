@@ -780,6 +780,8 @@ GameObject:
   - component: {fileID: 940439660}
   - component: {fileID: 940439664}
   - component: {fileID: 940439663}
+  - component: {fileID: 940439666}
+  - component: {fileID: 940439665}
   m_Layer: 0
   m_Name: NoteSpawn
   m_TagString: Untagged
@@ -973,7 +975,7 @@ MonoBehaviour:
     type: 0
     timeType: 0
     seconds: 0.1
-  _StartStateID: 1559595546
+  _StartStateID: 1655911537
   _States:
   - _NodeGraph: {fileID: 940439662}
     _NodeID: 1559595546
@@ -1007,6 +1009,22 @@ MonoBehaviour:
     - {fileID: 940439663}
     _BreakPoint: 0
     name: Start
+  - _NodeGraph: {fileID: 940439662}
+    _NodeID: 1655911537
+    position:
+      serializedVersion: 2
+      x: -84
+      y: 372
+      width: 300
+      height: 264
+    showComment: 0
+    nodeComment: 
+    _Resident: 0
+    _Behaviours:
+    - {fileID: 940439666}
+    - {fileID: 940439665}
+    _BreakPoint: 0
+    name: Start
   _StateLinkRerouteNodes:
     _Nodes: []
 --- !u!114 &940439663
@@ -1029,7 +1047,7 @@ MonoBehaviour:
   _TimeType: 0
   _Seconds:
     _Type: 0
-    _Value: 10
+    _Value: 8
     _Parameter:
       _Type: 0
       _Container: {fileID: 0}
@@ -1045,7 +1063,7 @@ MonoBehaviour:
       branchID: 0
   _NextState:
     name: 
-    stateID: 1559595546
+    stateID: 1655911537
     transitionTiming: 2
     lineColorChanged: 0
     lineColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1071,6 +1089,136 @@ MonoBehaviour:
   _Prefab:
     _Type: 0
     _Value: {fileID: 5916117208236992583, guid: bdb05cdbeb32e7c4b89aff979330369e,
+      type: 3}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _Parent:
+    _Type: 0
+    _Value: {fileID: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _InitTransform:
+    _Type: 0
+    _Value: {fileID: 0}
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _UsePool:
+    _Type: 0
+    _Value: 1
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _Probability: 0
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _Parameter:
+    _Type: 0
+    _Container: {fileID: 0}
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+    id: 0
+    name: 
+  _Output:
+    nodeGraph: {fileID: 0}
+    branchIDs: 
+  _SerializeVersion: 1
+  _OldPrefab: {fileID: 0}
+--- !u!114 &940439665
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940439657}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19d59d3d603bc340aa5df4b130e7c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 940439662}
+  _NodeID: 1655911537
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _TimeType: 0
+  _Seconds:
+    _Type: 0
+    _Value: 8
+    _Parameter:
+      _Type: 0
+      _Container: {fileID: 0}
+      _Slot:
+        nodeGraph: {fileID: 0}
+        branchID: 0
+      id: 0
+      name: 
+    _MinRange: 0
+    _MaxRange: 0
+    _Slot:
+      nodeGraph: {fileID: 0}
+      branchID: 0
+  _NextState:
+    name: 
+    stateID: 1655911537
+    transitionTiming: 2
+    lineColorChanged: 0
+    lineColor: {r: 1, g: 1, b: 1, a: 1}
+  _SerializeVersion: 1
+  _OldSeconds: 0
+--- !u!114 &940439666
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940439657}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f5b775bacf37a4c9c606b79603ec0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NodeGraph: {fileID: 940439662}
+  _NodeID: 1655911537
+  _DataSlotFieldLinks: []
+  expanded: 1
+  _BehaviourEnabled: 1
+  _Prefab:
+    _Type: 0
+    _Value: {fileID: 5916117208236992583, guid: 1f5adc5fc27c54e42a15a182946b55fa,
       type: 3}
     _Parameter:
       _Type: 0
