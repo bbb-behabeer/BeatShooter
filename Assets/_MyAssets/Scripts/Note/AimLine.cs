@@ -9,6 +9,8 @@ namespace _MyAssets.Scripts.Note
     {
         private LineRenderer _lineRenderer;
 
+        // TODO 色を変更
+        // TODO ショットとレーザーが可能なときのみレンダリング
         private void Start()
         {
             _lineRenderer = gameObject.GetComponent<LineRenderer>();
@@ -23,11 +25,17 @@ namespace _MyAssets.Scripts.Note
                 // 線を引く
                 var from = transform.position;
                 var to = hit.point;
-                
+
                 var vs = new Vector3[2];
                 vs[0] = from;
                 vs[1] = to;
-                
+
+                _lineRenderer.SetPositions(vs);
+            }
+            else
+            {
+                var vs = new Vector3[2];
+                vs[0] = vs[1] = transform.position;
                 _lineRenderer.SetPositions(vs);
             }
         }
