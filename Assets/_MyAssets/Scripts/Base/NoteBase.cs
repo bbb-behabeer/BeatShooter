@@ -2,6 +2,7 @@ using System;
 using _MyAssets.Scripts.Player;
 using Sirenix.OdinInspector;
 using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -15,7 +16,6 @@ namespace _MyAssets.Scripts.Note
     {
         // 爆発エフェクト
         [SerializeField] private GameObject _effect;
-        [SerializeField] private GameObject _hitStopSprite;
         
         // 照準をあわせられた
         public bool Aimed => _sight != null;
@@ -46,8 +46,18 @@ namespace _MyAssets.Scripts.Note
             var sec = .1f;
             
             HitStopSprite();
-            Observable.Timer(TimeSpan.FromSeconds(sec))
-                .Subscribe(_ => Explode());
+
+            var start = BeatManager.Instance.CurrentTime + sec;
+            BeatManager.Instance
+                .ObserveEveryValueChanged(_ => _.CurrentTime)
+                .Where(_ => _ > start)
+                .Subscribe(_ =>
+                {
+                    Time.timeScale = 1;
+                    Explode();
+                }).AddTo(this);
+            
+            Time.timeScale = 0;
         }
 
         /// <summary>

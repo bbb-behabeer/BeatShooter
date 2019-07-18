@@ -551,6 +551,7 @@ MonoBehaviour:
   _canShotSprite: {fileID: 1539951934}
   _canAimSprite: {fileID: 8812872}
   _defaultSprite: {fileID: 585784604}
+  _hitStopSprite: {fileID: 585784604}
 --- !u!1 &940439657
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,9 +566,9 @@ GameObject:
   - component: {fileID: 940439661}
   - component: {fileID: 940439664}
   - component: {fileID: 940439666}
+  - component: {fileID: 940439660}
   - component: {fileID: 940439665}
   - component: {fileID: 940439663}
-  - component: {fileID: 940439660}
   m_Layer: 0
   m_Name: NoteSpawn
   m_TagString: Untagged
@@ -767,7 +768,7 @@ MonoBehaviour:
     position:
       serializedVersion: 2
       x: -84
-      y: 84
+      y: 132
       width: 300
       height: 282
     showComment: 0
@@ -783,7 +784,7 @@ MonoBehaviour:
     position:
       serializedVersion: 2
       x: -84
-      y: 372
+      y: 480
       width: 300
       height: 282
     showComment: 0
@@ -805,7 +806,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 940439657}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28aa1d56b35558240a2f7c785f25e399, type: 3}
+  m_Script: {fileID: 11500000, guid: 88e2bec464254e049e6b84d56bcca3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _NodeGraph: {fileID: 940439662}
@@ -817,7 +818,7 @@ MonoBehaviour:
   _moment: 0
   _NextState:
     name: 
-    stateID: 1655911537
+    stateID: 1559595546
     transitionTiming: 2
     lineColorChanged: 0
     lineColor: {r: 1, g: 1, b: 1, a: 1}
@@ -918,7 +919,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 940439657}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28aa1d56b35558240a2f7c785f25e399, type: 3}
+  m_Script: {fileID: 11500000, guid: 88e2bec464254e049e6b84d56bcca3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _NodeGraph: {fileID: 940439662}
@@ -926,7 +927,7 @@ MonoBehaviour:
   _DataSlotFieldLinks: []
   expanded: 1
   _BehaviourEnabled: 1
-  _measure: 0
+  _measure: 4
   _moment: 0
   _NextState:
     name: 
@@ -950,7 +951,7 @@ MonoBehaviour:
   _NodeID: 1655911537
   _DataSlotFieldLinks: []
   expanded: 1
-  _BehaviourEnabled: 1
+  _BehaviourEnabled: 0
   _Prefab:
     _Type: 0
     _Value: {fileID: 5916117208236992583, guid: 1f5adc5fc27c54e42a15a182946b55fa,

@@ -28,7 +28,7 @@ namespace _MyAssets.Scripts.Player
             _shooter = GameObject.Find("Shooter").GetComponent<Shooter>();
         }
 
-        protected void FixedUpdate()
+        protected void Update()
         {
             InitSprite();
 
@@ -47,7 +47,8 @@ namespace _MyAssets.Scripts.Player
             _hitStop = true;
             
             InitSprite();
-            _hitStopSprite.SetActive(true);
+            if (_hitStopSprite != null)
+                _hitStopSprite.SetActive(true);
         }
 
         protected void InitSprite()
@@ -57,7 +58,9 @@ namespace _MyAssets.Scripts.Player
             if (_canAimSprite != null)
                 _canAimSprite.SetActive(false);
             if (_defaultSprite != null)
-                _defaultSprite.SetActive(false);
+                _defaultSprite.SetActive(false); 
+            if (_hitStopSprite != null)
+                _hitStopSprite.SetActive(false);
         }
 
         protected void UpdateSprite()
