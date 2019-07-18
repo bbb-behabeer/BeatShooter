@@ -25,6 +25,7 @@ namespace _MyAssets.Scripts.Note
         public float Duration => 60f / _bpm * _beat;
 
         private int _beat = 4;
+        public int Beat => _beat;
 
         [SerializeField] private int _bpm = 120;
 
@@ -32,7 +33,16 @@ namespace _MyAssets.Scripts.Note
         public float DurationPerBeat => Duration / _beat;
 
         // 時間
-        public float CurrentTime => _audioSource.time;//Time.timeSinceLevelLoad % Duration;
+        public float CurrentTime
+        {
+            get
+            {
+                if (_audioSource != null)
+                    return _audioSource.time;
+                return 0;
+            }
+        }
+
         public float CurrentTimePerDuration => CurrentTime % Duration;
         
         public int CurrentMeasure => Mathf.FloorToInt(CurrentTime / Duration);
@@ -90,6 +100,15 @@ namespace _MyAssets.Scripts.Note
             
             // 範囲内であればエイム可能
             return (CurrentTimePerDuration > min && CurrentTimePerDuration < max);
+        }
+
+        /// <summary>
+        /// オーディオの再生速度を制御
+        /// </summary>
+        /// <param name="axis"></param>
+        public void SpeedCtl(float axis)
+        {
+            _audioSource.pitch = 1f + axis * .5f;
         }
     }
 }

@@ -41,7 +41,7 @@ namespace _MyAssets.Scripts.Player
                 _lineRenderer.SetPositions(vs);
 
                 // 色を変更する
-                var c = hit.collider.gameObject.GetComponent<ControllerUi>();
+                var c = hit.collider.gameObject.GetComponent<BeatSprite>();
                 if (c.CanAim && _shooter.CanAim())
                 {
                     _lineRenderer.startColor = _lineRenderer.endColor = _canAim;

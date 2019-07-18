@@ -1,6 +1,7 @@
 using System;
 using _MyAssets.Scripts.Player;
 using Sirenix.OdinInspector;
+using UniRx;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -10,17 +11,18 @@ namespace _MyAssets.Scripts.Note
     /// ノートの制御
     /// </summary>
     [RequireComponent(typeof(AudioClip))]
-    public class NoteBase: MonoBehaviour
+    public class NoteBase: BeatSprite
     {
-        // ノート再生時のエフェクト
+        // 爆発エフェクト
         [SerializeField] private GameObject _effect;
-
+        [SerializeField] private GameObject _hitStopSprite;
+        
         // 照準をあわせられた
         public bool Aimed => _sight != null;
 
         // オーディオクリップ
         [SerializeField] private AudioClip _se;
-        
+
         // 経過時間
         private float _time;
 
@@ -36,9 +38,22 @@ namespace _MyAssets.Scripts.Note
         }
 
         /// <summary>
-        /// 削除する
+        /// ヒット
         /// </summary>
-        public void Explode() 
+        /// <returns></returns>
+        public void Hit()
+        {
+            var sec = .1f;
+            
+            HitStopSprite();
+            Observable.Timer(TimeSpan.FromSeconds(sec))
+                .Subscribe(_ => Explode());
+        }
+
+        /// <summary>
+        /// 爆発する
+        /// </summary>
+        private void Explode()
         {
             // 照準を削除
             if (_sight != null)

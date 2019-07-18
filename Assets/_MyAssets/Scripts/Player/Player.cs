@@ -27,17 +27,13 @@ namespace _MyAssets.Scripts.Player
         [SerializeField] private float _velocity = 1f;
 
         private Rigidbody2D _rigidbody;
+
+        private Vector2 _offset;
         
         void Start()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-        }
-
-        /// <summary>
-        /// 射撃する
-        /// </summary>
-        public void Shot()
-        {
+            _offset = transform.position;
         }
 
         /// <summary>
@@ -46,13 +42,10 @@ namespace _MyAssets.Scripts.Player
         /// <param name="pos">マウスのワールド座標</param>
         public void Move(Vector2 dir)
         {
-            var x = NoteScreen.Instance.Width * .3f * dir.x;
             var pos = transform.position;
-            var vx = Mathf.Lerp(pos.x, x, Time.deltaTime * 10f);
-            transform.position = new Vector2(vx, pos.y);
+            var npos = NoteSetter.Instance.GetPosWithAxis(dir) + _offset;
             
-            //dir.x = 0;
-            //_rigidbody.velocity = dir * _velocity;
+            transform.position = Vector2.Lerp(pos, npos, Time.deltaTime * 10f);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

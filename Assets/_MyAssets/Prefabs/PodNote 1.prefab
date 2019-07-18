@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 2220223160224588672}
   - component: {fileID: 8601204463085529455}
   - component: {fileID: -1274261734924850844}
-  - component: {fileID: 2062699164401529837}
+  - component: {fileID: 4693762741004574643}
   m_Layer: 8
   m_Name: PodNote 1
   m_TagString: Note
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _effect: {fileID: 2501792985075724444, guid: c1fbbc6bccaa4c544accafa657b677ab, type: 3}
   _se: {fileID: 0}
---- !u!114 &2062699164401529837
+--- !u!114 &4693762741004574643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,9 +260,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6783333544406282442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d494da88d6b41a2b9f07375084cc347, type: 3}
+  m_Script: {fileID: 11500000, guid: 962f7277436546b7a44a69cf209941b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enterPos: {fileID: 0}
-  _exitPos: {fileID: 0}
-  _duration: 4

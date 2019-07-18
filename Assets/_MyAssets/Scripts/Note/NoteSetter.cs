@@ -1,4 +1,5 @@
 using _MyAssets.Scripts.Base;
+using UnityEngine;
 
 namespace _MyAssets.Scripts.Note
 {
@@ -49,6 +50,22 @@ namespace _MyAssets.Scripts.Note
             var noteManager = BeatManager.Instance;
             
             return GetYPosWithTime(noteManager.CurrentTime);
+        }
+
+        /// <summary>
+        /// プレイヤーのポジションを取得
+        /// </summary>
+        /// <param name="axis">入力方向</param>
+        /// <returns></returns>
+        public Vector2 GetPosWithAxis(Vector2 axis)
+        {
+            var kx = .3;
+            var ky = .1f;
+            
+            var x = NoteScreen.Instance.Width * .3f * axis.x;
+            var y = NoteScreen.Instance.Width * .1f * axis.y;
+            
+            return new Vector2(x, y);
         }
     }
 }

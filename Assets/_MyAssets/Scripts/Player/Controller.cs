@@ -1,3 +1,4 @@
+using _MyAssets.Scripts.Note;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Player
@@ -20,6 +21,7 @@ namespace _MyAssets.Scripts.Player
             var dir = new Vector2(h, v);
             
             _player.Move(dir);
+            BeatManager.Instance.SpeedCtl(dir.y);
             
             if (Input.GetButtonDown("Fire1"))
             {

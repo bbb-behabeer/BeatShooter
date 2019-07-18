@@ -1,35 +1,26 @@
 using _MyAssets.Scripts.Note;
 using Arbor;
+using UnityEditor;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Arbor
 {
-    // 拍数で遷移する
+    // 現在の拍数で遷移する
     [AddComponentMenu("MyArbor")]
-    [AddBehaviourMenu("Transition/BeatTransition")]
-    public class BeatTransition : StateBehaviour
+    [AddBehaviourMenu("Transition/CurrentBeatTransition")]
+    public class CurrentBeatTransition : StateBehaviour
     {
         [SerializeField] private int _measure;
         [SerializeField] private int _moment;
-
-        /// <summary>
-        /// 遷移先ステート
-        /// </summary>
+        
+		/// <summary>
+		/// 遷移先ステート
+		/// </summary>
         [SerializeField] private StateLink _NextState = new StateLink();
         
         void Transition()
         {
             Transition(_NextState);
-        }
-
-        public override void OnStateBegin()
-        {
-            _measure += BeatManager.Instance.CurrentMeasure;
-            _moment += BeatManager.Instance.CurrentMoment;
-            
-            // モーメントの繰り上げ
-            _measure += Mathf.FloorToInt((float)_moment / (float)BeatManager.Instance.Beat);
-            _moment = _moment % BeatManager.Instance.Beat;
         }
 
         public override void OnStateUpdate()
@@ -39,7 +30,7 @@ namespace _MyAssets.Scripts.Arbor
                 var measure = BeatManager.Instance.CurrentMeasure;
                 var moment = BeatManager.Instance.CurrentMoment;
 
-                if (measure >= _measure && moment > _moment)
+                if (measure > _measure && moment > _moment)
                 {
                     Transition();
                 }

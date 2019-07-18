@@ -45,10 +45,10 @@ namespace _MyAssets.Scripts.Player
         /// <summary>
         /// ショットする
         /// </summary>
-        public void ShotAt(NoteBase note)
+        private void ShotAt(NoteBase note)
         {
             // 射撃で爆発
-            note.Explode();
+            note.Hit();
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace _MyAssets.Scripts.Player
             Observable.Timer(TimeSpan.FromSeconds(period))
                 .Subscribe(_ =>
                 {
-                    t.Explode();
+                    t.Hit();
                     _targets.Remove(t);
                 });
         }
@@ -116,7 +116,6 @@ namespace _MyAssets.Scripts.Player
         {
             var a = BeatManager.Instance.CurrentMoment;
             return (a % 2 == 0) && BeatManager.Instance.CanHit(a);
-            //return a % 2 == 0;
         }
         
         /// <summary>
@@ -127,7 +126,6 @@ namespace _MyAssets.Scripts.Player
         {
             var a = BeatManager.Instance.CurrentMoment;
             return (a % 2 == 1) && BeatManager.Instance.CanHit(a);
-            //return a % 2 == 1;
         }
         
         /// <summary>
