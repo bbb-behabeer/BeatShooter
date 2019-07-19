@@ -25,8 +25,9 @@ namespace _MyAssets.Scripts.Player
             // 色を変更する
             _lineRenderer.startColor = _lineRenderer.endColor = _default;
 
+            var dist = 300;
             var mask = LayerMask.GetMask("Note");
-            var hit = Physics2D.Raycast(transform.position, Vector2.up, mask);
+            var hit = Physics2D.Raycast(transform.position, Vector2.up, dist, mask);
             
             if (hit.collider != null)
             {

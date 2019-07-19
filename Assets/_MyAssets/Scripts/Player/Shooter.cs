@@ -20,7 +20,8 @@ namespace _MyAssets.Scripts.Player
         /// </summary>
         private NoteBase GetLookingNote()
         {
-            var hit = Physics2D.Raycast(transform.position, Vector2.up, LayerMask.GetMask("Note"));
+            var dist = 300;
+            var hit = Physics2D.Raycast(transform.position, Vector2.up, dist, LayerMask.GetMask("Note"));
             if (hit.collider)
             {
                 return hit.collider.gameObject.GetComponent<NoteBase>();

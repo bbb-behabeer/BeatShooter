@@ -1401,7 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dd7edab4e47bab014f0a2a8603bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _range: 0.3
+  _range: 0.4
   _bpm: 128
 --- !u!4 &2084453025
 Transform:
