@@ -23,14 +23,7 @@ namespace _MyAssets.Scripts.Player
 //        [SerializeField] private float _ratio;
         
         // トレイルレンダラー
-        private TrailRenderer _trailRenderer;
-
-        private void Start()
-        {
-            _trailRenderer = GetComponent<TrailRenderer>();
-            //_initialPos = transform.position;
-            //Initialize();
-        }
+        private TrailRenderer _trailRenderer => GetComponent<TrailRenderer>();
 
         private void FixedUpdate()
         {
@@ -40,9 +33,8 @@ namespace _MyAssets.Scripts.Player
             // ターゲットまでのベクトルを計算
             if (_target != null)
             {
-                var q = Quaternion.Lerp(transform.rotation, Quaternion.identity, t);
+                var q = Quaternion.Slerp(transform.rotation, Quaternion.identity, t);
                 var pos = Vector2.Lerp(_initialPos, q * _target.Position, t);
-                //var pos = Vector2.Lerp(_initialPos, q * _target.position, t);
 
                 // 位置を更新する
                 transform.position = pos;
@@ -50,6 +42,11 @@ namespace _MyAssets.Scripts.Player
 
             _current += Time.deltaTime;
 
+            if (_current > _period)
+            {
+                _target = null;
+            }
+            
             if (_current > _period + _trailRenderer.time)
             {
                 Destroy(gameObject);
@@ -62,16 +59,9 @@ namespace _MyAssets.Scripts.Player
         public void Initialize(Vector3 pos)
         {
             _initialPos = pos;
+            transform.position = pos;
             _current = 0;
         }
-
-        /// <summary>
-        /// レーザーを撃つ
-        /// </summary>
-        /*public void Shot()
-        {
-            Initialize();
-        }*/
 
         /// <summary>
         /// ターゲットを設定
@@ -80,6 +70,11 @@ namespace _MyAssets.Scripts.Player
         public void SetTarget(NoteBase t)
         {
             _target = t;
+            var diff = t.Position - transform.position;
+            if (diff.x > 0)
+                transform.rotation = Quaternion.AngleAxis(-170f, Vector3.forward);
+            else
+                transform.rotation = Quaternion.AngleAxis(170f, Vector3.forward);
         }
     }
 }

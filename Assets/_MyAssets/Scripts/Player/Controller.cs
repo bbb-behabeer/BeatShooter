@@ -1,4 +1,5 @@
 using _MyAssets.Scripts.Note;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace _MyAssets.Scripts.Player
@@ -13,7 +14,7 @@ namespace _MyAssets.Scripts.Player
 
         private int _offset = 0;
 
-        private void FixedUpdate()
+        private void Update()
         {
             var h = Input.GetAxisRaw("Horizontal");
             var v = Input.GetAxisRaw("Vertical");
@@ -26,22 +27,17 @@ namespace _MyAssets.Scripts.Player
             if (Input.GetButtonDown("Fire1"))
             {
                 if (_shooter.CanShot())
-                    Shot();
-                else if (_shooter.CanAim())
-                    Aim();
+                    _shooter.Shot();
             }
-        }
-
-        private void Aim()
-        {
-            // 照準をあわせる
-            _shooter.Aim();
-        }
-
-        private void Shot()
-        {
-            if (_shooter.CanShot())
-                _shooter.Shot();
+            else if (Input.GetButton("Fire2"))
+            {
+                if (_shooter.CanAim())
+                    _shooter.Aim();
+            }
+            else if (Input.GetButtonUp("Fire2"))
+            {
+                _shooter.Laser();
+            }
         }
     }
 }

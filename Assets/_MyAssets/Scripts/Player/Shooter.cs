@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using _MyAssets.Scripts.Common;
 using _MyAssets.Scripts.Note;
 using UniRx;
 using UnityEngine;
@@ -13,7 +14,7 @@ namespace _MyAssets.Scripts.Player
         [SerializeField]
         private Sight _sight;
 
-        private List<NoteBase> _targets;
+        private List<NoteBase> _targets = new List<NoteBase>();
 
         /// <summary>
         /// レイキャストで手前のノートを取得
@@ -28,6 +29,28 @@ namespace _MyAssets.Scripts.Player
             }
 
             return null;
+        }
+        
+        /// <summary>
+        /// レイキャストで複数のノートを取得
+        /// </summary>
+        private List<NoteBase> GetLookingNotes()
+        {
+            var dist = 300;
+            var hits = Physics2D.RaycastAll(transform.position, Vector2.up, dist, LayerMask.GetMask("Note"));
+
+            var notes = new List<NoteBase>();
+            
+            foreach(var hit in hits)
+            {
+                if (hit.collider)
+                {
+                    var note = hit.collider.gameObject.GetComponent<NoteBase>();
+                    notes.Add(note);
+                }
+            }
+
+            return notes;
         }
         
         /// <summary>
@@ -60,6 +83,7 @@ namespace _MyAssets.Scripts.Player
             foreach (var t in _targets.ToArray())
             {
                 LaserAt(t);
+                _targets.Remove(t);
             }
         }
 
@@ -68,7 +92,7 @@ namespace _MyAssets.Scripts.Player
         /// </summary>
         /// <param name="t">ターゲット</param>
         /// <returns></returns>
-        public void LaserAt(NoteBase t)
+        private void LaserAt(NoteBase t)
         {
             // レーザーを生成する
             var l = Instantiate(_laser).GetComponent<Laser>();
@@ -81,7 +105,6 @@ namespace _MyAssets.Scripts.Player
                 .Subscribe(_ =>
                 {
                     t.Hit();
-                    _targets.Remove(t);
                 });
         }
 
@@ -90,8 +113,8 @@ namespace _MyAssets.Scripts.Player
         /// </summary>
         public void Aim()
         {
-            var note = GetLookingNote();
-            if (note != null)
+            var notes = GetLookingNotes();
+            foreach (var note in notes)
             {
                 AimAt(note);
             }
@@ -103,10 +126,11 @@ namespace _MyAssets.Scripts.Player
         /// <param name="t">ターゲット</param>
         private void AimAt(NoteBase t)
         {
-            // SetTarget内で
-            // 照準を生成する
+            if (_targets.Contains(t)) return;
+            
             var s = Instantiate(_sight).GetComponent<Sight>();
             s.SetTarget(t);
+            _targets.Add(t);
         }
         
         /// <summary>

@@ -566,9 +566,9 @@ GameObject:
   - component: {fileID: 940439661}
   - component: {fileID: 940439664}
   - component: {fileID: 940439666}
-  - component: {fileID: 940439660}
   - component: {fileID: 940439665}
   - component: {fileID: 940439663}
+  - component: {fileID: 940439660}
   m_Layer: 0
   m_Name: NoteSpawn
   m_TagString: Untagged
@@ -611,7 +611,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 940439657}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28aa1d56b35558240a2f7c785f25e399, type: 3}
+  m_Script: {fileID: 11500000, guid: 88e2bec464254e049e6b84d56bcca3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _NodeGraph: {fileID: 940439662}
@@ -623,7 +623,7 @@ MonoBehaviour:
   _moment: 0
   _NextState:
     name: 
-    stateID: 1559595546
+    stateID: 1655911537
     transitionTiming: 2
     lineColorChanged: 0
     lineColor: {r: 1, g: 1, b: 1, a: 1}
@@ -818,7 +818,7 @@ MonoBehaviour:
   _moment: 0
   _NextState:
     name: 
-    stateID: 1559595546
+    stateID: 1655911537
     transitionTiming: 2
     lineColorChanged: 0
     lineColor: {r: 1, g: 1, b: 1, a: 1}
@@ -951,7 +951,7 @@ MonoBehaviour:
   _NodeID: 1655911537
   _DataSlotFieldLinks: []
   expanded: 1
-  _BehaviourEnabled: 0
+  _BehaviourEnabled: 1
   _Prefab:
     _Type: 0
     _Value: {fileID: 5916117208236992583, guid: 1f5adc5fc27c54e42a15a182946b55fa,
